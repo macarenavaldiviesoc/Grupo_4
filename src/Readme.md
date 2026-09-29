@@ -51,10 +51,6 @@ Funcionalidades previstas (según caso de uso y maqueta preliminar):
 - Facturación y contratos con transportistas.
 - Optimización automática de rutas (algoritmos de ruteo).
 
-> Nota: en el Avance 2 el alcance se acotó a la gestión de excepciones,
-> en lugar del monitoreo en tiempo real de toda la flota planteado en
-> el Avance 1.
-
 ---
 
 ## 2. PARA QUIÉN ES

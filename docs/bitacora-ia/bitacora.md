@@ -198,3 +198,18 @@ Por cada una de las 9 tablas se explicitan los campos obligatorios (que no puede
 
 * **Qué se aceptó o corrigió:** [Se aceptaron las tablas y conexiones. Pero se debió solicitar el "Resumen de relaciones" en la parte 1. Y para la parte 2 se modificaron titulos, se acomodó la presentación de las tablas y ajustaron ejemplos y parrafos]
 * **Cómo se verificó:** [Se reviso la imagen de la base datos en la rama dev. Se pudo verificar que graficamente coincidió con las conexiones de las tablas esperadas]
+
+
+## Uso 7
+* **Objetivo:** [Crear el .env.example)]
+* **Instrucción (Prompt):** [" Trabajo en un repositorio en github en la construcción del armado de carpetas inicial. En la raíz del repositorio, necesito crear un .env.example con los nombres de las variables sin valores. se va a utilizar Supabase mas adelante. No puedes cambiar ningún otro archivo ni carpeta del repositorio."
+" ]
+* **Respuesta obtenida:** ["He creado el archivo .env.example en la raíz del repositorio con las variables requeridas para la integración con Supabase, sin asignarles valores. Verificación:
+Se comprobó mediante git status que únicamente se ha creado el archivo .env.example en la raíz del proyecto.
+No se modificó ningún otro archivo ni carpeta del repositorio."]
+
+* **Qué se aceptó o corrigió:** [La respuesta utilizada fue tal cual la obtenida, no se tuvo que modificar]
+* **Cómo se verificó:** [Se comprobo que la respuesta fuera parecida a casos similares obtenidos en google]
+
+
+---

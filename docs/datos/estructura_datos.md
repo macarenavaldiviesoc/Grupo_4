@@ -1,9 +1,6 @@
-# Estructura de datos — Equipo 4
+# Estructura de datos
 
-Este documento define las tablas de la base de datos a partir de los sustantivos
-identificados en el caso de uso principal del Avance 2 (despachador, conductor,
-jefe de operaciones, cliente, camión, despacho, imprevisto, notificación,
-historial). Aún no se crea nada en Supabase; esto es solo el diseño.
+Este documento define las tablas de la base de datos.
 
 ---
 
@@ -161,8 +158,8 @@ erDiagram
 
 | id_usuario | nombre | correo | telefono | id_cargo | estado | fecha_creacion |
 |---|---|---|---|---|---|---|
-| 1 | Pedro Soto | pedro.soto@grupo4.cl | +56912345678 | 1 (Despachador) | activo | 2026-03-01 08:00 |
-| 2 | Carla Reyes | carla.reyes@grupo4.cl | +56987654321 | 2 (Conductor) | activo | 2026-03-02 09:15 |
+| 1 | Pedro Soto | pedro.soto@logitrack.cl | +56912345678 | 1 (Despachador) | activo | 2026-03-01 08:00 |
+| 2 | Carla Reyes | carla.reyes@logitrack.cl | +56987654321 | 2 (Conductor) | activo | 2026-03-02 09:15 |
 
 ---
 
@@ -173,7 +170,7 @@ erDiagram
 | id_cliente | nombre_razon_social | rut | direccion | correo | telefono |
 |---|---|---|---|---|---|
 | 1 | Supermercados Lider S.A. | 76.123.456-7 | Av. Kennedy 5454, Las Condes | logistica@lider.cl | +56221234567 |
-| 2 | Comercial Don Juan Ltda. | 77.987.654-3 | Camino a Melipilla 8200, Maipú | compras@donjuan.cl | +56229876543 |
+| 2 | Matriceria Mac SpA| 77.987.654-3 | Camino a Melipilla 8200, Maipú | compras@mac.cl | +56229876543 |
 
 ---
 
@@ -183,7 +180,7 @@ erDiagram
 
 | id_empresa | nombre | tipo | contacto |
 |---|---|---|---|
-| 1 | Flota Propia Grupo 4 | interno | flota@grupo4.cl |
+| 1 | Flota Propia | interno | flota@logitrack.cl |
 | 2 | Transportes Andina Ltda. | externo | contacto@andina.cl |
 
 ---
@@ -194,8 +191,8 @@ erDiagram
 
 | id_vehiculo | patente | tipo_camion | capacidad_kg | id_empresa | estado | id_conductor |
 |---|---|---|---|---|---|---|
-| 1 | FXCV-21 | Rampla | 12000 | 1 (Flota Propia Grupo 4) | en_ruta | 2 (Carla Reyes) |
-| 2 | HGKP-88 | Furgón | 3000 | 2 (Transportes Andina Ltda.) | disponible | *(vacío, sin conductor asignado)* |
+| 1 | FXCV-21 | Rampla | 12000 | 1 | en_ruta | 2 |
+| 2 | HGKP-88 | Furgón | 3000 | 2 | disponible | *(vacío, sin conductor asignado)* |
 
 ---
 
@@ -205,8 +202,8 @@ erDiagram
 
 | id_despacho | id_cliente | id_vehiculo | id_despachador | origen | destino | fecha_programada | fecha_real_entrega | estado |
 |---|---|---|---|---|---|---|---|---|
-| 1001 | 1 (Lider) | 1 (FXCV-21) | 1 (Pedro Soto) | CD Lo Espejo, Santiago | Supermercados Lider, Las Condes | 2026-03-10 09:00 | *(vacío)* | con_imprevisto |
-| 1002 | 2 (Don Juan) | 2 (HGKP-88) | 1 (Pedro Soto) | CD Maipú, Santiago | Comercial Don Juan, Maipú | 2026-03-10 11:30 | 2026-03-10 12:05 | completado |
+| 1001 | 1 | 1  | 1 | CD Lo Espejo, Santiago | Supermercados Lider, Las Condes | 2026-03-10 09:00 | *(vacío)* | con_imprevisto |
+| 1002 | 2 | 2 | 1 | CD Maipú, Santiago | Tratamiento termicos Chile norte, Renca | 2026-03-10 11:30 | 2026-03-10 12:05 | completado |
 
 ---
 
@@ -216,8 +213,8 @@ erDiagram
 
 | id_imprevisto | id_despacho | id_usuario_registra | tipo | cambio_provocado | descripcion | fecha_registro | estado | descripcion_resolucion | fecha_resolucion |
 |---|---|---|---|---|---|---|---|---|---|
-| 5001 | 1001 | 1 (Pedro Soto) | ruta_bloqueada | cambio_ruta | Corte de Av. Kennedy por manifestación; se desvía por Américo Vespucio | 2026-03-10 09:40 | en_proceso | *(vacío)* | *(vacío)* |
-| 5002 | 1002 | 1 (Pedro Soto) | retraso_carga_descarga | retraso | Demora de 35 minutos en descarga por falta de personal en bodega destino | 2026-03-10 11:45 | resuelto | Se reasignó personal de bodega y se completó la descarga | 2026-03-10 12:00 |
+| 5001 | 1001 | 1 | ruta_bloqueada | cambio_ruta | Corte de Av. Kennedy por manifestación; se desvía por Américo Vespucio | 2026-03-10 09:40 | en_proceso | *(vacío)* | *(vacío)* |
+| 5002 | 1002 | 1  | retraso_carga_descarga | retraso | Demora de 35 minutos en descarga por falta de personal en bodega destino | 2026-03-10 11:45 | resuelto | Se reasignó personal de bodega y se completó la descarga | 2026-03-10 12:00 |
 
 ---
 
@@ -228,7 +225,7 @@ erDiagram
 
 | id_notificacion | id_imprevisto | id_usuario_destinatario | id_cliente_destinatario | canal | fecha_envio | leido | fecha_lectura |
 |---|---|---|---|---|---|---|---|
-| 9001 | 5001 | 2 (Carla Reyes, conductora) | *(vacío)* | whatsapp | 2026-03-10 09:41 | si | 2026-03-10 09:50 |
+| 9001 | 5001 | 2 | *(vacío)* | whatsapp | 2026-03-10 09:41 | si | 2026-03-10 09:50 |
 | 9002 | 5001 | *(vacío)* | 1 (Supermercados Lider) | correo | 2026-03-10 09:42 | no | *(vacío)* |
 
 ---
@@ -239,5 +236,5 @@ erDiagram
 
 | id_historial | id_imprevisto | id_usuario | accion | descripcion | fecha_accion |
 |---|---|---|---|---|---|
-| 7001 | 5001 | 1 (Pedro Soto) | Registro de imprevisto | Se creó el caso por ruta bloqueada y se definió el desvío | 2026-03-10 09:40 |
-| 7002 | 5002 | 1 (Pedro Soto) | Resolución de imprevisto | Se resolvió el retraso tras reasignar personal de bodega | 2026-03-10 12:00 |
+| 7001 | 5001 | 1 | Registro de imprevisto | Se creó el caso por ruta bloqueada y se definió el desvío | 2026-03-10 09:40 |
+| 7002 | 5002 | 1 | Resolución de imprevisto | Se resolvió el retraso tras reasignar personal de bodega | 2026-03-10 12:00 |

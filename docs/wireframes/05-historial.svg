@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 640" font-family="Arial, sans-serif">
+  <rect x="0" y="0" width="480" height="640" fill="#ffffff" stroke="#333333" stroke-width="2"/>
+  <text x="240" y="40" text-anchor="middle" font-size="18" font-weight="bold">Historial de imprevistos</text>
+
+  <rect x="40" y="70" width="400" height="60" fill="#f9f9f9" stroke="#bbbbbb"/>
+  <text x="55" y="92" font-size="13">Folio 5001 · Ruta bloqueada</text>
+  <text x="55" y="112" font-size="12" fill="#777777">Estado: en_proceso · 2026-03-10 09:40</text>
+
+  <rect x="40" y="140" width="400" height="60" fill="#f9f9f9" stroke="#bbbbbb"/>
+  <text x="55" y="162" font-size="13">Folio 5002 · Retraso carga/descarga</text>
+  <text x="55" y="182" font-size="12" fill="#777777">Estado: resuelto · 2026-03-10 12:00</text>
+
+  <rect x="40" y="210" width="400" height="60" fill="#f9f9f9" stroke="#bbbbbb"/>
+  <text x="55" y="232" font-size="13">Folio 5003 · Camión en espera</text>
+  <text x="55" y="252" font-size="12" fill="#777777">Estado: en_proceso · 2026-10-10 09:40</text>
+
+  <rect x="40" y="280" width="400" height="60" fill="#f9f9f9" stroke="#bbbbbb"/>
+  <text x="55" y="302" font-size="13">Folio 5004 · Carga no lista</text>
+  <text x="55" y="322" font-size="12" fill="#777777">Estado: resuelto · 2026-10-10 12:00</text>
+
+  <text x="40" y="380" font-size="12" fill="#777777">Cada fila abre el detalle: qué cambió, cuándo</text>
+  <text x="40" y="398" font-size="12" fill="#777777">y por qué (descripción y resolución).</text>
+</svg>

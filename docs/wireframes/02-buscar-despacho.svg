@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 640" font-family="Arial, sans-serif">
+  <rect x="0" y="0" width="480" height="640" fill="#ffffff" stroke="#333333" stroke-width="2"/>
+  <text x="240" y="50" text-anchor="middle" font-size="20" font-weight="bold">Buscar despacho (HU-02)</text>
+
+  <text x="40" y="100" font-size="14">Buscar por planta</text>
+  <rect x="40" y="110" width="400" height="36" fill="#f4f4f4" stroke="#999999"/>
+  <text x="55" y="133" font-size="13" fill="#777777">Faena Minera Los Bronces</text>
+
+  <text x="40" y="175" font-size="14">o por patente del camión</text>
+  <rect x="40" y="185" width="400" height="36" fill="#f4f4f4" stroke="#999999"/>
+  <text x="55" y="208" font-size="13" fill="#777777">FHTR-56</text>
+
+  <rect x="40" y="240" width="120" height="40" rx="6" fill="#dddddd" stroke="#333333"/>
+  <text x="100" y="265" text-anchor="middle" font-size="14" font-weight="bold">Buscar</text>
+
+  <line x1="40" y1="310" x2="440" y2="310" stroke="#cccccc"/>
+  <text x="40" y="335" font-size="13" font-weight="bold">Resultados</text>
+
+  <rect x="40" y="350" width="400" height="70" fill="#f9f9f9" stroke="#bbbbbb"/>
+  <text x="55" y="372" font-size="13">Despacho #1003 · Faena Minera Los Bronces</text>
+  <text x="55" y="392" font-size="13">Camión FHTR-56 · Estado: en curso</text>
+  <text x="55" y="410" font-size="12" fill="#777777">(tocar para registrar imprevisto)</text>
+</svg>

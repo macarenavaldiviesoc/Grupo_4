@@ -142,7 +142,21 @@ https://app.notion.com/p/Equipo-4-Proyecto-de-Log-stica-y-Transporte-3d8498f17d4
 
 ---
 
-## 6. QUIÉNES LA DESARROLLAN
+## 6. HISTORIAS DE USUARIO Y WIREFRAMES (AVANCE 4)
+
+A partir de una conversación con una Ingeniera de Proyectos que coordina
+despachos mineros, se definieron 5 historias de usuario y sus criterios de
+aceptación, la estructura de datos asociada y los wireframes de las 5
+pantallas del flujo. Las tres piezas describen el mismo caso (folio 5003:
+camión en espera en el acceso al polvorín de una faena minera):
+
+- [docs/historias.md](docs/historias.md) — historias de usuario y criterios de aceptación.
+- [docs/datos/estructura_datos.md](docs/datos/estructura_datos.md) — diagrama de base de datos y ejemplos de registros.
+- [docs/wireframes/](docs/wireframes/) — bocetos de las 5 pantallas (Login, Buscar despacho, Registrar imprevisto, Notificación y estado de envío, Historial).
+
+---
+
+## 7. QUIÉNES LA DESARROLLAN
 
 **Equipo 4**
 

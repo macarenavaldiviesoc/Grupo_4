@@ -6,7 +6,7 @@
 |---|---|---|---|
 | Ejecuta: Coordinador/a de despachos | Llamar uno por uno a jefe y conductor | Registra el imprevisto y el sistema avisa por él | Si no registra a tiempo, nadie se entera |
 | Decide/supervisa: Jefe/a de Operaciones | Monitorear cada despacho por radio | Revisa alertas por correo y decide si interviene | Si no revisa el correo, no interviene a tiempo |
-| Excluido: Conductor/a sin cobertura en ruta | Enterarse por radio en tiempo real | Depende de un correo que puede no llegarle | Sigue una ruta desactualizada sin saberlo |
+| Excluido: Conductor/a sin cobertura en ruta, o con teléfono básico/antiguo sin apps de correo cómodas | Enterarse por radio en tiempo real | Depende de un correo que puede no llegarle o que no puede revisar bien desde su teléfono | Sigue una ruta desactualizada sin saberlo |
 
 ## Ficha de tratamiento de datos personales (B2)
 

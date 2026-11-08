@@ -1,6 +1,6 @@
 # Prototipo navegable · Gestión de imprevistos en despachos mineros
 
-Enlace: https://www.figma.com/proto/bEA6Z4q13xJlCxUTl2BNZg/Entrega-4?node-id=0-1&t=GIpORD3W6ovRGsCO-1
+Enlace: https://www.figma.com/design/bEA6Z4q13xJlCxUTl2BNZg/Entrega-4?node-id=41-339&p=f
 
 ## Sistema mínimo (A2)
 

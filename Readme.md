@@ -55,22 +55,22 @@ Funcionalidades previstas (según caso de uso y maqueta preliminar):
 
 ## 2. PARA QUIÉN ES
 
-Industrias objetivo: retail en Chile (Falabella, Cencosud, Walmart
-Chile, SMU) y manufactura/producción (CCU, Watts, Carozzi, Nestlé
-Chile, entre otros), incluyendo a sus proveedores.
+Industria objetivo: minería en Chile — retiro de residuos peligrosos y
+movimiento de materias primas entre faenas mineras y las empresas de
+transporte que les prestan servicio (ej. Enaex S.A.).
 
 **Usuarios directos:**
-- Despachador/a o logística de planta: hoy coordina la salida y
-  llegada de camiones por radio y planillas; es el actor principal
-  que registra los imprevistos.
+- Coordinador/a de despachos de planta: hoy coordina la salida y
+  llegada de camiones por radio y planillas; es quien registra los
+  imprevistos.
 - Conductores de flota: registran o consultan el estado de sus rutas
   y entregas.
 
 **Beneficiarios (sin usar el sistema directamente):**
-- Jefe de operaciones/planta: recibe reportes de despacho más
-  confiables y oportunos.
-- Clientes (receptores de carga): reciben sus productos a tiempo y
-  con trazabilidad.
+- Jefe/a de Operaciones: recibe reportes de despacho más confiables y
+  oportunos.
+- Plantas mineras (origen del retiro): obtienen trazabilidad del
+  proceso sin necesidad de interactuar con el sistema.
 
 **Quién autoriza/decide:**
 - Jefe de logística o supervisor de operaciones.
@@ -94,20 +94,16 @@ diseño.
 
 ## 5. EN QUÉ ESTADO ESTÁ
 
-**Etapa actual:** diseño y definición (Avance 2).
+**Etapa actual:** Avance 6.
 
 **Completado:**
-- Definición del problema y del usuario.
-- Identificación de áreas involucradas.
-- Caso de uso principal.
-- Maqueta digital preliminar (pantallas: Login, Ingresar/buscar,
-  Registrar imprevisto, Notificación y confirmación de lectura,
-  Historial).
-- Espacio del Roadmap.
+- Definición del problema y del usuario (Avance 1-2).
+- Caso de uso principal y maqueta digital preliminar (Avance 2).
+- Historias de usuario, estructura de datos y wireframes (Avance 3-4).
+- Prototipo navegable y análisis ético del prototipo (Avance 5).
 
 **En curso:**
-- Investigación de antecedentes de aplicaciones similares.
-- Definición de requerimientos del prototipo.
+- Avance 6.
 
 **Por hacer:**
 - Flujo de tareas/acciones de la aplicación.
@@ -161,11 +157,18 @@ camión en espera en el acceso al polvorín de una faena minera):
 - [docs/prototipo.md](docs/prototipo.md) — enlace al prototipo navegable y su mapa de navegación.
 - [docs/etica.md](docs/etica.md) — análisis ético del prototipo.
 - Enlace a prototipo en figma: 
-      https://www.figma.com/file/bEA6Z4q13xJlCxUTl2BNZg?node-id=41:339&locale=en&type=design 
+      https://www.figma.com/design/bEA6Z4q13xJlCxUTl2BNZg/Entrega-4?node-id=41-339&p=f 
 
 ---
 
-## 8. QUIÉNES LA DESARROLLAN
+## 8. DISEÑO DE PRUEBA DE USUARIOS (AVANCE 6)
+
+- [docs/prueba-usuarios.md](docs/prueba-usuarios.md) — hipótesis, tareas, perfiles y plan de levantamiento.
+- [docs/pauta-validacion.md](docs/pauta-validacion.md) — guion de la sesión de validación.
+
+---
+
+## 9. QUIÉNES LA DESARROLLAN
 
 **Equipo 4**
 

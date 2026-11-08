@@ -14,8 +14,7 @@ solo: **"¿Qué haría usted si estuviera solo/a?"** y no agregar nada más.
 > "Gracias por su tiempo. Le voy a explicar qué vamos a hacer antes de
 > empezar.
 >
-> Vamos a grabar la pantalla de un celular (sin audio y sin mostrar su
-> rostro), mientras usted hace algunas tareas con un prototipo. Mientras
+> Se va a realizar una demo de una aplicación de logística, por lo que necesitamos grabar la pantalla de un celular o web (sin audio y sin mostrar su rostro), mientras usted hace algunas tareas con un prototipo. Mientras
 > tanto, yo voy a ir escribiendo lo que usted dice y hace.
 >
 > Esto es para mejorar el diseño antes de construirlo, no para evaluarlo a
@@ -24,7 +23,7 @@ solo: **"¿Qué haría usted si estuviera solo/a?"** y no agregar nada más.
 > registrar su nombre, su teléfono ni su correo — lo vamos a identificar
 > solo por su rol.
 >
-> El tiempo que se va a conservar esta información es [POR COMPLETAR].
+> El tiempo que se va a conservar esta información es 1 año.
 >
 > ¿Está de acuerdo en participar bajo estas condiciones?"
 

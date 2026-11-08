@@ -61,20 +61,17 @@ solo: **"¿Qué haría usted si estuviera solo/a?"** y no agregar nada más.
 > "Ya registraste el imprevisto. Necesitas saber si el jefe y el conductor
 > efectivamente se enteraron, para decidir si los llamas tú mismo/a."
 
-## 5. Cuestionario SUS (1 = muy en desacuerdo, 5 = muy de acuerdo) — 3 min
+## 5. Preguntas de facilidad (satisfacción) — 1 min
 
-| # | Afirmación |
-|---|---|
-| 1 | Creo que usaría este sistema con frecuencia. |
-| 2 | Encontré el sistema innecesariamente complejo. |
-| 3 | Pensé que el sistema era fácil de usar. |
-| 4 | Creo que necesitaría ayuda de alguien técnico para usar este sistema. |
-| 5 | Sentí que las distintas funciones estaban bien integradas. |
-| 6 | Encontré demasiada inconsistencia en el sistema. |
-| 7 | Imagino que la mayoría de las personas aprendería a usarlo muy rápido. |
-| 8 | Encontré el sistema muy incómodo de usar. |
-| 9 | Me sentí seguro/a usando el sistema. |
-| 10 | Necesité aprender muchas cosas antes de poder usarlo. |
+> "Para terminar, tres preguntas rápidas. En una escala de 1 (muy difícil)
+> a 5 (muy fácil)..."
+
+1. "Pensando en encontrar el despacho afectado, ¿qué tan fácil o difícil
+   fue?" (1-5)
+2. "Pensando en dejar registrado el imprevisto, ¿qué tan fácil o difícil
+   fue?" (1-5)
+3. "Pensando en saber si los avisos llegaron, ¿qué tan fácil o difícil
+   fue?" (1-5)
 
 ## 6. Preguntas de cierre — 2 min
 

@@ -42,9 +42,11 @@ ambas métricas — porcentaje que completa sin ayuda, tiempo, número de
 ayudas pedidas y desvíos del camino esperado (se cuentan aunque no tengan
 umbral propio, ej. si intenta confirmar sin elegir el tipo de imprevisto).
 
-**Satisfacción (SUS):** cuestionario SUS estándar (10 preguntas, escala
-1-5), aplicado una sola vez al final de toda la sesión por participante.
-Umbral: promedio ≥ 68 puntos sobre 100 entre los 5 participantes.
+**Satisfacción:** una pregunta de facilidad por tarea (escala 1-5, de muy
+difícil a muy fácil), hecha justo después de completarla. No se usa el
+cuestionario SUS porque dos de sus ítems son de opinión o de futuro
+("¿usaría…?", predicciones sobre otras personas), lo que esta prueba busca
+evitar. Umbral: promedio ≥ 4/5 por tarea entre los 5 participantes.
 
 ## 3. Perfiles y reclutamiento
 
@@ -63,9 +65,9 @@ opina sobre si conviene adoptarla.
 | Perfil | Usuario o stakeholder | N.º | Cómo se contacta | Por qué |
 |---|---|---|---|---|
 | P1 · Coordinador/a de despachos de planta (minería) | Usuario | 5 | A través de la coordinadora ya entrevistada (docs/historias.md), pidiendo que refiera a colegas con el mismo rol en otras faenas o empresas de transporte (bola de nieve) | Ejecuta HU-01, HU-02 y HU-05 directamente en el prototipo; representa a quien usará la app a diario |
-| P2 · Conductor/a sin cobertura en ruta o con teléfono básico/antiguo | Usuario | 5 | [POR COMPLETAR] — no hay en el repositorio una vía de contacto definida para conductores | Es el perfil que docs/etica.md (B1) identifica como excluido; probarlo como usuario permite observar si realmente puede recibir y leer el aviso (HU-04) en sus condiciones reales, en vez de solo asumirlo |
-| S1 · Jefe/a de Operaciones | Stakeholder | 5 | [POR COMPLETAR] | Según HU-03 solo recibe el aviso por correo y decide si interviene; no ejecuta pantallas, pero sus condiciones para confiar en el aviso afectan si la solución se adopta |
-| S2 · Jefe de logística / supervisor de operaciones | Stakeholder | 5 | [POR COMPLETAR] | Según Readme.md ("Quién autoriza/decide") es quien aprueba cambios en el proceso de despacho; no usa la app, pero decide si el equipo puede adoptarla |
+| P2 · Conductor/a sin cobertura en ruta o con teléfono básico/antiguo | Usuario | 5 | *(propuesta, no confirmada por el equipo)* A través de las empresas de transporte ya usadas como ejemplo en docs/datos/estructura_datos.md (Flota Propia, Transportes Andina, Enaex S.A.), pidiendo al jefe de flota que refiera a conductores con estas condiciones | Es el perfil que docs/etica.md (B1) identifica como excluido; probarlo como usuario permite observar si realmente puede recibir y leer el aviso (HU-04) en sus condiciones reales, en vez de solo asumirlo |
+| S1 · Jefe/a de Operaciones | Stakeholder | 5 | *(propuesta, no confirmada por el equipo)* A través de la coordinadora ya entrevistada (docs/historias.md), pidiendo que contacte a su jefe/a de operaciones directo | Según HU-03 solo recibe el aviso por correo y decide si interviene; no ejecuta pantallas, pero sus condiciones para confiar en el aviso afectan si la solución se adopta |
+| S2 · Jefe de logística / supervisor de operaciones | Stakeholder | 5 | *(propuesta, no confirmada por el equipo)* A través de la coordinadora entrevistada o de las faenas ya usadas como ejemplo (Faena Minera Los Bronces, Faena Minera Centinela), pidiendo contacto con su jefe de logística o supervisor de operaciones | Según Readme.md ("Quién autoriza/decide") es quien aprueba cambios en el proceso de despacho; no usa la app, pero decide si el equipo puede adoptarla |
 
 ## 5. Plan de levantamiento
 

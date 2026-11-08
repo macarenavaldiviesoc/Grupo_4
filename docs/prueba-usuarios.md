@@ -15,11 +15,8 @@ imprevisto y lee el estado de los avisos sin pedir ayuda ni perderse en el
 camino.
 
 **Fuera de alcance:**
-- El prototipo es una simulación visual (Figma); esta prueba no permite
-  comprobar si el sistema funcionaría técnicamente (envío real de correos,
-  validaciones de backend, base de datos real, desempeño, seguridad).
-- El camino alternativo de envío fallido y la cancelación del registro no se
-  incluyen en esta ronda (son caminos alternativos, no el flujo principal).
+- El prototipo es una simulación que de momento no considera Cuentas y permisos
+  asociadas a roles de trabajo.
 - No se prueba la resolución ni el cierre del imprevisto (no está en el
   prototipo actual).
 - No se prueba con un conductor en terreno sin cobertura; la prueba se hace
@@ -64,17 +61,17 @@ opina sobre si conviene adoptarla.
 
 | Perfil | Usuario o stakeholder | N.º | Cómo se contacta | Por qué |
 |---|---|---|---|---|
-| P1 · Coordinador/a de despachos de planta (minería) | Usuario | 5 | A través de la coordinadora ya entrevistada (docs/historias.md), pidiendo que refiera a colegas con el mismo rol en otras faenas o empresas de transporte (bola de nieve) | Ejecuta HU-01, HU-02 y HU-05 directamente en el prototipo; representa a quien usará la app a diario |
-| P2 · Conductor/a sin cobertura en ruta o con teléfono básico/antiguo | Usuario | 5 | *(propuesta, no confirmada por el equipo)* A través de las empresas de transporte ya usadas como ejemplo en docs/datos/estructura_datos.md (Flota Propia, Transportes Andina, Enaex S.A.), pidiendo al jefe de flota que refiera a conductores con estas condiciones | Es el perfil que docs/etica.md (B1) identifica como excluido; probarlo como usuario permite observar si realmente puede recibir y leer el aviso (HU-04) en sus condiciones reales, en vez de solo asumirlo |
-| S1 · Jefe/a de Operaciones | Stakeholder | 5 | *(propuesta, no confirmada por el equipo)* A través de la coordinadora ya entrevistada (docs/historias.md), pidiendo que contacte a su jefe/a de operaciones directo | Según HU-03 solo recibe el aviso por correo y decide si interviene; no ejecuta pantallas, pero sus condiciones para confiar en el aviso afectan si la solución se adopta |
-| S2 · Jefe de logística / supervisor de operaciones | Stakeholder | 5 | *(propuesta, no confirmada por el equipo)* A través de la coordinadora entrevistada o de las faenas ya usadas como ejemplo (Faena Minera Los Bronces, Faena Minera Centinela), pidiendo contacto con su jefe de logística o supervisor de operaciones | Según Readme.md ("Quién autoriza/decide") es quien aprueba cambios en el proceso de despacho; no usa la app, pero decide si el equipo puede adoptarla |
+| P1 · Coordinador/a de despachos de planta (minería) | Usuario | 5 | A través de la coordinadora ya entrevistada  y personas con cargos similares | Ejecuta HU-01, HU-02 y HU-05 directamente en el prototipo; representa a quien usará la app a diario |
+| P2 · Conductor/a sin cobertura en ruta o con teléfono básico/antiguo | Usuario | 5 | Conductor de transporte minero como rol similar | Es el perfil que docs/etica.md (B1) identifica como excluido; probarlo como usuario permite observar si realmente puede recibir y leer el aviso (HU-04) en sus condiciones reales, en vez de solo asumirlo |
+| S1 · Jefe/a de Operaciones | Stakeholder | 0 | De momento no se planea contactar debido a que no es el usuario principal y solo es evaluar notificaciones | Según HU-03 solo recibe el aviso por correo y decide si interviene; no ejecuta pantallas, pero sus condiciones para confiar en el aviso afectan si la solución se adopta |
+| S2 · Jefe de logística / supervisor de operaciones | Stakeholder | 0 | De momento no se planea contactar debido a que no es el usuario principal y solo es evaluar notificaciones| Según Readme.md ("Quién autoriza/decide") es quien aprueba cambios en el proceso de despacho; no usa la app, pero decide si el equipo puede adoptarla |
+
 
 ## 5. Plan de levantamiento
 
 Este plan cubre las sesiones con **usuarios** (P1 y P2, sección 3), que son
 quienes ejecutan tareas en el celular y por eso se pueden grabar en pantalla.
-Los stakeholders (S1, S2) se consultan por otra vía, no cubierta aquí:
-[POR COMPLETAR].
+Los stakeholders (S1, S2) no se consultan debido a que solo es una notificación y no uso.
 
 **Número de sesiones:** 10 en total — 5 con P1 (Coordinador/a de despachos)
 y 5 con P2 (Conductor/a, perfil excluido), una sesión por participante.

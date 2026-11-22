@@ -51,6 +51,20 @@ El archivo incluye reglas para excluir los archivos y carpetas locales más comu
 No se ha modificado ningún otro archivo o carpeta del repositorio, tal como lo solicitaste. Si necesitas agregar exclusiones específicas para algún lenguaje de programación en particular, puedes editar este archivo y agregarlas al final."]
 * **Qué se aceptó o corrigió:** [Se acepto toda la respuesta. ]
 * **Cómo se verificó:** [El .gitignore creado se comparo con otros .gitignore encontrados en internet. A falta de conocimiento se encontro similar y aceptable]
+* **Verificación posterior (22-11-2026, a partir de la retroalimentación):** como en su momento no teníamos cómo evaluarlo, se repitió la verificación con dos fuentes comprobables:
+  1. **Comparación con la plantilla oficial** `Node.gitignore` del repositorio [github/gitignore](https://github.com/github/gitignore/blob/main/Node.gitignore), mantenido por GitHub. Coinciden: `.env`, `node_modules/`, `*.log`, `logs`, `npm-debug.log*`, `yarn-debug.log*`, `yarn-error.log*`. La plantilla además excluye `.next` (salida de compilación de Next.js), que nuestro archivo no tenía.
+  2. **Prueba directa con git** (`git check-ignore -v <archivo>`), que indica qué regla ignora cada archivo:
+
+     | Archivo de prueba | Resultado | ¿Es lo esperado? |
+     |---|---|---|
+     | `.env` | ignorado (línea `.env`) | Sí: contiene claves reales |
+     | `.env.local` | ignorado (línea `.env.local`) | Sí |
+     | `.env.example` | **no** ignorado | Sí: debe subirse, solo tiene nombres de variables |
+     | `node_modules/x` | ignorado | Sí |
+     | `x.log`, `Thumbs.db` | ignorados | Sí |
+     | `.next/x` | **no** ignorado | No: es salida de compilación |
+     | `.vercel/x` | **no** ignorado | No: carpeta local que crea la herramienta de Vercel al vincular el proyecto |
+* **Corrección resultante:** se agregaron `.next/` y `.vercel/` al `.gitignore`, necesarios para la prueba de concepto del Avance 7 (Next.js publicado en Vercel). Se repitió `git check-ignore` y ambas carpetas quedan ignoradas.
 
 ---
 
@@ -197,7 +211,37 @@ Parte 2: Especificación de Campos y Ejemplos con Datos Reales:
 Por cada una de las 9 tablas se explicitan los campos obligatorios (que no pueden quedar vacíos / NOT NULL). Se proporcionan dos ejemplos por tabla formateados en tablas Markdown con datos consistentes entre sí según el flujo de transporte, despacho e incidencias.]
 
 * **Qué se aceptó o corrigió:** [Se aceptaron las tablas y conexiones. Pero se debió solicitar el "Resumen de relaciones" en la parte 1. Y para la parte 2 se modificaron titulos, se acomodó la presentación de las tablas y ajustaron ejemplos y parrafos]
+
+  **Detalle de lo corregido** (comprobable en el commit `74dfe15`, 04-10-2026):
+
+  | Qué estaba mal | Por qué se cambió | Corrección |
+  |---|---|---|
+  | Las claves foráneas tenían texto: `1 (Pedro Soto)`, `2 (Carla Reyes)`, `1 (Lider)`, `1 (FXCV-21)`, etc. | Son campos de tipo `numero`: guardan solo el id, y el nombre se obtiene de la tabla referenciada | Se dejó solo el número (`1`, `2`…) |
+  | Los ejemplos usaban el nombre del equipo (`@grupo4.cl`, "Flota Propia Grupo 4") | Los datos de ejemplo deben representar a la empresa usuaria, no al equipo | Se cambió a `@logitrack.cl` y "Flota Propia" |
+  | Cliente 2 "Comercial Don Juan" y destino del despacho 1002 | Se ajustaron para acercarlos al caso base del equipo | Cliente "Matriceria Mac SpA" y nuevo destino |
+
+  **Lo que esa corrección no detectó:** quedaron dos celdas con texto en campos numéricos, `1 (Despachador)` en USUARIOS.id_cargo y `1 (Supermercados Lider)` en NOTIFICACIONES.id_cliente_destinatario. Las señaló la retroalimentación y se corrigieron el 22-11-2026 (ver Uso 9).
+
 * **Cómo se verificó:** [Se reviso la imagen de la base datos en la rama dev. Se pudo verificar que graficamente coincidió con las conexiones de las tablas esperadas]
+
+  **Límite de esa verificación:** que el diagrama se vea bien en GitHub confirma que la sintaxis Mermaid es válida y que las líneas unen las tablas pedidas, pero **no** que el modelo sea correcto. Para eso se contrastó (22-11-2026) cada paso y extensión del caso de uso del Avance 2 con la tabla y el campo donde debería quedar guardado:
+
+  | Paso del caso de uso (Avance 2) | ¿Dónde se guarda? | Antes | Después |
+  |---|---|---|---|
+  | 1. Selecciona el despacho y describe el imprevisto | IMPREVISTOS.id_despacho, descripcion | ✅ | ✅ |
+  | 2. Indica el tipo de cambio (retraso, cambio de camión, cambio de ruta) | IMPREVISTOS.cambio_provocado | ✅ | ✅ |
+  | 2. …si es cambio de camión | Antes solo se podía sobrescribir DESPACHOS.id_vehiculo | ❌ se perdía el camión original | ✅ IMPREVISTOS.id_vehiculo_original e id_vehiculo_nuevo |
+  | 3. Valida y genera un folio | IMPREVISTOS.id_imprevisto | ✅ | ✅ |
+  | 4. Identifica al jefe de operaciones | No había relación entre despacho y jefe | ❌ | ✅ DESPACHOS.id_jefe_operaciones |
+  | 4. Identifica al conductor | DESPACHOS.id_vehiculo → VEHICULOS.id_conductor | ✅ | ✅ |
+  | 4. Identifica al cliente | DESPACHOS.id_cliente | ✅ | ✅ |
+  | 5. Envía la notificación a cada afectado | NOTIFICACIONES (una fila por destinatario) | ✅ | ✅ |
+  | 6. Actualiza el estado del despacho y deja el historial | DESPACHOS.estado, HISTORIAL | ✅ | ✅ |
+  | Ext. 1: datos incompletos, se rechaza | No se guarda nada (campos obligatorios) | ✅ | ✅ |
+  | Ext. 2: destinatario no notificado, se registra el intento fallido y queda pendiente | NOTIFICACIONES solo tenía leido (sí/no) | ❌ | ✅ estado_envio (pendiente, enviado, fallido), intentos, motivo_fallo |
+  | Ext. 3: se cierra el caso y se envía una actualización | IMPREVISTOS.estado, fecha_resolucion y una nueva fila en NOTIFICACIONES | ⚠️ | ⚠️ |
+
+  Las tres brechas (❌) son las de la retroalimentación del modelo de datos; su corrección se registra en el Uso 9. La extensión 3 (⚠️) queda parcial: el cierre sí se guarda, pero NOTIFICACIONES no distingue si un aviso es el original o una actualización. Queda pendiente decidir si se agrega un campo `tipo_aviso` (original, actualizacion).
 
 
 ## Uso 7
@@ -236,5 +280,34 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
 
 * **Qué se aceptó o corrigió:** [Se aceptó la estructura y el contenido de cada paso. Los ajustes relevantes fueron dos: la corrección de docs/etica.md antes de escribir la sección 3 (en vez de inventar el dato del excluido), y el reemplazo del cuestionario SUS por la pregunta de facilidad por tarea, detectado en la revisión de errores frecuentes.]
 * **Cómo se verificó:** [Se releyeron docs/historias.md, docs/etica.md, docs/prueba-usuarios.md y las imágenes de docs/wireframes/ antes de escribir cada sección, para no usar datos fuera del repositorio. Se hizo una revisión de sesgo explícita sobre escenarios/objetivos (sin botones ni pantallas), preguntas de contexto y cierre (hechos pasados, no opinión ni futuro), y se repasó la lista de errores frecuentes del Avance 6 completa al final.
+
+---
+
+## Uso 9
+* **Objetivo:** [Incorporar la retroalimentación del profesor sobre el modelo de datos, la bitácora y el README, antes de comenzar el Avance 7]
+
+* **Instrucción y respuesta (en orden):**
+
+1. **Prompt:** [Se pegó al agente la retroalimentación del modelo de datos: el envío fallido de la extensión 2 no tiene dónde guardarse, al cambiar de camión se pierde el original, no se sabe qué jefe de operaciones corresponde a cada despacho, VEHICULOS.id_conductor no guarda el historial "a lo largo del tiempo", hay dos celdas de clave foránea con texto y DESPACHOS.destino repite el nombre del cliente.]
+   **Respuesta:** [El agente leyó docs/datos/estructura_datos.md completo y propuso un cambio por cada punto, sin aplicarlo: (1) estado_envio con "pendiente", más intentos y motivo_fallo; (2) id_vehiculo_original e id_vehiculo_nuevo en IMPREVISTOS; (3) id_jefe_operaciones en DESPACHOS; (4) corregir el texto de la relación conductor-vehículo, mencionando como alternativa más compleja agregar id_conductor a DESPACHOS; (5) dejar solo el número en las dos celdas; (6) definir destino como punto específico de entrega.]
+
+2. **Prompt:** [Se pegó la retroalimentación de la bitácora: la verificación del Uso 3 (.gitignore) no tenía fuente, y en el Uso 6 la corrección estaba descrita en forma general y la verificación solo revisaba que el diagrama se viera bien.]
+   **Respuesta:** [El agente revisó el historial de git del archivo de datos (commit 74dfe15) para describir lo que realmente se corrigió, en vez de reconstruirlo de memoria, y detectó que esa corrección dejó dos celdas con texto, justo las que señaló el profesor. Para el .gitignore ejecutó git check-ignore sobre archivos de prueba y encontró que .next/ y .vercel/ no se ignoraban.]
+
+3. **Prompt:** [Se pegó la retroalimentación del README: "Etapa actual: diseño y definición (Avance 2)" y no menciona lo hecho en el Avance 3.]
+   **Respuesta:** [El agente encontró que había dos README: el de la raíz (Avance 6) y una copia antigua en src/Readme.md que seguía en el Avance 2 y además hablaba de retail en vez de minería. Propuso dejar una sola fuente de verdad y actualizar el estado por avance.]
+
+4. **Prompt:** ["ahora agregar a commit": aprobación para aplicar los cambios, dejando el commit al equipo.]
+   **Respuesta:** [Se aplicaron los cambios en estructura_datos.md, bitacora.md, .gitignore, Readme.md y src/Readme.md, sin hacer commit.]
+
+* **Qué se aceptó o corrigió:**
+  - Se aceptaron las seis correcciones del modelo. Para el punto 4 se eligió la opción mínima (corregir el texto de la relación) en lugar de agregar una tabla de historial de asignaciones.
+  - **Se corrigió al agente:** al agregar el ejemplo de cambio de camión, primero cambió el vehículo del despacho 1001 de 1 a 2. Eso rompía la historia coherente entre tablas (la notificación 9001 va a la conductora del camión 1 de ese despacho). Se revirtió, y el ejemplo se puso en el despacho 1002 (imprevisto 5005): el camión FXCV-21 queda retenido por el desvío del 1001 y se reemplaza por el HGKP-88, que es el vehículo que ya figuraba en el 1002.
+  - **Se corrigió al agente:** en la tabla de verificación contra el caso de uso, marcó la extensión 3 como cubierta. Al revisarla, NOTIFICACIONES no distingue un aviso original de uno de actualización, así que se dejó como parcial (⚠️) y pendiente de decisión, en vez de declararla resuelta.
+
+* **Cómo se verificó:**
+  - Modelo de datos: se contrastó cada paso y extensión del caso de uso del Avance 2 (docs/unidad1/Avance2_Equipo_4.docx.pdf) con la tabla y el campo donde se guarda (tabla en el Uso 6). Se revisó que los ejemplos nuevos fueran coherentes entre tablas: imprevisto 5005 ↔ despacho 1002 ↔ vehículos 1 y 2 ↔ historial 7005, con horas consistentes.
+  - .gitignore: comparación con la plantilla oficial Node.gitignore de github/gitignore y prueba con git check-ignore antes y después del cambio (detalle en el Uso 3).
+  - README: se comparó la sección "En qué estado está" con la lista de archivos del repositorio y el historial de commits de cada avance.
 
 ---

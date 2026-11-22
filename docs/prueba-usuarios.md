@@ -19,8 +19,10 @@ camino.
   asociadas a roles de trabajo.
 - No se prueba la resolución ni el cierre del imprevisto (no está en el
   prototipo actual).
-- No se prueba con un conductor en terreno sin cobertura; la prueba se hace
-  en un entorno controlado, con el prototipo en una pantalla.
+- Para el perfil de coordinador/a (P1), la prueba se hace en un entorno
+  controlado, con el prototipo en una pantalla. El conductor que ha quedado
+  sin señal en ruta (perfil excluido, P2) **sí se incluye**, en sus
+  condiciones reales (ver secciones 3 y 5).
 
 Participantes de referencia para los umbrales de esta sección: **5
 personas** que cumplan el perfil de coordinador/a de despachos o un rol

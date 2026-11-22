@@ -311,3 +311,30 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
   - README: se comparó la sección "En qué estado está" con la lista de archivos del repositorio y el historial de commits de cada avance.
 
 ---
+
+## Uso 10
+* **Objetivo:** [Incorporar en el repositorio la retroalimentación del Avance 5 (prototipo y ética), sin modificar el prototipo en Figma]
+
+* **Instrucción y respuesta (en orden):**
+
+1. **Prompt:** [Se pegó al agente la retroalimentación del Avance 5: faltan estados vacío y de carga; el mapa dice «Cancelar» en P2, pero la pantalla solo tiene «Volver»; la ficha de datos no da plazos de conservación; la accesibilidad dice «cumple» sin medir; P4b no existe en Figma; los botones del prototipo no avanzan; y la recomendación de incluir en la prueba a un conductor sin señal en ruta.]
+   **Respuesta:** [El agente leyó docs/etica.md, docs/prototipo.md y docs/prueba-usuarios.md. Separó lo que se corrige en el repositorio de lo que solo se puede corregir en Figma, y propuso los cambios sin aplicarlos. Detectó además una contradicción que la retroalimentación no mencionaba: prueba-usuarios.md decía en «Fuera de alcance» que no se probaría con un conductor sin cobertura, pero la sección 3 del mismo archivo sí lo incluye como perfil P2.]
+
+2. **Prompt:** ["que es 12 meses a que se referia?"]
+   **Respuesta:** [El agente explicó que se trata del plazo de conservación de los datos personales (B2), que 12 meses era un ejemplo del profesor y no una regla, y dio alternativas (6, 12 o 24 meses o más) con el criterio de cada una.]
+
+3. **Prompt:** ["por favor hacer los cambios para poner en commit, no tocar lo de figma"]
+   **Respuesta:** [Se aplicaron los cambios en etica.md (plazos y contraste medido), prototipo.md (mapa con «Volver», estados P1 vacío y P2 carga, todo lo que falta en Figma marcado como pendiente), prueba-usuarios.md (se eliminó la contradicción) y el README. No se hizo commit ni se tocó Figma.]
+
+* **Qué se aceptó o corrigió:**
+  - Se aceptó el plazo de 12 meses desde el cierre del caso.
+  - Para «Cancelar» se eligió corregir el mapa (decir «Volver») en vez de agregar un botón en Figma, porque «Volver» ya cumple la misma función de regresar a P1.
+  - **No se aceptó declarar todo como «cumple»:** el agente solo midió lo que se podía medir con datos del repositorio (#333333 sobre blanco). El rojo de alerta y el tamaño de los botones quedaron como «pendiente de medir», porque sus valores no están documentados.
+  - Los estados nuevos y P4b quedaron marcados explícitamente como «pendiente en Figma», para no aparentar que ya existen en el prototipo.
+
+* **Cómo se verificó:**
+  - Contraste: se calculó con la fórmula de WCAG 2.2. La luminancia relativa de #333333 es aprox. 0,033 y la del blanco es 1, por lo que (1 + 0,05) / (0,033 + 0,05) ≈ 12,6:1. El resultado coincide con el valor indicado en la retroalimentación.
+  - Se comprobó que las etiquetas P1 y P2 de prueba-usuarios.md (sección 3) corresponden a coordinador/a y conductor/a antes de reescribir la línea de alcance.
+  - Se revisó que cada pantalla del mapa de navegación tenga su fila en la tabla de decisiones y que los botones nombrados coincidan entre ambas.
+
+---

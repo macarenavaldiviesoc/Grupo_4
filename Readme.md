@@ -182,6 +182,12 @@ camión en espera en el acceso al polvorín de una faena minera):
 | La verificación del `.gitignore` no tenía fuente | Comparación con la plantilla oficial de GitHub y prueba con `git check-ignore`; se agregaron `.next/` y `.vercel/` | [docs/bitacora-ia/bitacora.md](docs/bitacora-ia/bitacora.md) (Uso 3), [.gitignore](.gitignore) |
 | El Uso 6 describía la corrección en forma general y solo verificaba que el diagrama se viera bien | Detalle de lo corregido y contraste del modelo con cada paso del caso de uso | [docs/bitacora-ia/bitacora.md](docs/bitacora-ia/bitacora.md) (Uso 6) |
 | El README seguía en el Avance 2 y no mencionaba el Avance 3 | Estado actualizado por avance; se eliminó la copia antigua del manual en `src/Readme.md` | Este archivo, [src/Readme.md](src/Readme.md) |
+| Avance 5: faltaban estados vacío y de carga; el mapa decía «Cancelar» en P2, pero la pantalla tiene «Volver» | Se agregaron al mapa P1 vacío y P2 carga; el mapa se corrigió a «Volver». **Pendiente en Figma:** crear esos cuadros | [docs/prototipo.md](docs/prototipo.md) |
+| Avance 5: la ficha de datos no daba plazos de conservación | Plazo de 12 meses desde el cierre del caso, con su justificación | [docs/etica.md](docs/etica.md) (B2) |
+| Avance 5: la accesibilidad decía «cumple» sin medir | Contraste medido: #333333 sobre blanco = 12,6:1. El rojo de alerta y el tamaño de los botones quedan pendientes de medir en Figma | [docs/etica.md](docs/etica.md) (B3) |
+| Avance 5: P4b (envío fallido) no existe en el prototipo y falta la captura del «después» | Se declaró como pendiente. **Pendiente en Figma:** crear P4b con «Fallido» y «Reintentar», y agregar la captura | [docs/etica.md](docs/etica.md) (Integración), [docs/prototipo.md](docs/prototipo.md) |
+| Avance 5: los botones del prototipo no avanzaban al hacer clic | **Pendiente en Figma:** revisar las conexiones y probar en una ventana de incógnito | Prototipo en Figma |
+| Recomendación: incluir en la prueba a un conductor que haya quedado sin señal en ruta | Ya estaba en el perfil P2; se eliminó la línea de «Fuera de alcance» que lo contradecía | [docs/prueba-usuarios.md](docs/prueba-usuarios.md) |
 
 ---
 

@@ -103,7 +103,7 @@ diseño.
 - Prototipo navegable y análisis ético del prototipo (Avance 5).
 
 **En curso:**
-- Avance 6.
+- Avance 7.
 
 **Por hacer:**
 - Flujo de tareas/acciones de la aplicación.

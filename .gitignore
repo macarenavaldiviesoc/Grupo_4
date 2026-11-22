@@ -29,6 +29,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Build output and deployment (Next.js, Vercel)
+.next/
+.vercel/
+
 # Common Dependency Directories (Node, Python)
 node_modules/
 __pycache__/

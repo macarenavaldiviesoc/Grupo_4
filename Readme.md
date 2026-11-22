@@ -94,16 +94,19 @@ diseño.
 
 ## 5. EN QUÉ ESTADO ESTÁ
 
-**Etapa actual:** Avance 6.
+**Etapa actual:** Avance 7, diagrama de arquitectura y prueba de concepto (PoC) del flujo principal (en curso).
 
 **Completado:**
-- Definición del problema y del usuario (Avance 1-2).
-- Caso de uso principal y maqueta digital preliminar (Avance 2).
-- Historias de usuario, estructura de datos y wireframes (Avance 3-4).
-- Prototipo navegable y análisis ético del prototipo (Avance 5).
+- **Avance 1:** definición del problema y del usuario.
+- **Avance 2:** propuesta de solución, caso de uso principal, maqueta digital preliminar y roadmap inicial.
+- **Avance 3:** repositorio del equipo con su estructura de carpetas (`src/`, `docs/`), `.gitignore`, `.env.example` con los nombres de las variables de Supabase (sin valores), bitácora de uso de IA ([docs/bitacora-ia/bitacora.md](docs/bitacora-ia/bitacora.md)) y modelo de datos ([docs/datos/estructura_datos.md](docs/datos/estructura_datos.md)).
+- **Avance 4:** historias de usuario y criterios de aceptación, estructura de datos adaptada al caso minero y wireframes de las 5 pantallas.
+- **Avance 5:** prototipo navegable y análisis ético del prototipo.
+- **Avance 6:** diseño de la prueba de usuarios y guion de la sesión de validación.
+- **Correcciones según la retroalimentación** (ver sección 9).
 
 **En curso:**
-- Avance 6.
+- Avance 7: diagrama de arquitectura (`docs/arquitectura.md`), camino delgado y PoC publicada.
 
 **Por hacer:**
 - Flujo de tareas/acciones de la aplicación.
@@ -168,7 +171,27 @@ camión en espera en el acceso al polvorín de una faena minera):
 
 ---
 
-## 9. QUIÉNES LA DESARROLLAN
+## 9. RETROALIMENTACIÓN Y CORRECCIONES
+
+| Observación recibida | Qué se corrigió | Archivo |
+|---|---|---|
+| El envío fallido (extensión 2 del caso de uso) no tenía dónde guardarse | `estado_envio` con valor «pendiente», más los campos `intentos` y `motivo_fallo` | [docs/datos/estructura_datos.md](docs/datos/estructura_datos.md) |
+| Al cambiar de camión se perdía el original | `id_vehiculo_original` e `id_vehiculo_nuevo` en IMPREVISTOS | [docs/datos/estructura_datos.md](docs/datos/estructura_datos.md) |
+| No se sabía qué jefe de operaciones notificar | `id_jefe_operaciones` en DESPACHOS | [docs/datos/estructura_datos.md](docs/datos/estructura_datos.md) |
+| Detalles menores del modelo (relación conductor-vehículo, claves foráneas con texto, destino que repetía el cliente) | Texto de la relación corregido, solo números en las claves foráneas, `destino` como punto de entrega | [docs/datos/estructura_datos.md](docs/datos/estructura_datos.md) |
+| La verificación del `.gitignore` no tenía fuente | Comparación con la plantilla oficial de GitHub y prueba con `git check-ignore`; se agregaron `.next/` y `.vercel/` | [docs/bitacora-ia/bitacora.md](docs/bitacora-ia/bitacora.md) (Uso 3), [.gitignore](.gitignore) |
+| El Uso 6 describía la corrección en forma general y solo verificaba que el diagrama se viera bien | Detalle de lo corregido y contraste del modelo con cada paso del caso de uso | [docs/bitacora-ia/bitacora.md](docs/bitacora-ia/bitacora.md) (Uso 6) |
+| El README seguía en el Avance 2 y no mencionaba el Avance 3 | Estado actualizado por avance; se eliminó la copia antigua del manual en `src/Readme.md` | Este archivo, [src/Readme.md](src/Readme.md) |
+| Avance 5: faltaban estados vacío y de carga; el mapa decía «Cancelar» en P2, pero la pantalla tiene «Volver» | Se agregaron al mapa P1 vacío y P2 carga; el mapa se corrigió a «Volver». **Pendiente en Figma:** crear esos cuadros | [docs/prototipo.md](docs/prototipo.md) |
+| Avance 5: la ficha de datos no daba plazos de conservación | Plazo de 12 meses desde el cierre del caso, con su justificación | [docs/etica.md](docs/etica.md) (B2) |
+| Avance 5: la accesibilidad decía «cumple» sin medir | Contraste medido: #333333 sobre blanco = 12,6:1. El rojo de alerta y el tamaño de los botones quedan pendientes de medir en Figma | [docs/etica.md](docs/etica.md) (B3) |
+| Avance 5: P4b (envío fallido) no existe en el prototipo y falta la captura del «después» | Se declaró como pendiente. **Pendiente en Figma:** crear P4b con «Fallido» y «Reintentar», y agregar la captura | [docs/etica.md](docs/etica.md) (Integración), [docs/prototipo.md](docs/prototipo.md) |
+| Avance 5: los botones del prototipo no avanzaban al hacer clic | **Pendiente en Figma:** revisar las conexiones y probar en una ventana de incógnito | Prototipo en Figma |
+| Recomendación: incluir en la prueba a un conductor que haya quedado sin señal en ruta | Ya estaba en el perfil P2; se eliminó la línea de «Fuera de alcance» que lo contradecía | [docs/prueba-usuarios.md](docs/prueba-usuarios.md) |
+
+---
+
+## 10. QUIÉNES LA DESARROLLAN
 
 **Equipo 4**
 

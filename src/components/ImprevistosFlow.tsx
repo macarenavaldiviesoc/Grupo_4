@@ -424,17 +424,7 @@ export default function ImprevistosFlow() {
             </div>
 
             <div className="actions-row">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                onClick={() => {
-                  setFormError(null);
-                  setErrorField(null);
-                  setScreen("P2");
-                }}
-              >
-                ← Volver
-              </button>
+              {/* Sin "← Volver" a P2: volver con el formulario lleno y confirmar de nuevo creaba un imprevisto duplicado. */}
               <button
                 type="button"
                 className="btn btn-secondary"

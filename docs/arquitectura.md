@@ -83,9 +83,11 @@ El supuesto más frágil es que **todo el circuito completo —desde el gesto de
 | **Editar, borrar o cerrar imprevistos, e historial consultable** | Llega al robustecer lo funcional, después de validar el alta de imprevistos con folio. |
 | **Mantenedor de despachos y datos reales de producción** | En la PoC se usan **2–3 despachos semilla (seed)** precargados en Supabase para evitar construir pantallas administrativas antes de probar el flujo principal. |
 | **Diseño visual terminado, modo sin conexión y otros canales (WhatsApp / app)** | Se utiliza el sistema mínimo funcional de `docs/prototipo.md`; pulido visual, soporte offline y canales adicionales quedan para etapas posteriores. |
+| **Revisión de duplicados en el servidor** | **Siguiente iteración.** En la PoC el duplicado se evita desde la pantalla (ver punto 4 de «Qué ve la persona si algo falla»). El backend todavía no revisa si ya existe un imprevisto igual para el mismo despacho antes de guardarlo. |
 
 ### Qué ve la persona si algo falla
 
 1. **Falta un campo obligatorio (tipo de imprevisto o descripción — P3):** El backend rechaza el envío y devuelve el detalle del campo faltante. La persona ve una alerta clara indicando qué dato falta, permanece en la pantalla de registro (P2/P3) y **conserva intacto lo que ya escribió** para corregir y volver a confirmar.
 2. **Error de servidor o caída de conexión con Supabase:** La persona ve un mensaje visible de error indicando que el imprevisto no pudo registrarse, sin borrar los datos ingresados en el formulario, permitiéndole reintentar.
 3. **Falla del servicio externo de correo (cuando se integre en la siguiente iteración — P4b):** La persona ve igualmente el **folio** del imprevisto guardado y la etiqueta **«Fallido»** junto al destinatario afectado, para poder contactarlo directamente por teléfono o radio.
+4. **Riesgo de imprevisto duplicado:** En la prueba en Vercel se detectó que, desde la confirmación (P4), el botón «← Volver» regresaba al formulario (P2) con los datos aún escritos; al confirmar de nuevo se guardaba un segundo imprevisto con otro folio y otros dos avisos. Se resolvió quitando ese botón: en P4 solo queda **«Volver a despachos»**, que limpia el formulario y vuelve a P1. Así, cada confirmación corresponde a un único folio.

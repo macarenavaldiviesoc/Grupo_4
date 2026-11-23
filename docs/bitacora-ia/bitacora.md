@@ -1,43 +1,43 @@
-# Bitacora IA
+# Bitácora IA
 ## Uso 1
-* **Objetivo:** [Crear la carpeta src/ (con un readme para que no este vacia la carpeta de momento)]
-* **Instrucción (Prompt):** [" Trabajo en un repositorio en github en la construcción del armado de carpetas inicial. Necesito crear una carpeta llamada src, que contenga una archivo readme.md en su interior con el siguiente texto: "Grupo_4
-Aplicación para registrar imprevistos en despachos y notificar automáticamente a los Stakeholders / Proveedores / Otros, y así mejorar la gestión logística" . No puedes cambiar ningún otro archivo ni carpeta del repositorio." ]
-* **Respuesta obtenida:** [Listo. Creé la carpeta src y dentro el archivo readme.md con el siguiente contenido:
+* **Objetivo:** Crear la carpeta src/ (con un readme para que no este vacia la carpeta de momento)
+* **Instrucción (Prompt):** " Trabajo en un repositorio en github en la construcción del armado de carpetas inicial. Necesito crear una carpeta llamada src, que contenga una archivo readme.md en su interior con el siguiente texto: "Grupo_4
+Aplicación para registrar imprevistos en despachos y notificar automáticamente a los Stakeholders / Proveedores / Otros, y así mejorar la gestión logística" . No puedes cambiar ningún otro archivo ni carpeta del repositorio." 
+* **Respuesta obtenida:** Listo. Creé la carpeta src y dentro el archivo readme.md con el siguiente contenido:
 
 Grupo_4
 Aplicación para registrar imprevistos en despachos y notificar automáticamente a los Stakeholders / Proveedores / Otros, y así mejorar la gestión logística
 
 Verifiqué con git status que el único cambio en el repositorio es el nuevo archivo src/readme.md; no modifiqué ningún otro archivo ni carpeta.
 
-No hice commit ni push. Si quieres, puedo hacerlo con el mensaje que prefieras.]
-* **Qué se aceptó o corrigió:** [La respuesta utilizada fue tal cual la obtenida, no se tuvo que modificar]
-* **Cómo se verificó:** [Se reviso en el explorador que la carpeta y el archivo existiera, junto con el contenido]
+No hice commit ni push. Si quieres, puedo hacerlo con el mensaje que prefieras.
+* **Qué se aceptó o corrigió:** La respuesta utilizada fue tal cual la obtenida, no se tuvo que modificar
+* **Cómo se verificó:** Se reviso en el explorador que la carpeta y el archivo existiera, junto con el contenido
 
 
 ---
 
 ## Uso 2
-* **Objetivo:** [Crear la carpeta docs. (con un documento al interior para que no este vacía)]
-* **Instrucción (Prompt):** [" Trabajo en un repositorio en github en la construcción del armado de carpetas inicial. Necesito crear una carpeta llamada docs, que contenga una archivo llamado Prueba1.md en su interior con el siguiente texto: "Equipo 4
+* **Objetivo:** Crear la carpeta docs. (con un documento al interior para que no este vacía)
+* **Instrucción (Prompt):** " Trabajo en un repositorio en github en la construcción del armado de carpetas inicial. Necesito crear una carpeta llamada docs, que contenga una archivo llamado Prueba1.md en su interior con el siguiente texto: "Equipo 4
 
-Aqui van las sub carpetas: Bitacora_IA , Unidad_1 y Datos.". No puedes cambiar ningún otro archivo ni carpeta del repositorio."]
-* **Respuesta obtenida:** [He creado la carpeta docs/ en la raíz del proyecto junto con el archivo solicitado:
+Aqui van las sub carpetas: Bitacora_IA , Unidad_1 y Datos.". No puedes cambiar ningún otro archivo ni carpeta del repositorio."
+* **Respuesta obtenida:** He creado la carpeta docs/ en la raíz del proyecto junto con el archivo solicitado:
 
 docs/Prueba1.md
 Contenido de Prueba1.md:
 markdown
-# Equipo 4
-Aqui van las sub carpetas: Bitacora_IA , Unidad_1 y Datos.]
-* **Qué se aceptó o corrigió:** [Se acepto completamente]
-* **Cómo se verificó:** [Se reviso que existiera la carpeta y el documento en su interior. El documento fue posteriormente borrado ya que solo fue requerido para la creacion de la carpeta y orientacion para la ubicacion de las subcarpetas]
+\# Equipo 4
+Aqui van las sub carpetas: Bitacora_IA , Unidad_1 y Datos.
+* **Qué se aceptó o corrigió:** Se acepto completamente
+* **Cómo se verificó:** Se reviso que existiera la carpeta y el documento en su interior. El documento fue posteriormente borrado ya que solo fue requerido para la creacion de la carpeta y orientacion para la ubicacion de las subcarpetas
 
 ---
 
 ## Uso 3
-* **Objetivo:** [Crear el .gitignore]
-* **Instrucción (Prompt):** ["Trabajo en un repositorio en github en la construcción del armado de carpetas inicial. Necesito crear un .gitignore que excluya los archivos locales. No puedes cambiar ningún otro archivo ni carpeta del repositorio."]
-* **Respuesta obtenida:** ["Created .gitignore
+* **Objetivo:** Crear el .gitignore
+* **Instrucción (Prompt):** "Trabajo en un repositorio en github en la construcción del armado de carpetas inicial. Necesito crear un .gitignore que excluya los archivos locales. No puedes cambiar ningún otro archivo ni carpeta del repositorio."
+* **Respuesta obtenida:** "Created .gitignore
 
 He creado el archivo [`.gitignore`](file:///c:/Users/avera/Documents/IAG4/Grupo_4/.gitignore) en la raíz de tu repositorio. 
 
@@ -48,9 +48,9 @@ El archivo incluye reglas para excluir los archivos y carpetas locales más comu
 *   Archivos de registro/logs (ej. `*.log`).
 *   Carpetas comunes de dependencias y entornos virtuales (ej. `node_modules/`, `venv/`, `__pycache__/`).
 
-No se ha modificado ningún otro archivo o carpeta del repositorio, tal como lo solicitaste. Si necesitas agregar exclusiones específicas para algún lenguaje de programación en particular, puedes editar este archivo y agregarlas al final."]
-* **Qué se aceptó o corrigió:** [Se acepto toda la respuesta. ]
-* **Cómo se verificó:** [El .gitignore creado se comparo con otros .gitignore encontrados en internet. A falta de conocimiento se encontro similar y aceptable]
+No se ha modificado ningún otro archivo o carpeta del repositorio, tal como lo solicitaste. Si necesitas agregar exclusiones específicas para algún lenguaje de programación en particular, puedes editar este archivo y agregarlas al final."
+* **Qué se aceptó o corrigió:** Se acepto toda la respuesta. 
+* **Cómo se verificó:** El .gitignore creado se comparo con otros .gitignore encontrados en internet. A falta de conocimiento se encontro similar y aceptable
 * **Verificación posterior (22-11-2026, a partir de la retroalimentación):** como en su momento no teníamos cómo evaluarlo, se repitió la verificación con dos fuentes comprobables:
   1. **Comparación con la plantilla oficial** `Node.gitignore` del repositorio [github/gitignore](https://github.com/github/gitignore/blob/main/Node.gitignore), mantenido por GitHub. Coinciden: `.env`, `node_modules/`, `*.log`, `logs`, `npm-debug.log*`, `yarn-debug.log*`, `yarn-error.log*`. La plantilla además excluye `.next` (salida de compilación de Next.js), que nuestro archivo no tenía.
   2. **Prueba directa con git** (`git check-ignore -v <archivo>`), que indica qué regla ignora cada archivo:
@@ -69,24 +69,27 @@ No se ha modificado ningún otro archivo o carpeta del repositorio, tal como lo 
 ---
 
 ## Uso 4
-* **Objetivo:** [Crear la carpeta unidad1]
-* **Instrucción (Prompt):** [Trabajo en un repositorio en github en la construcción del armado de carpetas inicial. Crea una carpeta llamada unidad1 dentro de la carpeta docs/ de este proyecto. Crea dentro de unidad1 un archivo llamado unidades.md que contenga un titulo: "Avance 1 y 2". No puedes cambiar ningún otro archivo ni carpeta del repositorio.]
-* **Respuesta obtenida:** ["Creé la carpeta docs/unidad1 y el archivo [unidades.md](C:/Users/diego/OneDrive/Escritorio/USACH/ING. CIVIL INDUSTRIAL/S3/INGENIERIA IA/Grupo_4/docs/unidad1/unidades.md) con el título # Avance 1 y 2."]
-* **Qué se aceptó o corrigió:** [se acepto la subcarpeta y su documento]
-* **Cómo se verificó:** [Se verifico que la subcarpeta existiera en el explorador de documentos]
+* **Objetivo:** Crear la carpeta unidad1
+* **Instrucción (Prompt):** Trabajo en un repositorio en github en la construcción del armado de carpetas inicial. Crea una carpeta llamada unidad1 dentro de la carpeta docs/ de este proyecto. Crea dentro de unidad1 un archivo llamado unidades.md que contenga un titulo: "Avance 1 y 2". No puedes cambiar ningún otro archivo ni carpeta del repositorio.
+* **Respuesta obtenida:** "Creé la carpeta docs/unidad1 y el archivo [unidades.md](C:/Users/diego/OneDrive/Escritorio/USACH/ING. CIVIL INDUSTRIAL/S3/INGENIERIA IA/Grupo_4/docs/unidad1/unidades.md) con el título # Avance 1 y 2."
+* **Qué se aceptó o corrigió:** se acepto la subcarpeta y su documento
+* **Cómo se verificó:** Se verifico que la subcarpeta existiera en el explorador de documentos
 
 ---
 
 ## Uso 5
-* **Objetivo:** [Crear la carpeta datos]
-* **Instrucción (Prompt):** [Trabajo en un repositorio en github en la construcción del armado de carpetas inicial. Crea una carpeta llamada datos dentro de la carpeta docs/ de este proyecto. Crea dentro de datos un archivo llamado datos.md que contenga un titulo: "Datos proyecto". No puedes cambiar ningún otro archivo ni carpeta del repositorio.]
-* **Respuesta obtenida:** ["Creé [docs/datos/datos.md](C:/Users/diego/OneDrive/Escritorio/USACH/ING. CIVIL INDUSTRIAL/S3/INGENIERIA IA/Grupo_4/docs/datos/datos.md) con el título # Datos proyecto."]
-* **Qué se aceptó o corrigió:** [se acepto la subcarpeta y su documento]
-* **Cómo se verificó:** [Se verifico que la subcarpeta existiera en el explorador de documentos]
+* **Objetivo:** Crear la carpeta datos
+* **Instrucción (Prompt):** Trabajo en un repositorio en github en la construcción del armado de carpetas inicial. Crea una carpeta llamada datos dentro de la carpeta docs/ de este proyecto. Crea dentro de datos un archivo llamado datos.md que contenga un titulo: "Datos proyecto". No puedes cambiar ningún otro archivo ni carpeta del repositorio.
+* **Respuesta obtenida:** "Creé [docs/datos/datos.md](C:/Users/diego/OneDrive/Escritorio/USACH/ING. CIVIL INDUSTRIAL/S3/INGENIERIA IA/Grupo_4/docs/datos/datos.md) con el título # Datos proyecto."
+* **Qué se aceptó o corrigió:** se acepto la subcarpeta y su documento
+* **Cómo se verificó:** Se verifico que la subcarpeta existiera en el explorador de documentos
+
+
+---
 
 ## Uso 6
-* **Objetivo:** [Crear la base de datos]
-* **Instrucción (Prompt):** [Trabajo en un repositorio en github en la construcción de la propuesta de la base de datos. Crea la base de datos en formato mermaid para que se vean en GitHub. Considera un archivo dentro de docs/datos/ llamado estructura_datos.md con dos partes. La
+* **Objetivo:** Crear la base de datos
+* **Instrucción (Prompt):** Trabajo en un repositorio en github en la construcción de la propuesta de la base de datos. Crea la base de datos en formato mermaid para que se vean en GitHub. Considera un archivo dentro de docs/datos/ llamado estructura_datos.md con dos partes. La
 primera es el diagrama de la siguiente base de datos: 
 
 CARGOS {
@@ -195,9 +198,9 @@ La segunda parte, por cada tabla,
 indica qué campos son obligatorios (los que no pueden quedar vacíos) y muestra dos ejemplos con
 datos, como si fueran dos registros reales. 
 
-No puedes cambiar ningún otro archivo ni carpeta del repositorio.]
+No puedes cambiar ningún otro archivo ni carpeta del repositorio.
 
-* **Respuesta obtenida:** [He creado el archivo estructura_datos.md dentro de docs/datos/, cumpliendo con todos los requerimientos y sin modificar ningún otro archivo o carpeta del proyecto.
+* **Respuesta obtenida:** He creado el archivo estructura_datos.md dentro de docs/datos/, cumpliendo con todos los requerimientos y sin modificar ningún otro archivo o carpeta del proyecto.
 
 Resumen del contenido implementado:
 
@@ -208,9 +211,9 @@ Modela las 13 relaciones en dirección 1:N de izquierda a derecha utilizando la 
 
 Parte 2: Especificación de Campos y Ejemplos con Datos Reales:
 
-Por cada una de las 9 tablas se explicitan los campos obligatorios (que no pueden quedar vacíos / NOT NULL). Se proporcionan dos ejemplos por tabla formateados en tablas Markdown con datos consistentes entre sí según el flujo de transporte, despacho e incidencias.]
+Por cada una de las 9 tablas se explicitan los campos obligatorios (que no pueden quedar vacíos / NOT NULL). Se proporcionan dos ejemplos por tabla formateados en tablas Markdown con datos consistentes entre sí según el flujo de transporte, despacho e incidencias.
 
-* **Qué se aceptó o corrigió:** [Se aceptaron las tablas y conexiones. Pero se debió solicitar el "Resumen de relaciones" en la parte 1. Y para la parte 2 se modificaron titulos, se acomodó la presentación de las tablas y ajustaron ejemplos y parrafos]
+* **Qué se aceptó o corrigió:** Se aceptaron las tablas y conexiones. Pero se debió solicitar el "Resumen de relaciones" en la parte 1. Y para la parte 2 se modificaron titulos, se acomodó la presentación de las tablas y ajustaron ejemplos y parrafos
 
   **Detalle de lo corregido** (comprobable en el commit `74dfe15`, 04-10-2026):
 
@@ -222,7 +225,7 @@ Por cada una de las 9 tablas se explicitan los campos obligatorios (que no puede
 
   **Lo que esa corrección no detectó:** quedaron dos celdas con texto en campos numéricos, `1 (Despachador)` en USUARIOS.id_cargo y `1 (Supermercados Lider)` en NOTIFICACIONES.id_cliente_destinatario. Las señaló la retroalimentación y se corrigieron el 22-11-2026 (ver Uso 9).
 
-* **Cómo se verificó:** [Se reviso la imagen de la base datos en la rama dev. Se pudo verificar que graficamente coincidió con las conexiones de las tablas esperadas]
+* **Cómo se verificó:** Se reviso la imagen de la base datos en la rama dev. Se pudo verificar que graficamente coincidió con las conexiones de las tablas esperadas
 
   **Límite de esa verificación:** que el diagrama se vea bien en GitHub confirma que la sintaxis Mermaid es válida y que las líneas unen las tablas pedidas, pero **no** que el modelo sea correcto. Para eso se contrastó (22-11-2026) cada paso y extensión del caso de uso del Avance 2 con la tabla y el campo donde debería quedar guardado:
 
@@ -243,80 +246,85 @@ Por cada una de las 9 tablas se explicitan los campos obligatorios (que no puede
 
   Las tres brechas (❌) son las de la retroalimentación del modelo de datos; su corrección se registra en el Uso 10. La extensión 3 (⚠️) queda parcial: el cierre sí se guarda, pero NOTIFICACIONES no distingue si un aviso es el original o una actualización. Queda pendiente decidir si se agrega un campo `tipo_aviso` (original, actualizacion).
 
+---
 
 ## Uso 7
-* **Objetivo:** [Crear el .env.example)]
-* **Instrucción (Prompt):** [" Trabajo en un repositorio en github en la construcción del armado de carpetas inicial. En la raíz del repositorio, necesito crear un .env.example con los nombres de las variables sin valores. se va a utilizar Supabase mas adelante. No puedes cambiar ningún otro archivo ni carpeta del repositorio."
-" ]
-* **Respuesta obtenida:** ["He creado el archivo .env.example en la raíz del repositorio con las variables requeridas para la integración con Supabase, sin asignarles valores. Verificación:
+* **Objetivo:** Crear el .env.example)
+* **Instrucción (Prompt):** " Trabajo en un repositorio en github en la construcción del armado de carpetas inicial. En la raíz del repositorio, necesito crear un .env.example con los nombres de las variables sin valores. se va a utilizar Supabase mas adelante. No puedes cambiar ningún otro archivo ni carpeta del repositorio."
+" 
+* **Respuesta obtenida:** "He creado el archivo .env.example en la raíz del repositorio con las variables requeridas para la integración con Supabase, sin asignarles valores. Verificación:
 Se comprobó mediante git status que únicamente se ha creado el archivo .env.example en la raíz del proyecto.
-No se modificó ningún otro archivo ni carpeta del repositorio."]
+No se modificó ningún otro archivo ni carpeta del repositorio."
 
-* **Qué se aceptó o corrigió:** [La respuesta utilizada fue tal cual la obtenida, no se tuvo que modificar]
-* **Cómo se verificó:** [Se comprobo que la respuesta fuera parecida a casos similares obtenidos en google]
+* **Qué se aceptó o corrigió:** La respuesta utilizada fue tal cual la obtenida, no se tuvo que modificar
+* **Cómo se verificó:** Se comprobo que la respuesta fuera parecida a casos similares obtenidos en google
 
 
 ---
 
 ## Uso 8
-* **Objetivo:** [Diseñar la prueba de usuarios del Avance 6 (hipótesis, tareas, perfiles, plan de levantamiento) y el guion de la sesión, documentados en docs/prueba-usuarios.md y docs/pauta-validacion.md]
-
+* **Objetivo:** Diseñar la prueba de usuarios del Avance 6 (hipótesis, tareas, perfiles, plan de levantamiento) y el guion de la sesión, documentados en docs/prueba-usuarios.md y docs/pauta-validacion.md
+* **Contexto:** El repositorio ya contaba con las historias de usuario (`docs/historias.md`), el análisis ético con el mapa de impacto (`docs/etica.md`), el prototipo navegable y los wireframes (`docs/wireframes/`), y la hipótesis planteada en el Avance 2. El Avance 6 pedía diseñar, sin ejecutarla todavía, la prueba con usuarios y el guion de la sesión. La sesión se realizó el 08-11-2026 (commit `c530092`).
+* **Intención:** Diseñar una prueba que permita aceptar o rechazar la hipótesis del Avance 2 con evidencia observable, construida solo con datos del repositorio y revisada contra la lista de errores frecuentes del Avance 6 antes de darla por terminada.
+* **Restricciones:** No usar datos fuera del repositorio; nombrar a quienes facilitan como «Integrante 1, 2, 3», sin nombres reales; sesiones de máximo 20 minutos; guion de máximo dos planas; evidencia sin audio ni rostro, guardada fuera del repositorio; escenarios y objetivos de las tareas sin nombrar botones ni pantallas; ningún dato personal en el repositorio.
 * **Instrucción y respuesta (en orden):**
 
-1. **Prompt:** ["Crea docs/prueba-usuarios.md con el título '# Diseño de prueba de usuarios · [nombre del proyecto]' y dos secciones: '1. Objetivo, hipótesis y alcance' (pregunta que responde la prueba, una hipótesis falseable con la plantilla 'Creemos que… Lo sabremos cuando observemos…' retomando la del Avance 2, y qué queda fuera de alcance) y '2. Tareas, métricas y umbral' (2-3 tareas del flujo principal en una tabla Tarea | HU | Escenario | Objetivo | Éxito | No revelar | Umbral, sin nombrar botones ni pantallas en escenario/objetivo, con datos que existan en el prototipo, y umbrales numéricos concretos). Restricción: todo debe salir del repositorio, lo que falte queda como [POR COMPLETAR]."]
-   **Respuesta:** [Se creó docs/prueba-usuarios.md con ambas secciones, usando la hipótesis del Avance 2 (docs/unidad1/Avance2_Equipo_4.docx.pdf) y datos reales de los wireframes (Planta Norte, JK-LP-82, "Carga no lista"). Se verificó que ningún escenario/objetivo nombrara botones o pantallas, que los criterios de éxito fueran observables en una grabación, y se avisó que los umbrales numéricos no salían del repositorio (no había ninguno previo) sino que eran una propuesta a validar por el equipo.]
+1. **Prompt:** "Crea docs/prueba-usuarios.md con el título '# Diseño de prueba de usuarios · [nombre del proyecto]' y dos secciones: '1. Objetivo, hipótesis y alcance' (pregunta que responde la prueba, una hipótesis falseable con la plantilla 'Creemos que… Lo sabremos cuando observemos…' retomando la del Avance 2, y qué queda fuera de alcance) y '2. Tareas, métricas y umbral' (2-3 tareas del flujo principal en una tabla Tarea | HU | Escenario | Objetivo | Éxito | No revelar | Umbral, sin nombrar botones ni pantallas en escenario/objetivo, con datos que existan en el prototipo, y umbrales numéricos concretos). Restricción: todo debe salir del repositorio, lo que falte queda como [POR COMPLETAR]."
+   **Respuesta:** Se creó docs/prueba-usuarios.md con ambas secciones, usando la hipótesis del Avance 2 (docs/unidad1/Avance2_Equipo_4.docx.pdf) y datos reales de los wireframes (Planta Norte, JK-LP-82, "Carga no lista"). Se verificó que ningún escenario/objetivo nombrara botones o pantallas, que los criterios de éxito fueran observables en una grabación, y se avisó que los umbrales numéricos no salían del repositorio (no había ninguno previo) sino que eran una propuesta a validar por el equipo.
 
-2. **Prompt:** ["Agrega '## 3. Perfiles y reclutamiento' con una tabla Perfil | Usuario o stakeholder | N.º | Cómo se contacta | Por qué, distinguiendo usuarios (ejecutan tareas en el celular) de stakeholders (se consultan por restricciones y adopción), considerando el rol de Coordinadora de despachos de docs/historias.md, e incluyendo al menos un perfil del grupo excluido según el mapa de impacto del Avance 5. Avisar si el Avance 5 describe la exclusión de otra forma antes de escribirla."]
-   **Respuesta:** [Antes de escribir la tabla, se avisó que docs/etica.md (B1) solo describía al excluido como "sin cobertura en ruta", sin la parte de teléfonos antiguos/no inteligentes que pedía el mensaje. Se preguntó cómo seguir; se eligió actualizar primero esa fila de docs/etica.md, y luego se escribió la sección 3 ya consistente con ese cambio.]
+2. **Prompt:** "Agrega '## 3. Perfiles y reclutamiento' con una tabla Perfil | Usuario o stakeholder | N.º | Cómo se contacta | Por qué, distinguiendo usuarios (ejecutan tareas en el celular) de stakeholders (se consultan por restricciones y adopción), considerando el rol de Coordinadora de despachos de docs/historias.md, e incluyendo al menos un perfil del grupo excluido según el mapa de impacto del Avance 5. Avisar si el Avance 5 describe la exclusión de otra forma antes de escribirla."
+   **Respuesta:** Antes de escribir la tabla, se avisó que docs/etica.md (B1) solo describía al excluido como "sin cobertura en ruta", sin la parte de teléfonos antiguos/no inteligentes que pedía el mensaje. Se preguntó cómo seguir; se eligió actualizar primero esa fila de docs/etica.md, y luego se escribió la sección 3 ya consistente con ese cambio.
 
-3. **Prompt:** ["Agrega '## 5. Plan de levantamiento': número de sesiones coherente con los perfiles, duración máxima 20 min por sesión, quién facilita/registra/resguarda la evidencia (usando 'Integrante 1, 2, 3'), qué es la evidencia (grabación sin audio ni rostro, más transcripción en vivo), qué pasa si el participante no tiene celular compatible, dónde se guarda (Drive del curso, fuera del repositorio, sin links), una planilla vacía Participante | Tarea | Minuto | Observado | Interpretado | Severidad, y la regla de decisión bloquea/entorpece/estético."]
-   **Respuesta:** [Se agregó la sección 5, cubriendo las 10 sesiones de los perfiles usuario (P1 y P2), con los tres roles, el protocolo de evidencia sin audio/rostro, el caso del perfil excluido (se mantienen sus condiciones reales en vez de reemplazarlas por el celular de prueba) y la planilla vacía con su regla de decisión al final.]
+3. **Prompt:** "Agrega '## 5. Plan de levantamiento': número de sesiones coherente con los perfiles, duración máxima 20 min por sesión, quién facilita/registra/resguarda la evidencia (usando 'Integrante 1, 2, 3'), qué es la evidencia (grabación sin audio ni rostro, más transcripción en vivo), qué pasa si el participante no tiene celular compatible, dónde se guarda (Drive del curso, fuera del repositorio, sin links), una planilla vacía Participante | Tarea | Minuto | Observado | Interpretado | Severidad, y la regla de decisión bloquea/entorpece/estético."
+   **Respuesta:** Se agregó la sección 5, cubriendo las 10 sesiones de los perfiles usuario (P1 y P2), con los tres roles, el protocolo de evidencia sin audio/rostro, el caso del perfil excluido (se mantienen sus condiciones reales en vez de reemplazarlas por el celular de prueba) y la planilla vacía con su regla de decisión al final.
 
-4. **Prompt:** ["Crea docs/pauta-validacion.md con el guion que lee quien facilita, en orden y con minutos por etapa: bienvenida y consentimiento, 2-3 preguntas de contexto sobre hechos pasados, instrucción de pensar en voz alta, las tareas de la sección 2 copiadas textualmente, el cuestionario SUS de 10 ítems, y 2 preguntas de cierre. Máximo dos planas, y que la suma de consentimiento+contexto+tareas+cuestionario no pase de 20 minutos. Ninguna pregunta debe sugerir la respuesta, pedir opinión sobre el futuro o promover la idea del equipo."]
-   **Respuesta:** [Se creó docs/pauta-validacion.md con el guion completo. Se sumaron los minutos (15 min el bloque pedido, 18 min el guion completo) y se comparó cada tarea contra docs/prueba-usuarios.md, confirmando que el texto del escenario era idéntico. Se avisó explícitamente que 2 ítems del cuestionario SUS ("¿usaría…?", predicciones sobre otras personas) sí calzan con el tipo de pregunta de opinión/futuro que la restricción pide evitar, por ser parte de un instrumento estándar y no una pregunta propia.]
+4. **Prompt:** "Crea docs/pauta-validacion.md con el guion que lee quien facilita, en orden y con minutos por etapa: bienvenida y consentimiento, 2-3 preguntas de contexto sobre hechos pasados, instrucción de pensar en voz alta, las tareas de la sección 2 copiadas textualmente, el cuestionario SUS de 10 ítems, y 2 preguntas de cierre. Máximo dos planas, y que la suma de consentimiento+contexto+tareas+cuestionario no pase de 20 minutos. Ninguna pregunta debe sugerir la respuesta, pedir opinión sobre el futuro o promover la idea del equipo."
+   **Respuesta:** Se creó docs/pauta-validacion.md con el guion completo. Se sumaron los minutos (15 min el bloque pedido, 18 min el guion completo) y se comparó cada tarea contra docs/prueba-usuarios.md, confirmando que el texto del escenario era idéntico. Se avisó explícitamente que 2 ítems del cuestionario SUS ("¿usaría…?", predicciones sobre otras personas) sí calzan con el tipo de pregunta de opinión/futuro que la restricción pide evitar, por ser parte de un instrumento estándar y no una pregunta propia.
 
-5. **Prompt:** ["Pauta de errores frecuentes del Avance 6 (demostración disfrazada de prueba, preguntas de opinión, umbral elástico, perfiles genéricos, sesiones extensas, datos personales en el repositorio): revisar ambos documentos contra esa lista."]
-   **Respuesta:** [Se revisaron los dos archivos contra la lista. Se confirmó que 4 de los 6 errores no aplicaban (no hay instrucciones de qué tocar, los umbrales son concretos, no hay datos personales ni links a grabaciones). Se encontraron 2 reales: el cuestionario SUS (preguntas de opinión/futuro) y 3 perfiles sin vía de contacto definida. Se preguntó cómo resolver cada uno; se decidió reemplazar el SUS por una pregunta de facilidad (1-5) después de cada tarea, y proponer vías de contacto para esos 3 perfiles, marcadas explícitamente como propuesta no confirmada por el equipo. Se aplicaron ambos cambios en docs/pauta-validacion.md y docs/prueba-usuarios.md.]
+5. **Prompt:** "Pauta de errores frecuentes del Avance 6 (demostración disfrazada de prueba, preguntas de opinión, umbral elástico, perfiles genéricos, sesiones extensas, datos personales en el repositorio): revisar ambos documentos contra esa lista."
+   **Respuesta:** Se revisaron los dos archivos contra la lista. Se confirmó que 4 de los 6 errores no aplicaban (no hay instrucciones de qué tocar, los umbrales son concretos, no hay datos personales ni links a grabaciones). Se encontraron 2 reales: el cuestionario SUS (preguntas de opinión/futuro) y 3 perfiles sin vía de contacto definida. Se preguntó cómo resolver cada uno; se decidió reemplazar el SUS por una pregunta de facilidad (1-5) después de cada tarea, y proponer vías de contacto para esos 3 perfiles, marcadas explícitamente como propuesta no confirmada por el equipo. Se aplicaron ambos cambios en docs/pauta-validacion.md y docs/prueba-usuarios.md.
 
-* **Qué se aceptó o corrigió:** [Se aceptó la estructura y el contenido de cada paso. Los ajustes relevantes fueron dos: la corrección de docs/etica.md antes de escribir la sección 3 (en vez de inventar el dato del excluido), y el reemplazo del cuestionario SUS por la pregunta de facilidad por tarea, detectado en la revisión de errores frecuentes.]
-* **Cómo se verificó:** [Se releyeron docs/historias.md, docs/etica.md, docs/prueba-usuarios.md y las imágenes de docs/wireframes/ antes de escribir cada sección, para no usar datos fuera del repositorio. Se hizo una revisión de sesgo explícita sobre escenarios/objetivos (sin botones ni pantallas), preguntas de contexto y cierre (hechos pasados, no opinión ni futuro), y se repasó la lista de errores frecuentes del Avance 6 completa al final.]
+* **Qué se aceptó o corrigió:** Se aceptó la estructura y el contenido de cada paso. Los ajustes relevantes fueron dos: la corrección de docs/etica.md antes de escribir la sección 3 (en vez de inventar el dato del excluido), y el reemplazo del cuestionario SUS por la pregunta de facilidad por tarea, detectado en la revisión de errores frecuentes.
+* **Cómo se verificó:** Se releyeron docs/historias.md, docs/etica.md, docs/prueba-usuarios.md y las imágenes de docs/wireframes/ antes de escribir cada sección, para no usar datos fuera del repositorio. Se hizo una revisión de sesgo explícita sobre escenarios/objetivos (sin botones ni pantallas), preguntas de contexto y cierre (hechos pasados, no opinión ni futuro), y se repasó la lista de errores frecuentes del Avance 6 completa al final.
 
 ---
 
 ## Uso 9
-* **Objetivo:** [Definir el camino delgado (acción punta a punta) y documentar la arquitectura de componentes junto con el alcance inicial en `docs/arquitectura.md`.]
-* **Contexto:** [Se inicia la fase de desarrollo de la PoC del proyecto de gestión de imprevistos en despachos, partiendo de los artefactos ya existentes en el repositorio (`docs/historias.md`, `docs/prototipo.md` y `docs/datos/estructura_datos.md`) y de las láminas del curso sobre *Camino completo y límite explícito* (Figura 7) y *La PoC es un camino delgado completo*.]
-* **Intención:** [Primero alinear mediante preguntas el alcance exacto del camino delgado (acción mínima, manejo de despachos, validaciones, límites explícitos y stack) contrastándolo con lo documentado en GitHub; luego crear `docs/arquitectura.md` con el diagrama de componentes en Mermaid, la tabla por pieza, el plan de falla de servicios externos y la definición formal del camino delgado.]
-* **Restricciones:** [En el primer turno, no crear ni modificar ningún archivo del repositorio y solo hacer preguntas para definir el camino delgado. En el segundo turno, crear únicamente `docs/arquitectura.md` y registrar esta conversación en `docs/bitacora-ia/bitacora.md` sin modificar ningún otro documento; usar los 3 tipos actuales de imprevisto (`Carga no lista`, `Retraso`, `Camión en espera`), dejar explícito el envío real por correo para la siguiente iteración y explicar que el inicio de sesión se resuelve temporalmente con un coordinador fijo de prueba (seed) en Supabase.]
+* **Objetivo:** Definir el camino delgado (acción punta a punta) y documentar la arquitectura de componentes junto con el alcance inicial en `docs/arquitectura.md`.
+* **Contexto:** Se inicia la fase de desarrollo de la PoC del proyecto de gestión de imprevistos en despachos, partiendo de los artefactos ya existentes en el repositorio (`docs/historias.md`, `docs/prototipo.md` y `docs/datos/estructura_datos.md`) y de las láminas del curso sobre *Camino completo y límite explícito* (Figura 7) y *La PoC es un camino delgado completo*.
+* **Intención:** Primero alinear mediante preguntas el alcance exacto del camino delgado (acción mínima, manejo de despachos, validaciones, límites explícitos y stack) contrastándolo con lo documentado en GitHub; luego crear `docs/arquitectura.md` con el diagrama de componentes en Mermaid, la tabla por pieza, el plan de falla de servicios externos y la definición formal del camino delgado.
+* **Restricciones:** En el primer turno, no crear ni modificar ningún archivo del repositorio y solo hacer preguntas para definir el camino delgado. En el segundo turno, crear únicamente `docs/arquitectura.md` y registrar esta conversación en `docs/bitacora-ia/bitacora.md` sin modificar ningún otro documento; usar los 3 tipos actuales de imprevisto (`Carga no lista`, `Retraso`, `Camión en espera`), dejar explícito el envío real por correo para la siguiente iteración y explicar que el inicio de sesión se resuelve temporalmente con un coordinador fijo de prueba (seed) en Supabase.
 * **Instrucción y respuesta (en orden):**
 
-1. **Prompt:** ["No modifiques ni crees nada. Necesito definir el 'Camino delgado' (acción de punta a punta) para comenzar a desarrollar. Hazme las preguntas necesarias para que definamos este camino. No crees ni modifiques ningún documento." (adjuntando Figura 7: Camino completo y límite explícito).]
-   **Respuesta:** [Se revisó `docs/prototipo.md` sin modificar archivos y se formularon 5 preguntas estructuradas sobre la acción mínima punta a punta, manejo de despachos en Supabase, validaciones del backend, límite explícito y stack/despliegue. Tras responder las preguntas (y consultar si el flujo propuesto por el usuario coincidía con GitHub), se contrastó contra `docs/historias.md`, `docs/prototipo.md` y `docs/datos/estructura_datos.md`, recomendando tres ajustes: (1) sacar el login del camino delgado usando un coordinador fijo seed en Supabase, (2) dejar el envío real de correos para la siguiente iteración guardando por ahora los avisos en Supabase, y (3) usar los 3 tipos actuales de imprevisto de `docs/historias.md` (`Carga no lista`, `Retraso`, `Camión en espera`).]
+1. **Prompt:** "No modifiques ni crees nada. Necesito definir el 'Camino delgado' (acción de punta a punta) para comenzar a desarrollar. Hazme las preguntas necesarias para que definamos este camino. No crees ni modifiques ningún documento." (adjuntando Figura 7: Camino completo y límite explícito).
+   **Respuesta:** Se revisó `docs/prototipo.md` sin modificar archivos y se formularon 5 preguntas estructuradas sobre la acción mínima punta a punta, manejo de despachos en Supabase, validaciones del backend, límite explícito y stack/despliegue. Tras responder las preguntas (y consultar si el flujo propuesto por el usuario coincidía con GitHub), se contrastó contra `docs/historias.md`, `docs/prototipo.md` y `docs/datos/estructura_datos.md`, recomendando tres ajustes: (1) sacar el login del camino delgado usando un coordinador fijo seed en Supabase, (2) dejar el envío real de correos para la siguiente iteración guardando por ahora los avisos en Supabase, y (3) usar los 3 tipos actuales de imprevisto de `docs/historias.md` (`Carga no lista`, `Retraso`, `Camión en espera`).
 
-2. **Prompt:** ["Crea un documento en `docs/arquitectura.md`, dentro de este muestra el diagrama a nivel de componentes (Mermaid) con el frontend, el backend, los datos, el servicio externo si existe y la publicación, y una flecha por cada comunicación. Bajo el diagrama, una tabla con una fila por pieza que indique qué hace en esta solución (no la definición general), con qué está hecha y con quién se comunica. Si la solución depende de un servicio externo, se declara su plan de falla: qué ve la persona y qué hace mientras ese servicio no responde. 2. Camino delgado: la acción elegida (una sola), por qué corresponde al supuesto más frágil de la solución, qué queda fuera por ahora (declarado como decisión, no como olvido) y qué ve la persona si algo falla. Además ajusta los tipos de imprevistos, usa los 3 tipos actuales. Deja explícitos los límites para la siguiente iteración (envío por correo). Explica que el inicio de sesión es usando un coordinador fijo de prueba (seed) en Supabase. No modifiques ningún otro documento. Deja esta conversación como registro en `bitacora.md` siguiendo la estructura ya establecida (contexto, intención, restricciones y verificación)."]
-   **Respuesta:** [Se creó `docs/arquitectura.md` con las dos secciones solicitadas: (1) diagrama de componentes en Mermaid con Frontend (Next.js/React), Backend API (Next.js Route Handlers), Datos (Supabase/PostgreSQL), Servicio externo de correo (siguiente iteración) y Publicación (Vercel), tabla específica por pieza y plan de falla ante caída del servicio externo o BD; y (2) definición del camino delgado (P1 → P2 → [P3] → P4) con los 3 tipos actuales de imprevisto, explicación del coordinador fijo seed en Supabase, justificación del supuesto más frágil, tabla de límites explícitos y manejo de errores visibles para la persona. Se agregó además este registro en `docs/bitacora-ia/bitacora.md`.]
+2. **Prompt:** "Crea un documento en `docs/arquitectura.md`, dentro de este muestra el diagrama a nivel de componentes (Mermaid) con el frontend, el backend, los datos, el servicio externo si existe y la publicación, y una flecha por cada comunicación. Bajo el diagrama, una tabla con una fila por pieza que indique qué hace en esta solución (no la definición general), con qué está hecha y con quién se comunica. Si la solución depende de un servicio externo, se declara su plan de falla: qué ve la persona y qué hace mientras ese servicio no responde. 2. Camino delgado: la acción elegida (una sola), por qué corresponde al supuesto más frágil de la solución, qué queda fuera por ahora (declarado como decisión, no como olvido) y qué ve la persona si algo falla. Además ajusta los tipos de imprevistos, usa los 3 tipos actuales. Deja explícitos los límites para la siguiente iteración (envío por correo). Explica que el inicio de sesión es usando un coordinador fijo de prueba (seed) en Supabase. No modifiques ningún otro documento. Deja esta conversación como registro en `bitacora.md` siguiendo la estructura ya establecida (contexto, intención, restricciones y verificación)."
+   **Respuesta:** Se creó `docs/arquitectura.md` con las dos secciones solicitadas: (1) diagrama de componentes en Mermaid con Frontend (Next.js/React), Backend API (Next.js Route Handlers), Datos (Supabase/PostgreSQL), Servicio externo de correo (siguiente iteración) y Publicación (Vercel), tabla específica por pieza y plan de falla ante caída del servicio externo o BD; y (2) definición del camino delgado (P1 → P2 → [P3] → P4) con los 3 tipos actuales de imprevisto, explicación del coordinador fijo seed en Supabase, justificación del supuesto más frágil, tabla de límites explícitos y manejo de errores visibles para la persona. Se agregó además este registro en `docs/bitacora-ia/bitacora.md`.
 
-* **Qué se aceptó o corrigió:** [Se aceptó la propuesta consolidada del camino delgado incluyendo los tres ajustes detectados en la revisión del repositorio (sin login usando coordinador seed, envío real por correo pospuesto a la siguiente iteración y uso de los 3 tipos actuales de imprevisto).]
-* **Cómo se verificó:** [Se revisó `git status` para confirmar que únicamente se creó `docs/arquitectura.md` y se actualizó `docs/bitacora-ia/bitacora.md`, sin alterar ningún otro archivo del repositorio. Se contrastó el contenido contra `docs/historias.md`, `docs/prototipo.md` y los criterios de la Figura 7 y la lámina de PoC (acción única punta a punta, tipos de imprevisto vigentes, plan de falla, coordinador seed y límites explícitos).]
+* **Qué se aceptó o corrigió:** Se aceptó la propuesta consolidada del camino delgado incluyendo los tres ajustes detectados en la revisión del repositorio (sin login usando coordinador seed, envío real por correo pospuesto a la siguiente iteración y uso de los 3 tipos actuales de imprevisto).
+* **Cómo se verificó:** Se revisó `git status` para confirmar que únicamente se creó `docs/arquitectura.md` y se actualizó `docs/bitacora-ia/bitacora.md`, sin alterar ningún otro archivo del repositorio. Se contrastó el contenido contra `docs/historias.md`, `docs/prototipo.md` y los criterios de la Figura 7 y la lámina de PoC (acción única punta a punta, tipos de imprevisto vigentes, plan de falla, coordinador seed y límites explícitos).
 
 ---
 
 ## Uso 10
-* **Objetivo:** [Incorporar la retroalimentación del profesor sobre el modelo de datos, la bitácora y el README, antes de comenzar el Avance 7]
-
+* **Objetivo:** Incorporar la retroalimentación del profesor sobre el modelo de datos, la bitácora y el README, antes de comenzar el Avance 7
+* **Contexto:** Se recibió la retroalimentación del Avance 3, con observaciones sobre el modelo de datos (`docs/datos/estructura_datos.md`), la bitácora (Usos 3 y 6) y el README. Al momento de corregir, el repositorio ya incluía el trabajo hasta el Avance 6. La sesión se realizó el 22-11-2026.
+* **Intención:** Corregir cada observación verificándola contra una fuente concreta (el caso de uso del Avance 2, el historial de git y la plantilla oficial de `.gitignore`), en vez de reconstruir los cambios de memoria, y revisar antes de editar si alguna corrección ya estaba hecha en los archivos actuales.
+* **Restricciones:** Responder en español; trabajar siempre en la rama `dev`; el agente no aplica cambios sin aprobación: primero propone, y una vez aprobado deja los cambios listos para que el equipo revise y haga el commit.
 * **Instrucción y respuesta (en orden):**
 
-1. **Prompt:** [Se pegó al agente la retroalimentación del modelo de datos: el envío fallido de la extensión 2 no tiene dónde guardarse, al cambiar de camión se pierde el original, no se sabe qué jefe de operaciones corresponde a cada despacho, VEHICULOS.id_conductor no guarda el historial "a lo largo del tiempo", hay dos celdas de clave foránea con texto y DESPACHOS.destino repite el nombre del cliente.]
-   **Respuesta:** [El agente leyó docs/datos/estructura_datos.md completo y propuso un cambio por cada punto, sin aplicarlo: (1) estado_envio con "pendiente", más intentos y motivo_fallo; (2) id_vehiculo_original e id_vehiculo_nuevo en IMPREVISTOS; (3) id_jefe_operaciones en DESPACHOS; (4) corregir el texto de la relación conductor-vehículo, mencionando como alternativa más compleja agregar id_conductor a DESPACHOS; (5) dejar solo el número en las dos celdas; (6) definir destino como punto específico de entrega.]
+1. **Prompt:** Se pegó al agente la retroalimentación del modelo de datos: el envío fallido de la extensión 2 no tiene dónde guardarse, al cambiar de camión se pierde el original, no se sabe qué jefe de operaciones corresponde a cada despacho, VEHICULOS.id_conductor no guarda el historial "a lo largo del tiempo", hay dos celdas de clave foránea con texto y DESPACHOS.destino repite el nombre del cliente.
+   **Respuesta:** El agente leyó docs/datos/estructura_datos.md completo y propuso un cambio por cada punto, sin aplicarlo: (1) estado_envio con "pendiente", más intentos y motivo_fallo; (2) id_vehiculo_original e id_vehiculo_nuevo en IMPREVISTOS; (3) id_jefe_operaciones en DESPACHOS; (4) corregir el texto de la relación conductor-vehículo, mencionando como alternativa más compleja agregar id_conductor a DESPACHOS; (5) dejar solo el número en las dos celdas; (6) definir destino como punto específico de entrega.
 
-2. **Prompt:** [Se pegó la retroalimentación de la bitácora: la verificación del Uso 3 (.gitignore) no tenía fuente, y en el Uso 6 la corrección estaba descrita en forma general y la verificación solo revisaba que el diagrama se viera bien.]
-   **Respuesta:** [El agente revisó el historial de git del archivo de datos (commit 74dfe15) para describir lo que realmente se corrigió, en vez de reconstruirlo de memoria, y detectó que esa corrección dejó dos celdas con texto, justo las que señaló el profesor. Para el .gitignore ejecutó git check-ignore sobre archivos de prueba y encontró que .next/ y .vercel/ no se ignoraban.]
+2. **Prompt:** Se pegó la retroalimentación de la bitácora: la verificación del Uso 3 (.gitignore) no tenía fuente, y en el Uso 6 la corrección estaba descrita en forma general y la verificación solo revisaba que el diagrama se viera bien.
+   **Respuesta:** El agente revisó el historial de git del archivo de datos (commit 74dfe15) para describir lo que realmente se corrigió, en vez de reconstruirlo de memoria, y detectó que esa corrección dejó dos celdas con texto, justo las que señaló el profesor. Para el .gitignore ejecutó git check-ignore sobre archivos de prueba y encontró que .next/ y .vercel/ no se ignoraban.
 
-3. **Prompt:** [Se pegó la retroalimentación del README: "Etapa actual: diseño y definición (Avance 2)" y no menciona lo hecho en el Avance 3.]
-   **Respuesta:** [El agente encontró que había dos README: el de la raíz (Avance 6) y una copia antigua en src/Readme.md que seguía en el Avance 2 y además hablaba de retail en vez de minería. Propuso dejar una sola fuente de verdad y actualizar el estado por avance.]
+3. **Prompt:** Se pegó la retroalimentación del README: "Etapa actual: diseño y definición (Avance 2)" y no menciona lo hecho en el Avance 3.
+   **Respuesta:** El agente encontró que había dos README: el de la raíz (Avance 6) y una copia antigua en src/Readme.md que seguía en el Avance 2 y además hablaba de retail en vez de minería. Propuso dejar una sola fuente de verdad y actualizar el estado por avance.
 
-4. **Prompt:** ["ahora agregar a commit": aprobación para aplicar los cambios, dejando el commit al equipo.]
-   **Respuesta:** [Se aplicaron los cambios en estructura_datos.md, bitacora.md, .gitignore, Readme.md y src/Readme.md, sin hacer commit.]
+4. **Prompt:** "ahora agregar a commit": aprobación para aplicar los cambios, dejando el commit al equipo.
+   **Respuesta:** Se aplicaron los cambios en estructura_datos.md, bitacora.md, .gitignore, Readme.md y src/Readme.md, sin hacer commit.
 
 * **Qué se aceptó o corrigió:**
   - Se aceptaron las seis correcciones del modelo. Para el punto 4 se eligió la opción mínima (corregir el texto de la relación) en lugar de agregar una tabla de historial de asignaciones.
@@ -331,18 +339,20 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
 ---
 
 ## Uso 11
-* **Objetivo:** [Incorporar en el repositorio la retroalimentación del Avance 5 (prototipo y ética), sin modificar el prototipo en Figma]
-
+* **Objetivo:** Incorporar en el repositorio la retroalimentación del Avance 5 (prototipo y ética), sin modificar el prototipo en Figma
+* **Contexto:** La retroalimentación del Avance 5 señaló que faltaban los estados vacío y de carga, que el mapa de navegación no coincidía con la pantalla P2, que la ficha de datos no tenía plazos de conservación, que la accesibilidad se declaraba sin medir, que P4b no existía en Figma y que los botones del prototipo no avanzaban. Parte de estos puntos se corrige en el repositorio y parte solo en el archivo de Figma. La sesión se realizó el 22-11-2026, a continuación del Uso 10.
+* **Intención:** Corregir en el repositorio todo lo que se pudiera respaldar con datos ya disponibles, y dejar marcado explícitamente como pendiente lo que dependía de Figma, sin aparentar que ya estaba resuelto.
+* **Restricciones:** Responder en español; trabajar siempre en la rama `dev`; el agente no modifica el prototipo en Figma; los cambios quedan listos para que el equipo los revise y haga el commit.
 * **Instrucción y respuesta (en orden):**
 
-1. **Prompt:** [Se pegó al agente la retroalimentación del Avance 5: faltan estados vacío y de carga; el mapa dice «Cancelar» en P2, pero la pantalla solo tiene «Volver»; la ficha de datos no da plazos de conservación; la accesibilidad dice «cumple» sin medir; P4b no existe en Figma; los botones del prototipo no avanzan; y la recomendación de incluir en la prueba a un conductor sin señal en ruta.]
-   **Respuesta:** [El agente leyó docs/etica.md, docs/prototipo.md y docs/prueba-usuarios.md. Separó lo que se corrige en el repositorio de lo que solo se puede corregir en Figma, y propuso los cambios sin aplicarlos. Detectó además una contradicción que la retroalimentación no mencionaba: prueba-usuarios.md decía en «Fuera de alcance» que no se probaría con un conductor sin cobertura, pero la sección 3 del mismo archivo sí lo incluye como perfil P2.]
+1. **Prompt:** Se pegó al agente la retroalimentación del Avance 5: faltan estados vacío y de carga; el mapa dice «Cancelar» en P2, pero la pantalla solo tiene «Volver»; la ficha de datos no da plazos de conservación; la accesibilidad dice «cumple» sin medir; P4b no existe en Figma; los botones del prototipo no avanzan; y la recomendación de incluir en la prueba a un conductor sin señal en ruta.
+   **Respuesta:** El agente leyó docs/etica.md, docs/prototipo.md y docs/prueba-usuarios.md. Separó lo que se corrige en el repositorio de lo que solo se puede corregir en Figma, y propuso los cambios sin aplicarlos. Detectó además una contradicción que la retroalimentación no mencionaba: prueba-usuarios.md decía en «Fuera de alcance» que no se probaría con un conductor sin cobertura, pero la sección 3 del mismo archivo sí lo incluye como perfil P2.
 
-2. **Prompt:** ["que es 12 meses a que se referia?"]
-   **Respuesta:** [El agente explicó que se trata del plazo de conservación de los datos personales (B2), que 12 meses era un ejemplo del profesor y no una regla, y dio alternativas (6, 12 o 24 meses o más) con el criterio de cada una.]
+2. **Prompt:** "que es 12 meses a que se referia?"
+   **Respuesta:** El agente explicó que se trata del plazo de conservación de los datos personales (B2), que 12 meses era un ejemplo del profesor y no una regla, y dio alternativas (6, 12 o 24 meses o más) con el criterio de cada una.
 
-3. **Prompt:** ["por favor hacer los cambios para poner en commit, no tocar lo de figma"]
-   **Respuesta:** [Se aplicaron los cambios en etica.md (plazos y contraste medido), prototipo.md (mapa con «Volver», estados P1 vacío y P2 carga, todo lo que falta en Figma marcado como pendiente), prueba-usuarios.md (se eliminó la contradicción) y el README. No se hizo commit ni se tocó Figma.]
+3. **Prompt:** "por favor hacer los cambios para poner en commit, no tocar lo de figma"
+   **Respuesta:** Se aplicaron los cambios en etica.md (plazos y contraste medido), prototipo.md (mapa con «Volver», estados P1 vacío y P2 carga, todo lo que falta en Figma marcado como pendiente), prueba-usuarios.md (se eliminó la contradicción) y el README. No se hizo commit ni se tocó Figma.
 
 * **Qué se aceptó o corrigió:**
   - Se aceptó el plazo de 12 meses desde el cierre del caso.
@@ -358,26 +368,26 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
 ---
 
 ## Uso 12
-* **Objetivo:** [Implementar la Prueba de Concepto (PoC) del camino delgado en `src/` (Next.js + Supabase) siguiendo `docs/arquitectura.md` y los wireframes de Figma, verificar la validación real en backend y la ausencia de claves expuestas, y sincronizar los cambios en la rama `dev` de GitHub.]
-* **Contexto:** [Se partió con `docs/arquitectura.md` ya definido, los 4 wireframes en `docs/wireframes/` (`wireframe 01.png`–`04.png`), el sistema mínimo en `docs/prototipo.md` y las 10 tablas ya creadas en Supabase (inicialmente vacías, sin datos semilla). Previo a iniciar la PoC también existía un conflicto de merge pendiente en `Readme.md` que impedía actualizar la rama `dev` contra `origin/dev`.]
-* **Intención:** [Resolver el bloqueo de GitHub y luego construir paso a paso —validando cada etapa antes de pasar a la siguiente— la acción única de punta a punta: seleccionar un despacho en curso, registrar un imprevisto con validación real en backend, guardarlo en Supabase junto con sus avisos y devolver un folio visible, dejando todo listo para despliegue público en Vercel.]
-* **Restricciones:** [No modificar archivos sin aprobación explícita en cada paso; mantener toda la aplicación dentro de `src/`; no guardar jamás claves reales ni credenciales en `.env.example`, en el código ni en commits; asegurar que `.gitignore` excluya `.env` y `.env.local`; no usar variables `NEXT_PUBLIC_` para credenciales de Supabase; y preparar la solución para despliegue público en Vercel sin requerir inicio de sesión.]
+* **Objetivo:** Implementar la Prueba de Concepto (PoC) del camino delgado en `src/` (Next.js + Supabase) siguiendo `docs/arquitectura.md` y los wireframes de Figma, verificar la validación real en backend y la ausencia de claves expuestas, y sincronizar los cambios en la rama `dev` de GitHub.
+* **Contexto:** Se partió con `docs/arquitectura.md` ya definido, los 4 wireframes en `docs/wireframes/` (`wireframe 01.png`–`04.png`), el sistema mínimo en `docs/prototipo.md` y las 10 tablas ya creadas en Supabase (inicialmente vacías, sin datos semilla). Previo a iniciar la PoC también existía un conflicto de merge pendiente en `Readme.md` que impedía actualizar la rama `dev` contra `origin/dev`.
+* **Intención:** Resolver el bloqueo de GitHub y luego construir paso a paso —validando cada etapa antes de pasar a la siguiente— la acción única de punta a punta: seleccionar un despacho en curso, registrar un imprevisto con validación real en backend, guardarlo en Supabase junto con sus avisos y devolver un folio visible, dejando todo listo para despliegue público en Vercel.
+* **Restricciones:** No modificar archivos sin aprobación explícita en cada paso; mantener toda la aplicación dentro de `src/`; no guardar jamás claves reales ni credenciales en `.env.example`, en el código ni en commits; asegurar que `.gitignore` excluya `.env` y `.env.local`; no usar variables `NEXT_PUBLIC_` para credenciales de Supabase; y preparar la solución para despliegue público en Vercel sin requerir inicio de sesión.
 * **Instrucción y respuesta (en orden):**
 
-1. **Prompt:** ["Soluciona el problema con GitHub. No puedo actualizar el repositorio. No modifiques ningún archivo del repositorio." → tras diagnóstico, se aprobó "opción 1".]
-   **Respuesta:** [Se inspeccionó `git status` y `git diff Readme.md` sin editar archivos, detectando un único conflicto en la línea `En curso` de `Readme.md` entre `HEAD` y `origin/dev`. Con la aprobación de la opción 1, se conservó la línea más completa de `origin/dev`, se completó el commit de merge (`aeeb826`) y se subió a `origin/dev`.]
+1. **Prompt:** "Soluciona el problema con GitHub. No puedo actualizar el repositorio. No modifiques ningún archivo del repositorio." → tras diagnóstico, se aprobó "opción 1".
+   **Respuesta:** Se inspeccionó `git status` y `git diff Readme.md` sin editar archivos, detectando un único conflicto en la línea `En curso` de `Readme.md` entre `HEAD` y `origin/dev`. Con la aprobación de la opción 1, se conservó la línea más completa de `origin/dev`, se completó el commit de merge (`aeeb826`) y se subió a `origin/dev`.
 
-2. **Prompt:** ["Necesito implementar la solución digital de la PoC basándome en `arquitectura.md`, siguiendo el camino delgado y los wireframes de Figma, en `src/`, desplegable en Vercel y con BD en Supabase. No modifiques nada de momento: plantea qué debo revisar antes de implementar y propón pasos a seguir."]
-   **Respuesta:** [Sin modificar archivos, se revisaron `.gitignore`, `.env.example`, `docs/prototipo.md`, `docs/datos/estructura_datos.md`, los 4 wireframes y el entorno local. Se detectó que Node.js aún no estaba instalado en el equipo, se explicó qué revisar en Supabase, Vercel (`Root Directory = src`, desactivar `Vercel Authentication`, variables de entorno) y seguridad de claves, y se propuso un plan en 6 pasos.]
+2. **Prompt:** "Necesito implementar la solución digital de la PoC basándome en `arquitectura.md`, siguiendo el camino delgado y los wireframes de Figma, en `src/`, desplegable en Vercel y con BD en Supabase. No modifiques nada de momento: plantea qué debo revisar antes de implementar y propón pasos a seguir."
+   **Respuesta:** Sin modificar archivos, se revisaron `.gitignore`, `.env.example`, `docs/prototipo.md`, `docs/datos/estructura_datos.md`, los 4 wireframes y el entorno local. Se detectó que Node.js aún no estaba instalado en el equipo, se explicó qué revisar en Supabase, Vercel (`Root Directory = src`, desactivar `Vercel Authentication`, variables de entorno) y seguridad de claves, y se propuso un plan en 6 pasos.
 
-3. **Prompt:** ["Revisa si mi instalación de Node.js quedó bien", se compartió el SQL de las 10 tablas creadas en Supabase (indicando que no había seed) y se consultó "¿por qué es necesario crear estos ejemplos?". Luego se confirmó avanzar al Paso 2.]
-   **Respuesta:** [Se verificó la instalación de Node.js (`v26.13.1`) y npm (`11.20.0`). Se validó compatibilidad total del esquema SQL con el camino delgado, se explicó por qué se necesitan datos semilla (llaves foráneas obligatorias `NOT NULL`, pantalla P1 sin mantenedor de despachos y destinatarios reales para `notificaciones`) y se entregó el script SQL idempotente con el coordinador fijo de prueba y los 3 despachos en curso (`Planta Norte · JK-LP-82`, `Planta Sur · BZ-XD-39` y `Faena Minera Los Bronces · FHTR-56`).]
+3. **Prompt:** "Revisa si mi instalación de Node.js quedó bien", se compartió el SQL de las 10 tablas creadas en Supabase (indicando que no había seed) y se consultó "¿por qué es necesario crear estos ejemplos?". Luego se confirmó avanzar al Paso 2.
+   **Respuesta:** Se verificó la instalación de Node.js (`v26.13.1`) y npm (`11.20.0`). Se validó compatibilidad total del esquema SQL con el camino delgado, se explicó por qué se necesitan datos semilla (llaves foráneas obligatorias `NOT NULL`, pantalla P1 sin mantenedor de despachos y destinatarios reales para `notificaciones`) y se entregó el script SQL idempotente con el coordinador fijo de prueba y los 3 despachos en curso (`Planta Norte · JK-LP-82`, `Planta Sur · BZ-XD-39` y `Faena Minera Los Bronces · FHTR-56`).
 
-4. **Prompt:** ["Listo. Avancemos con crear la base del proyecto Next.js" (Paso 2), luego "Ya pegué la key. Avancemos" (Paso 3) y "Avancemos al paso 4" (Paso 4).]
-   **Respuesta:** [En el Paso 2 se creó la base Next.js 15 + TypeScript + `@supabase/supabase-js` dentro de `src/` (`src/package.json`, `src/tsconfig.json`, `src/next.config.ts`, `src/lib/supabase.ts` exclusivo de servidor), se actualizó `.env.example` en la raíz solo con nombres de variables (`SUPABASE_URL=` y `SUPABASE_SERVICE_ROLE_KEY=`) y se preparó `src/.env.local` (ignorado por Git) para que el usuario pegara localmente su clave. En el Paso 3 se implementaron `src/lib/imprevistos.ts`, `GET /api/despachos` y `POST /api/imprevistos` con validación real en servidor. En el Paso 4 se construyeron las pantallas `P1`, `P1 vacío`, `P2`, `P2 carga`, `P3` y `P4` en `src/components/ImprevistosFlow.tsx`, `src/app/page.tsx` y `src/app/globals.css`.]
+4. **Prompt:** "Listo. Avancemos con crear la base del proyecto Next.js" (Paso 2), luego "Ya pegué la key. Avancemos" (Paso 3) y "Avancemos al paso 4" (Paso 4).
+   **Respuesta:** En el Paso 2 se creó la base Next.js 15 + TypeScript + `@supabase/supabase-js` dentro de `src/` (`src/package.json`, `src/tsconfig.json`, `src/next.config.ts`, `src/lib/supabase.ts` exclusivo de servidor), se actualizó `.env.example` en la raíz solo con nombres de variables (`SUPABASE_URL=` y `SUPABASE_SERVICE_ROLE_KEY=`) y se preparó `src/.env.local` (ignorado por Git) para que el usuario pegara localmente su clave. En el Paso 3 se implementaron `src/lib/imprevistos.ts`, `GET /api/despachos` y `POST /api/imprevistos` con validación real en servidor. En el Paso 4 se construyeron las pantallas `P1`, `P1 vacío`, `P2`, `P2 carga`, `P3` y `P4` en `src/components/ImprevistosFlow.tsx`, `src/app/page.tsx` y `src/app/globals.css`.
 
-5. **Prompt:** ["Avancemos al paso 5", luego "Primero probar el localhost, después paso 6", luego "Detén el servidor local y continúa al paso 6", y preguntas sobre el despliegue en Vercel (opción B: quién debe configurar claves y cómo acceden los demás miembros).]
-   **Respuesta:** [Se ejecutaron pruebas reales de punta a punta contra Supabase y auditoría de seguridad; luego se inició el servidor local en `http://localhost:3000` para validación visual directa del usuario. Al confirmar, se detuvo el servidor, se creó el commit `510c2ee` y se subió a `origin/dev`. Se explicó que en Vercel las claves se cargan una sola vez en *Environment Variables* (con `Root Directory = src` y *Vercel Authentication* desactivado) para que el resto del equipo y cualquier usuario acceda por URL pública sin instalar nada ni cargar claves en su PC.]
+5. **Prompt:** "Avancemos al paso 5", luego "Primero probar el localhost, después paso 6", luego "Detén el servidor local y continúa al paso 6", y preguntas sobre el despliegue en Vercel (opción B: quién debe configurar claves y cómo acceden los demás miembros).
+   **Respuesta:** Se ejecutaron pruebas reales de punta a punta contra Supabase y auditoría de seguridad; luego se inició el servidor local en `http://localhost:3000` para validación visual directa del usuario. Al confirmar, se detuvo el servidor, se creó el commit `510c2ee` y se subió a `origin/dev`. Se explicó que en Vercel las claves se cargan una sola vez en *Environment Variables* (con `Root Directory = src` y *Vercel Authentication* desactivado) para que el resto del equipo y cualquier usuario acceda por URL pública sin instalar nada ni cargar claves en su PC.
 
 * **Qué se aceptó o corrigió:**
   - Se aceptó avanzar estrictamente paso a paso con confirmación en cada etapa y mantener las claves exclusivamente en `src/.env.local` (local) y en Vercel (producción), sin exponerlas en GitHub ni en el navegador.
@@ -397,54 +407,56 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
 ---
 
 ## Uso 13
-* **Objetivo:** Conseguir instrucciones claras para corregir en Figma lo que quedó pendiente de la retroalimentación del Avance 5, y actualizar en el repositorio el enlace del prototipo.
-* **Contexto:** Lo que se podía corregir en el repositorio ya estaba listo en el commit `ed7ac39` (Uso 11). Lo que faltaba dependía de Figma: los botones del prototipo no avanzaban al hacer clic, no existían los cuadros P1 vacío, P2 carga y P4b (envío fallido), y todavía no habíamos medido el rojo de alerta ni el tamaño de los botones.
-* **Restricciones:** Trabajar en español y siempre en la rama `dev`. El agente no hace cambios por su cuenta: propone, nos muestra el diff y nosotros aprobamos y hacemos el commit. Tampoco modifica el archivo de Figma; solo nos entrega las instrucciones.
+* **Objetivo:** Obtener instrucciones para corregir en Figma los pendientes de la retroalimentación del Avance 5 y actualizar en el repositorio el enlace del prototipo.
+* **Contexto:** Los cambios del Avance 5 que se podían hacer en el repositorio ya estaban en el commit `ed7ac39` (Uso 11). Lo que faltaba dependía de Figma: los botones del prototipo no avanzaban al hacer clic, no existían los cuadros P1 vacío, P2 carga y P4b (envío fallido), y no se había medido el rojo de alerta ni el tamaño de los botones. La sesión se realizó en dos partes: las instrucciones y la copia nueva del archivo el 22-11-2026, y el enlace definitivo el 23-11-2026.
+* **Intención:** Contar con una guía concreta para corregir el prototipo en Figma y, una vez hecha la corrección, dejar el enlace actualizado en la documentación sin declarar como resuelto nada que no se pudiera comprobar.
+* **Restricciones:** Responder en español; trabajar siempre en la rama `dev`; el agente no hace cambios directos: propone, muestra el diff y el equipo aprueba y hace el commit; el agente no modifica el archivo de Figma, solo entrega instrucciones.
 * **Instrucción y respuesta (en orden):**
 
-1. **Prompt (22-11):** Solicitamos una guía paso a paso para corregir en Figma los pendientes de la retroalimentación del Avance 5.
-   **Respuesta:** El agente nos dio una guía paso a paso para el archivo Entrega-4. Primero, duplicar la página como respaldo. Luego, marcar P1 como punto de inicio del flujo y conectar cada botón con *On click → Navigate to*, siguiendo una tabla de 10 conexiones que ya incluía P2 carga, P4b y P1 vacío. Al final, recorrer todo con *Present* para comprobarlo y crear los tres cuadros que faltaban.
+1. **Prompt:** Se solicitó una guía paso a paso para corregir en Figma los pendientes de la retroalimentación del Avance 5.
+   **Respuesta:** Se entregó una guía para el archivo Entrega-4: duplicar la página como respaldo; marcar P1 como punto de inicio del flujo; conectar cada botón con *On click → Navigate to* según una tabla de 10 conexiones (incluidas P2 carga, P4b y P1 vacío); comprobar el recorrido con *Present*; y crear los cuadros P1 vacío, P2 carga y P4b.
 
-2. **Prompt (22-11):** Informamos que las correcciones se hicieron en una copia del archivo, "Entrega-4 (copia)", y compartimos su enlace para que el agente las revisara.
-   **Respuesta:** El agente no pudo abrir el archivo, porque Figma respondió que se había alcanzado el límite de llamadas del plan Starter. Entonces revisó el repositorio y vio que en `docs/wireframes/` no había capturas nuevas. Nos pidió las capturas de P1 vacío, P2 carga y P4b, el código del rojo de alerta y el alto y ancho del botón más pequeño. También nos advirtió que el enlace era de diseño (`/design/`), que abre el editor, y que para el profesor conviene el de presentación (`/proto/`). Además, nos recomendó revisar en *Share* que la copia quedara como "Anyone with the link · can view", porque las copias no siempre heredan los permisos del original.
+2. **Prompt:** Se informó que las correcciones se hicieron en una copia del archivo, "Entrega-4 (copia)", y se compartió su enlace para revisarlas.
+   **Respuesta:** El agente no pudo abrir el archivo, porque Figma respondió que se había alcanzado el límite de llamadas del plan Starter. Se revisó el repositorio y se confirmó que en `docs/wireframes/` no había capturas nuevas. Se pidieron las capturas de P1 vacío, P2 carga y P4b, el código del rojo de alerta y el alto y ancho del botón más pequeño. También se advirtió que el enlace era de diseño (`/design/`), que abre el editor, y que para el profesor conviene el de presentación (`/proto/`), y se recomendó revisar en *Share* que la copia quedara como "Anyone with the link · can view", porque las copias no siempre heredan los permisos del original.
 
-3. **Prompt (23-11):** Entregamos el enlace definitivo de la copia de Figma para actualizarlo en la documentación del proyecto.
-   **Respuesta:** El agente buscó todos los enlaces de Figma en el repositorio y cambió el antiguo (`bEA6Z4q1...`) en los dos lugares donde aparecía: la sección 7 del `Readme.md` y `docs/prototipo.md`. Dejó tal cual las marcas "pendiente en Figma", porque no tenía cómo comprobar qué cuadros existen en la copia nueva.
+3. **Prompt:** Se entregó el enlace definitivo de la copia de Figma para actualizarlo en la documentación del proyecto.
+   **Respuesta:** Se buscaron todos los enlaces de Figma del repositorio y se reemplazó el antiguo (`bEA6Z4q1...`) en los dos lugares donde aparecía: la sección 7 del `Readme.md` y `docs/prototipo.md`. Las marcas "pendiente en Figma" se dejaron sin cambios, porque no se pudo comprobar qué cuadros existen en la copia nueva.
 
 * **Qué se aceptó o corrigió:**
-  - Aceptamos el cambio de enlace. Quedó en el commit `5fccf0b` y llegó a `main` con el PR #14.
-  - Decidimos no quitar todavía las marcas "pendiente en Figma" de `docs/prototipo.md`, `docs/etica.md` y `Readme.md`. Sin acceso al archivo ni capturas, no teníamos cómo respaldar que ya estuvieran resueltas.
+  - Se aceptó el cambio de enlace (commit `5fccf0b`, llevado a `main` en el PR #14).
+  - No se quitaron las marcas "pendiente en Figma" de `docs/prototipo.md`, `docs/etica.md` y `Readme.md`: sin acceso al archivo ni capturas, no había cómo respaldar que estuvieran resueltas.
 
 * **Cómo se verificó:**
-  - Buscamos `figma.com` en todo el repositorio. El enlace antiguo solo aparecía en `Readme.md` y `docs/prototipo.md`, y después del cambio no quedó ninguna referencia a él.
-  - Revisamos el `git diff` antes del commit: solo cambiaban esas dos líneas.
-  - **Pendiente:** abrir el enlace nuevo en una ventana de incógnito para confirmar que se ve sin iniciar sesión, y revisar en Figma los cuadros que siguen pendientes.
+  - Se buscó `figma.com` en todo el repositorio: el enlace antiguo aparecía solo en `Readme.md` y `docs/prototipo.md`, y después del cambio no quedó ninguna referencia a él.
+  - Se revisó el `git diff` antes del commit: solo cambiaban esas dos líneas.
+  - **Pendiente:** abrir el enlace nuevo en una ventana de incógnito para confirmar que se ve sin iniciar sesión, y verificar en Figma los cuadros pendientes.
 
 ---
 
 ## Uso 14
-* **Objetivo:** Revisar qué faltaba del Avance 7, agregar el enlace de la PoC publicada en Vercel y corregir el riesgo de imprevistos duplicados que apareció en la prueba de punta a punta.
-* **Contexto:** El 22-11 se subieron a `dev` la arquitectura (Uso 9) y la PoC (Uso 12), que quedó publicada en `https://grupo-4-sigma.vercel.app/`. Sin embargo, el enlace no aparecía en ningún documento y el README seguía diciendo que no había nada que instalar ni ejecutar.
-* **Restricciones:** Trabajar en español y siempre en la rama `dev`. El agente no hace cambios por su cuenta: propone, nos muestra el diff y nosotros aprobamos y hacemos el commit. No hace push ni merge sin nuestra aprobación y nunca expone las claves de Supabase.
+* **Objetivo:** Revisar qué faltaba del Avance 7, agregar el enlace de la PoC publicada en Vercel y corregir el riesgo de imprevistos duplicados detectado en la prueba de punta a punta.
+* **Contexto:** El 22-11-2026 se subieron a `dev` la arquitectura (Uso 9) y la PoC (Uso 12), publicada en `https://grupo-4-sigma.vercel.app/`. Sin embargo, el enlace no aparecía en ningún documento y el README seguía diciendo que no había nada que instalar ni ejecutar. La sesión se realizó el 23-11-2026.
+* **Intención:** Cerrar los entregables del Avance 7 en la documentación, comprobar que la PoC publicada funciona de punta a punta y corregir los problemas detectados en la prueba antes de la entrega.
+* **Restricciones:** Responder en español; trabajar siempre en la rama `dev`; el agente no hace cambios directos: propone, muestra el diff y el equipo aprueba y hace el commit; no hacer push ni merge sin aprobación; no exponer claves de Supabase.
 * **Instrucción y respuesta (en orden):**
 
-1. **Prompt:** Solicitamos revisar el estado del Avance 7 para identificar los entregables pendientes y, en particular, la situación de la publicación en Vercel.
+1. **Prompt:** Se solicitó revisar el estado del Avance 7 para identificar los entregables pendientes y, en particular, la situación de la publicación en Vercel.
    **Respuesta:** El agente respondió que faltaba casi todo el Avance 7: `docs/arquitectura.md`, el código en `src/` y la publicación en Vercel. Esta respuesta resultó equivocada, como se ve en el punto siguiente.
 
-2. **Prompt:** Compartimos la URL pública de la PoC desplegada en Vercel.
-   **Respuesta:** El agente abrió el sitio y vio que cargaba bien (HTTP 200, página "Despachos / Imprevistos · PoC"). Al ejecutar `git fetch`, encontró 4 commits en `origin/dev` que su copia local no tenía: la arquitectura, la PoC y la bitácora. Corrigió su respuesta anterior y probó `GET /api/despachos` en el sitio publicado, que respondió con los 3 despachos de prueba guardados en Supabase.
+2. **Prompt:** Se compartió la URL pública de la PoC desplegada en Vercel.
+   **Respuesta:** Se abrió el sitio y se comprobó que cargaba (HTTP 200, página "Despachos / Imprevistos · PoC"). Al ejecutar `git fetch`, el agente encontró 4 commits en `origin/dev` que su copia local no tenía: la arquitectura, la PoC y la bitácora. Corrigió su respuesta anterior y probó `GET /api/despachos` en el sitio publicado, que respondió con los 3 despachos de prueba guardados en Supabase.
 
-3. **Prompt:** Pedimos incorporar la URL de la PoC en las secciones de la documentación que correspondieran.
-   **Respuesta:** El agente agregó el enlace en tres secciones del `Readme.md`. En la sección 3 explicó que para usar la PoC no hay que instalar nada, y dejó los pasos para correrla en local. En la sección 4 explicó cómo usar la versión publicada y la local. En la sección 5 actualizó la etapa actual. También agregó el enlace en el paso 5 del camino delgado de `docs/arquitectura.md`. Quedó en el commit `939ca38`.
+3. **Prompt:** Se pidió incorporar la URL de la PoC en las secciones de la documentación que correspondieran.
+   **Respuesta:** Se agregó el enlace en tres secciones del `Readme.md`: en la sección 3, que para usar la PoC no hay que instalar nada, junto con los pasos para correrla en local; en la sección 4, cómo usar la versión publicada y la local; y en la sección 5, la etapa actual. También se agregó en el paso 5 del camino delgado de `docs/arquitectura.md`. Quedó en el commit `939ca38`.
 
-4. **Prompt:** Informamos los resultados de la prueba de punta a punta en Vercel. El imprevisto de prueba quedó registrado como IMP-2026-010 y la validación del servidor rechazó correctamente los datos incompletos. Sin embargo, se detectaron dos observaciones: el riesgo de crear duplicados al volver desde la pantalla final, y avisos marcados como "Enviado" sin que se enviara ningún correo. Indicamos priorizar los duplicados y dejar fuera el estado "Enviado", porque el envío real de correos requiere un servicio externo que aún no está definido. También pedimos verificar si esta limitación estaba documentada en la arquitectura.
-   **Respuesta:** El agente confirmó que el correo sí está documentado en `docs/arquitectura.md` como parte de la siguiente iteración: aparece con línea punteada en el diagrama, en la nota bajo el diagrama y en la tabla "Qué queda fuera". Los duplicados, en cambio, no estaban documentados. Al revisar el código encontró la causa: en P4, el botón "← Volver" regresaba a P2 con el tipo y la descripción todavía escritos, y si se confirmaba de nuevo, el backend guardaba otro imprevisto, porque no revisa si ya existe uno igual. El doble clic sí estaba protegido.
+4. **Prompt:** Se informaron los resultados de la prueba de punta a punta en Vercel. El imprevisto de prueba quedó registrado como IMP-2026-010 y la validación del servidor rechazó correctamente los datos incompletos. Sin embargo, se detectaron dos observaciones: el riesgo de crear duplicados al volver desde la pantalla final, y avisos marcados como "Enviado" sin que se enviara ningún correo. Se indicó priorizar los duplicados y dejar fuera el estado "Enviado", porque el envío real de correos requiere un servicio externo que aún no está definido, y se pidió verificar si esta limitación estaba documentada en la arquitectura.
+   **Respuesta:** Se confirmó que el correo sí está documentado en `docs/arquitectura.md` como parte de la siguiente iteración: aparece con línea punteada en el diagrama, en la nota bajo el diagrama y en la tabla "Qué queda fuera". Los duplicados, en cambio, no estaban documentados. Al revisar el código se encontró la causa: en P4, el botón "← Volver" regresaba a P2 con el tipo y la descripción todavía escritos, y al confirmar de nuevo el backend guardaba otro imprevisto, porque no revisa si ya existe uno igual. El doble clic sí estaba protegido.
 
-5. **Prompt:** Antes de aprobar el commit, solicitamos revisar por separado los cambios de la solución propuesta para los duplicados: eliminar el botón "← Volver" de P4 y documentar el riesgo en la arquitectura.
-   **Respuesta:** El agente nos mostró un diff con solo esos dos cambios. En `src/components/ImprevistosFlow.tsx` quitó el botón "← Volver" de P4, así que ahora queda solo "Volver a despachos", que limpia el formulario y vuelve a P1. En `docs/arquitectura.md` agregó el punto 4, "Riesgo de imprevisto duplicado", en "Qué ve la persona si algo falla", y la fila "Revisión de duplicados en el servidor" en "Qué queda fuera". Lo aprobamos y quedó en el commit `29b1e9e`.
+5. **Prompt:** Antes de aprobar el commit, se solicitó revisar por separado los cambios de la solución propuesta para los duplicados: eliminar el botón "← Volver" de P4 y documentar el riesgo en la arquitectura.
+   **Respuesta:** Se mostró un diff con solo esos dos cambios. En `src/components/ImprevistosFlow.tsx` se quitó el botón "← Volver" de P4, de modo que queda solo "Volver a despachos", que limpia el formulario y vuelve a P1. En `docs/arquitectura.md` se agregó el punto 4, "Riesgo de imprevisto duplicado", en "Qué ve la persona si algo falla", y la fila "Revisión de duplicados en el servidor" en "Qué queda fuera". Se aprobó y quedó en el commit `29b1e9e`.
 
-6. **Prompt:** Señalamos que la bitácora tenía dos entradas numeradas como "Uso 9": una sobre la arquitectura y el camino delgado, y otra sobre la retroalimentación del Avance 3. Solicitamos renumerarlas para que cada uso tuviera un número único y pudiera relacionarse sin ambigüedad con los commits y con las referencias internas de la bitácora. Además, pedimos registrar nuestras reglas de trabajo en el campo "Restricciones".
-   **Respuesta:** El agente confirmó que había dos encabezados "Uso 9". Mantuvo el primero y, desde el segundo, corrió la numeración en uno:
+6. **Prompt:** Se señaló que la bitácora tenía dos entradas numeradas como "Uso 9": una sobre la arquitectura y el camino delgado, y otra sobre la retroalimentación del Avance 3. Se solicitó renumerarlas para que cada uso tuviera un número único y pudiera relacionarse sin ambigüedad con los commits y con las referencias internas de la bitácora, y registrar las reglas de trabajo del equipo en el campo "Restricciones".
+   **Respuesta:** Se confirmó que había dos encabezados "Uso 9". Se mantuvo el primero y, desde el segundo, se corrió la numeración en uno:
 
    | Antes | Ahora | Contenido |
    |---|---|---|
@@ -453,20 +465,68 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
    | Uso 10 | Uso 11 | Retroalimentación del Avance 5 |
    | Uso 11 | Uso 12 | PoC en Next.js y Supabase |
 
-   También actualizó la única referencia que dependía de estos números: en el Uso 6, la frase sobre la corrección del modelo de datos ahora apunta al Uso 10. Por último, agregó los Usos 13 y 14, con nuestras reglas de trabajo en "Restricciones".
+   También se actualizó la única referencia que dependía de estos números: en el Uso 6, la frase sobre la corrección del modelo de datos ahora apunta al Uso 10. Por último, se agregaron los Usos 13 y 14, con las reglas de trabajo en "Restricciones".
 
 * **Qué se aceptó o corrigió:**
-  - **Corregimos al agente:** su primera revisión del Avance 7 estaba equivocada, porque miró la copia local sin traer antes los cambios del remoto. Cuando le dimos el enlace de Vercel, hizo `git fetch` y corrigió la respuesta.
-  - Decidimos dejar para más adelante el estado "Enviado" de los avisos. El envío real requiere un servicio de correo externo que todavía no definimos, y la arquitectura ya lo deja para la siguiente iteración.
-  - Para los duplicados elegimos la solución más simple, en la pantalla (quitar el botón), en vez de agregar una revisión en el backend. Esa revisión quedó anotada para la siguiente iteración.
-  - Mantenemos en Supabase el imprevisto IMP-2026-010 y sus 2 avisos hasta dejar registrada la prueba. Después se borran y se reinician los despachos de prueba.
+  - **Se corrigió al agente:** su primera revisión del Avance 7 estaba equivocada, porque revisó la copia local sin traer antes los cambios del remoto. Al recibir el enlace de Vercel ejecutó `git fetch` y corrigió la respuesta.
+  - Se decidió dejar para más adelante el estado "Enviado" de los avisos: el envío real requiere un servicio de correo externo que todavía no se define, y la arquitectura ya lo deja para la siguiente iteración.
+  - Para los duplicados se eligió la solución más simple, en la pantalla (quitar el botón), en vez de agregar una revisión en el backend, que quedó anotada para la siguiente iteración.
+  - El imprevisto IMP-2026-010 y sus 2 avisos se mantienen en Supabase hasta dejar registrada la prueba; después se borran y se reinician los despachos de prueba.
 
 * **Cómo se verificó:**
   - El sitio publicado y `GET /api/despachos` respondieron HTTP 200, con los 3 despachos de Supabase.
-  - Antes de cada commit revisamos `git log origin/dev` y `git diff`, para confirmar que solo cambiaban los archivos esperados.
-  - Buscamos en `docs/arquitectura.md` las menciones al correo y a los duplicados, y leímos el código del botón en `ImprevistosFlow.tsx` y del guardado en `src/app/api/imprevistos/route.ts`.
-  - Revisamos los pull requests con la API de GitHub. El PR #14 llevó a `main` los commits `939ca38` y `5fccf0b`; el commit `29b1e9e` quedó en `dev`, a la espera de un nuevo PR.
-  - No pudimos compilar en local, porque el computador donde trabajamos no tiene Node.js. **Pendiente:** cuando se fusione en `main`, confirmar en Vercel que P4 muestra solo "Volver a despachos".
-  - Para la renumeración revisamos con `grep "^## Uso"` que los usos fueran del 1 al 14, sin repetidos.
+  - Antes de cada commit se revisaron `git log origin/dev` y `git diff`, para confirmar que solo cambiaban los archivos esperados.
+  - Se buscaron en `docs/arquitectura.md` las menciones al correo y a los duplicados, y se leyó el código del botón en `ImprevistosFlow.tsx` y del guardado en `src/app/api/imprevistos/route.ts`.
+  - Se revisaron los pull requests con la API de GitHub: el PR #14 llevó a `main` los commits `939ca38` y `5fccf0b`, y el commit `29b1e9e` quedó en `dev`, a la espera de un nuevo PR.
+  - No se pudo compilar en local, porque el equipo donde se trabajó no tiene Node.js. **Pendiente:** después del merge a `main`, confirmar en Vercel que P4 muestra solo "Volver a despachos".
+  - Para la renumeración se revisó con `grep "^## Uso"` que los usos fueran del 1 al 14, sin repetidos.
+
+---
+
+## Uso 15
+* **Objetivo:** Cerrar en el repositorio los pendientes del prototipo de Figma (accesibilidad, estados y capturas), alinear el prototipo con la PoC, agregar a la PoC la validación de la descripción y unificar el formato de la bitácora.
+* **Contexto:** Después del Uso 14 seguían marcadas como pendientes en la documentación las pantallas P1 vacío, P2 carga y P4b, la medición del rojo de alerta y del tamaño de los botones, y la revisión de las conexiones del prototipo. El equipo corrigió el archivo de Figma y exportó las capturas. Además, la bitácora tenía formatos distintos entre los Usos antiguos y los nuevos. La sesión se realizó el 23-11-2026.
+* **Intención:** Dejar la documentación respaldada por evidencia (capturas y mediciones), sin declarar como resuelto nada que no se pudiera comprobar, y que el prototipo, la documentación y la PoC publicada describan el mismo comportamiento.
+* **Restricciones:** Responder en español; trabajar siempre en la rama `dev`; el agente no hace commits: deja los cambios listos, muestra el resumen y el equipo aprueba y hace un único commit; el agente no modifica el archivo de Figma.
+* **Instrucción y respuesta (en orden):**
+
+1. **Prompt:** Se solicitó explicar qué significaban el código del rojo de alerta y el tamaño de los botones, y luego se entregó el código `#E91818` como rojo del prototipo.
+   **Respuesta:** Se explicó que son mediciones de WCAG 2.2 (contraste mínimo de 4,5:1 para texto y elementos interactivos de al menos 24 × 24 px). Con `#E91818` como texto sobre el fondo rosado el contraste sería de 3,51:1, que no cumple, por lo que se propuso oscurecer el rojo.
+
+2. **Prompt:** Se compartieron capturas del mensaje de error de P1 y de la fila de envío fallido de P4b, y el alto de los botones (H = 70).
+   **Respuesta:** Se midieron los colores píxel a píxel en las capturas. El texto de las alertas no es rojo sino `#212121`, y el único texto rojo es «Fallido» (`#891212`). Todas las combinaciones cumplen AA y AAA (entre 7,5:1 y 16,1:1), por lo que se retiró la conclusión anterior de «no cumple». También se detectó que `#E91818` solo aparece como fondo con baja opacidad y que la documentación tenía mal el gris de los botones (`#333333` en vez de `#404040`).
+
+3. **Prompt:** Se informó que las capturas exportadas de Figma estaban en la carpeta de descargas y se preguntó dónde agregarlas.
+   **Respuesta:** Se revisaron las 8 imágenes y se propuso una carpeta nueva, `docs/capturas/`, separada de `docs/wireframes/`, que contiene los bocetos de baja fidelidad. La nota de accesibilidad exportada de Figma indicaba que los botones miden 44 px de alto (el más pequeño, «Reintentar», 96 × 44 px), lo que contradecía el valor de 70 entregado antes; se registró 44 px, que cumple el mínimo.
+
+4. **Prompt:** Se confirmó que los botones del prototipo están conectados y avanzan, que la pantalla de inicio de sesión es el comienzo de la app, y se decidió quitar «← Volver» de P4 y P4b en Figma para que coincidan con la PoC.
+   **Respuesta:** Se agregó P0 · Inicio de sesión al mapa de navegación, con una nota de que la PoC no tiene login por decisión del camino delgado. Se quitó la flecha P4 → P2 del mapa y «Volver» de la tabla de decisiones, con la explicación del riesgo de duplicados. Se reemplazaron las capturas de P4 y P4b por las nuevas, que ya no tienen ese botón.
+
+5. **Prompt:** Se solicitó corregir las diferencias de formato de la bitácora y luego que los Usos 13 y 14 quedaran iguales a los anteriores.
+   **Respuesta:** Se quitaron los corchetes de 88 campos, se escapó un `# Equipo 4` que se veía como título dentro del Uso 2, se agregó la tilde al título y los separadores que faltaban. A los Usos 13 y 14 se les agregó el campo «Intención» y se redactaron en forma impersonal, como los anteriores.
+
+6. **Prompt:** Se compartió la pantalla de Figma con el error de descripción no válida y se pidió igualar la PoC.
+   **Respuesta:** Se agregó en `src/lib/imprevistos.ts` una validación que acepta solo letras, números, espacios y signos de puntuación básicos, y que rechaza HTML y símbolos como `< > { } = &` con el mensaje de Figma: «La descripción solo puede contener texto, números y signos de puntuación básicos.». Se documentó el nuevo estado en `docs/prototipo.md` y en `docs/arquitectura.md`.
+
+7. **Prompt:** Se pidió instalar Node.js en el equipo para verificar la PoC antes del commit.
+   **Respuesta:** Se instaló Node.js v26.13.1 con winget, se instalaron las dependencias con `npm ci` y se compiló la PoC.
+
+8. **Prompt:** Se entregó el enlace a la carpeta de Google Drive con el video de demostración de la PoC y se pidió agregarlo al README.
+   **Respuesta:** Se preguntó primero qué contenía el video, porque si eran grabaciones de la prueba de usuarios había que revisar la privacidad antes de publicarlo en un repositorio público. Confirmado que era la demo de la PoC, se agregó el enlace en las secciones 4 y 5 del `Readme.md` y en el paso 5 del camino delgado de `docs/arquitectura.md` (commit `417ca6c`). Después se agregó al inicio del README una tabla de «Enlaces principales» con la PoC, el video, el prototipo de Figma, la arquitectura y la bitácora.
+
+* **Qué se aceptó o corrigió:**
+  - **Se corrigió al agente:** su primera conclusión sobre el contraste («no cumple») suponía que el texto de alerta era `#E91818`; con las capturas se comprobó que no era así y se reemplazó por la medición real.
+  - **Se corrigió un dato entregado por el equipo:** el alto de los botones se registró como 44 px, según la nota de accesibilidad de Figma y la medición en la captura completa, en lugar de 70.
+  - Se aceptó guardar las capturas en `docs/capturas/` y quitar todas las marcas «pendiente en Figma» que ya tenían evidencia. Queda pendiente solo probar el enlace de Figma en una ventana de incógnito.
+  - Para la descripción se aceptó una lista de caracteres permitidos, que también rechaza `@`; no se agregó texto de ayuda bajo el campo porque la pantalla de Figma no lo muestra.
+  - Se completaron los campos «Contexto», «Intención» y «Restricciones» de los Usos 8, 10 y 11, para que los Usos 8 a 15 sigan la misma plantilla. No se cambió la estructura de los Usos 1 a 7, que corresponden a la creación inicial del repositorio y que el profesor ya revisó con ese formato.
+
+* **Cómo se verificó:**
+  - Contraste calculado con la fórmula de WCAG 2.2 a partir de los colores medidos en las capturas exportadas de Figma.
+  - Se comprobó que todas las imágenes de `docs/capturas/` existen y están enlazadas desde algún documento, y que no quedan marcas «pendiente en Figma» en `docs/prototipo.md`, `docs/etica.md` ni `Readme.md`.
+  - Formato de la bitácora: se comparó la versión anterior y la nueva sin corchetes; las únicas diferencias son el título, el `# Equipo 4` escapado y los separadores, por lo que no cambió el contenido.
+  - PoC: `npm run build` terminó sin errores (incluida la revisión de tipos), y la función de validación del proyecto se ejecutó con Node sobre 13 casos (6 válidos y 7 con HTML o símbolos): 13 de 13 dieron el resultado esperado, y las validaciones anteriores (descripción vacía o de menos de 3 caracteres) siguen funcionando.
+  - El enlace del video de Google Drive responde (HTTP 200).
+  - **Pendiente:** después del merge a `main`, comprobar en Vercel que la descripción con HTML muestra el error; abrir los enlaces de Figma y del video en una ventana de incógnito para confirmar que se ven sin iniciar sesión; y borrar en Supabase los registros de prueba.
 
 ---

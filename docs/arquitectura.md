@@ -62,7 +62,7 @@ La solución depende del **servicio externo de correo** para notificar automáti
 2. **Validación (Backend):** El endpoint de Next.js verifica que el despacho seleccionado exista y que **tipo de imprevisto** y **descripción** no vengan vacíos.
 3. **Persistencia (Datos):** El backend inserta el registro en Supabase (`IMPREVISTOS`) vinculado al **coordinador fijo de prueba (seed)**, obtiene el **folio** generado y crea los registros de aviso para Jefe de operaciones y Conductor (`NOTIFICACIONES`).
 4. **Respuesta visible (Frontend):** La pantalla **P4** muestra el **folio del imprevisto** y la lista de destinatarios con su estado visible, con la opción de volver a los despachos y repetir la acción.
-5. **Publicación (Despliegue):** Todo el recorrido corre desplegado en una URL pública de **Vercel** (<https://grupo-4-sigma.vercel.app/>), repetible desde cualquier navegador.
+5. **Publicación (Despliegue):** Todo el recorrido corre desplegado en una URL pública de **Vercel** (<https://grupo-4-sigma.vercel.app/>), repetible desde cualquier navegador. El recorrido completo quedó grabado en un [video de demostración](https://drive.google.com/drive/folders/1p0eljQNjPvJON0yX9kPhgGzzr6emPcjJ?usp=sharing).
 
 ### Inicio de sesión en esta etapa
 
@@ -87,7 +87,7 @@ El supuesto más frágil es que **todo el circuito completo —desde el gesto de
 
 ### Qué ve la persona si algo falla
 
-1. **Falta un campo obligatorio (tipo de imprevisto o descripción — P3):** El backend rechaza el envío y devuelve el detalle del campo faltante. La persona ve una alerta clara indicando qué dato falta, permanece en la pantalla de registro (P2/P3) y **conserva intacto lo que ya escribió** para corregir y volver a confirmar.
+1. **Falta un campo obligatorio (tipo de imprevisto o descripción — P3):** El backend rechaza el envío y devuelve el detalle del campo faltante. La persona ve una alerta clara indicando qué dato falta, permanece en la pantalla de registro (P2/P3) y **conserva intacto lo que ya escribió** para corregir y volver a confirmar. Lo mismo ocurre si la descripción contiene etiquetas HTML o símbolos no permitidos (por ejemplo `< > { } = &`): el backend la rechaza con el mensaje «La descripción solo puede contener texto, números y signos de puntuación básicos», para que el texto se pueda usar sin riesgo en los avisos por correo.
 2. **Error de servidor o caída de conexión con Supabase:** La persona ve un mensaje visible de error indicando que el imprevisto no pudo registrarse, sin borrar los datos ingresados en el formulario, permitiéndole reintentar.
 3. **Falla del servicio externo de correo (cuando se integre en la siguiente iteración — P4b):** La persona ve igualmente el **folio** del imprevisto guardado y la etiqueta **«Fallido»** junto al destinatario afectado, para poder contactarlo directamente por teléfono o radio.
 4. **Riesgo de imprevisto duplicado:** En la prueba en Vercel se detectó que, desde la confirmación (P4), el botón «← Volver» regresaba al formulario (P2) con los datos aún escritos; al confirmar de nuevo se guardaba un segundo imprevisto con otro folio y otros dos avisos. Se resolvió quitando ese botón: en P4 solo queda **«Volver a despachos»**, que limpia el formulario y vuelve a P1. Así, cada confirmación corresponde a un único folio.

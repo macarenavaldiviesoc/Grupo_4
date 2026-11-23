@@ -45,6 +45,14 @@ const VALID_TIPO_MAP = new Map<string, string>(
   TIPOS_IMPREVISTO.map((t) => [t.value, t.label])
 );
 
+/**
+ * Descripción: solo letras (incluidas tildes y ñ), números, espacios y signos de
+ * puntuación básicos. Rechaza etiquetas HTML y símbolos como < > { } [ ] = & ` \
+ * para que el texto se pueda usar sin riesgo en los avisos por correo.
+ */
+const DESCRIPCION_PERMITIDA =
+  /^[A-Za-z0-9ÁÉÍÓÚÜÑáéíóúüñ\s.,;:¿?¡!()\-\/'"%°#+]+$/;
+
 export function getTipoLabel(tipo: string): string {
   return VALID_TIPO_MAP.get(tipo) ?? tipo;
 }
@@ -127,6 +135,12 @@ export function validarImprevistoInput(body: unknown):
     errors.push({
       field: "descripcion",
       message: "La descripción no puede superar los 500 caracteres.",
+    });
+  } else if (!DESCRIPCION_PERMITIDA.test(rawDescripcion)) {
+    errors.push({
+      field: "descripcion",
+      message:
+        "La descripción solo puede contener texto, números y signos de puntuación básicos.",
     });
   }
 

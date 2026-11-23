@@ -505,18 +505,22 @@ No se modificó ningún otro archivo ni carpeta del repositorio."
 7. **Prompt:** Se pidió instalar Node.js en el equipo para verificar la PoC antes del commit.
    **Respuesta:** Se instaló Node.js v26.13.1 con winget, se instalaron las dependencias con `npm ci` y se compiló la PoC.
 
+8. **Prompt:** Se entregó el enlace a la carpeta de Google Drive con el video de demostración de la PoC y se pidió agregarlo al README.
+   **Respuesta:** Se preguntó primero qué contenía el video, porque si eran grabaciones de la prueba de usuarios había que revisar la privacidad antes de publicarlo en un repositorio público. Confirmado que era la demo de la PoC, se agregó el enlace en las secciones 4 y 5 del `Readme.md` y en el paso 5 del camino delgado de `docs/arquitectura.md` (commit `417ca6c`). Después se agregó al inicio del README una tabla de «Enlaces principales» con la PoC, el video, el prototipo de Figma, la arquitectura y la bitácora.
+
 * **Qué se aceptó o corrigió:**
   - **Se corrigió al agente:** su primera conclusión sobre el contraste («no cumple») suponía que el texto de alerta era `#E91818`; con las capturas se comprobó que no era así y se reemplazó por la medición real.
   - **Se corrigió un dato entregado por el equipo:** el alto de los botones se registró como 44 px, según la nota de accesibilidad de Figma y la medición en la captura completa, en lugar de 70.
   - Se aceptó guardar las capturas en `docs/capturas/` y quitar todas las marcas «pendiente en Figma» que ya tenían evidencia. Queda pendiente solo probar el enlace de Figma en una ventana de incógnito.
   - Para la descripción se aceptó una lista de caracteres permitidos, que también rechaza `@`; no se agregó texto de ayuda bajo el campo porque la pantalla de Figma no lo muestra.
-  - Se decidió no unificar la estructura de los campos de los Usos 1 a 8, para no reescribir registros que el profesor ya revisó.
+  - Se decidió no unificar la estructura de los campos de los Usos anteriores (1 a 8, 10 y 11), para no reescribir registros que el profesor ya revisó.
 
 * **Cómo se verificó:**
   - Contraste calculado con la fórmula de WCAG 2.2 a partir de los colores medidos en las capturas exportadas de Figma.
   - Se comprobó que todas las imágenes de `docs/capturas/` existen y están enlazadas desde algún documento, y que no quedan marcas «pendiente en Figma» en `docs/prototipo.md`, `docs/etica.md` ni `Readme.md`.
   - Formato de la bitácora: se comparó la versión anterior y la nueva sin corchetes; las únicas diferencias son el título, el `# Equipo 4` escapado y los separadores, por lo que no cambió el contenido.
   - PoC: `npm run build` terminó sin errores (incluida la revisión de tipos), y la función de validación del proyecto se ejecutó con Node sobre 13 casos (6 válidos y 7 con HTML o símbolos): 13 de 13 dieron el resultado esperado, y las validaciones anteriores (descripción vacía o de menos de 3 caracteres) siguen funcionando.
-  - **Pendiente:** después del merge a `main`, comprobar en Vercel que la descripción con HTML muestra el error, y borrar en Supabase los registros de prueba.
+  - El enlace del video de Google Drive responde (HTTP 200).
+  - **Pendiente:** después del merge a `main`, comprobar en Vercel que la descripción con HTML muestra el error; abrir los enlaces de Figma y del video en una ventana de incógnito para confirmar que se ven sin iniciar sesión; y borrar en Supabase los registros de prueba.
 
 ---

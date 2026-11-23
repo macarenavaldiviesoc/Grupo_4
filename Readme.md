@@ -100,6 +100,9 @@ Para correrla en un computador propio (solo desarrollo):
 un despacho en curso, registrar el imprevisto y confirmar. La pantalla
 muestra el folio y el estado de los avisos.
 
+**Video de demostración:** el recorrido completo de la PoC está grabado en
+[esta carpeta de Google Drive](https://drive.google.com/drive/folders/1p0eljQNjPvJON0yX9kPhgGzzr6emPcjJ?usp=sharing).
+
 **Versión local:** desde `src/`, ejecutar `npm run dev` y abrir
 <http://localhost:3000>.
 
@@ -116,7 +119,7 @@ muestra el folio y el estado de los avisos.
 - **Avance 4:** historias de usuario y criterios de aceptación, estructura de datos adaptada al caso minero y wireframes de las 5 pantallas.
 - **Avance 5:** prototipo navegable y análisis ético del prototipo.
 - **Avance 6:** diseño de la prueba de usuarios y guion de la sesión de validación.
-- **Avance 7:** diagrama de arquitectura y camino delgado ([docs/arquitectura.md](docs/arquitectura.md)), y PoC del flujo principal publicada en <https://grupo-4-sigma.vercel.app/>: registrar un imprevisto, validarlo en el backend, guardarlo en Supabase y mostrar su folio.
+- **Avance 7:** diagrama de arquitectura y camino delgado ([docs/arquitectura.md](docs/arquitectura.md)), y PoC del flujo principal publicada en <https://grupo-4-sigma.vercel.app/>: registrar un imprevisto, validarlo en el backend, guardarlo en Supabase y mostrar su folio ([video de demostración](https://drive.google.com/drive/folders/1p0eljQNjPvJON0yX9kPhgGzzr6emPcjJ?usp=sharing)).
 - **Correcciones según la retroalimentación** (ver sección 9).
 
 **En curso:**

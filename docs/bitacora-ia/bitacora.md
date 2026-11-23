@@ -356,3 +356,42 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
   - Se revisó que cada pantalla del mapa de navegación tenga su fila en la tabla de decisiones y que los botones nombrados coincidan entre ambas.
 
 ---
+
+## Uso 11
+* **Objetivo:** [Implementar la Prueba de Concepto (PoC) del camino delgado en `src/` (Next.js + Supabase) siguiendo `docs/arquitectura.md` y los wireframes de Figma, verificar la validación real en backend y la ausencia de claves expuestas, y sincronizar los cambios en la rama `dev` de GitHub.]
+* **Contexto:** [Se partió con `docs/arquitectura.md` ya definido, los 4 wireframes en `docs/wireframes/` (`wireframe 01.png`–`04.png`), el sistema mínimo en `docs/prototipo.md` y las 10 tablas ya creadas en Supabase (inicialmente vacías, sin datos semilla). Previo a iniciar la PoC también existía un conflicto de merge pendiente en `Readme.md` que impedía actualizar la rama `dev` contra `origin/dev`.]
+* **Intención:** [Resolver el bloqueo de GitHub y luego construir paso a paso —validando cada etapa antes de pasar a la siguiente— la acción única de punta a punta: seleccionar un despacho en curso, registrar un imprevisto con validación real en backend, guardarlo en Supabase junto con sus avisos y devolver un folio visible, dejando todo listo para despliegue público en Vercel.]
+* **Restricciones:** [No modificar archivos sin aprobación explícita en cada paso; mantener toda la aplicación dentro de `src/`; no guardar jamás claves reales ni credenciales en `.env.example`, en el código ni en commits; asegurar que `.gitignore` excluya `.env` y `.env.local`; no usar variables `NEXT_PUBLIC_` para credenciales de Supabase; y preparar la solución para despliegue público en Vercel sin requerir inicio de sesión.]
+* **Instrucción y respuesta (en orden):**
+
+1. **Prompt:** ["Soluciona el problema con GitHub. No puedo actualizar el repositorio. No modifiques ningún archivo del repositorio." → tras diagnóstico, se aprobó "opción 1".]
+   **Respuesta:** [Se inspeccionó `git status` y `git diff Readme.md` sin editar archivos, detectando un único conflicto en la línea `En curso` de `Readme.md` entre `HEAD` y `origin/dev`. Con la aprobación de la opción 1, se conservó la línea más completa de `origin/dev`, se completó el commit de merge (`aeeb826`) y se subió a `origin/dev`.]
+
+2. **Prompt:** ["Necesito implementar la solución digital de la PoC basándome en `arquitectura.md`, siguiendo el camino delgado y los wireframes de Figma, en `src/`, desplegable en Vercel y con BD en Supabase. No modifiques nada de momento: plantea qué debo revisar antes de implementar y propón pasos a seguir."]
+   **Respuesta:** [Sin modificar archivos, se revisaron `.gitignore`, `.env.example`, `docs/prototipo.md`, `docs/datos/estructura_datos.md`, los 4 wireframes y el entorno local. Se detectó que Node.js aún no estaba instalado en el equipo, se explicó qué revisar en Supabase, Vercel (`Root Directory = src`, desactivar `Vercel Authentication`, variables de entorno) y seguridad de claves, y se propuso un plan en 6 pasos.]
+
+3. **Prompt:** ["Revisa si mi instalación de Node.js quedó bien", se compartió el SQL de las 10 tablas creadas en Supabase (indicando que no había seed) y se consultó "¿por qué es necesario crear estos ejemplos?". Luego se confirmó avanzar al Paso 2.]
+   **Respuesta:** [Se verificó la instalación de Node.js (`v26.13.1`) y npm (`11.20.0`). Se validó compatibilidad total del esquema SQL con el camino delgado, se explicó por qué se necesitan datos semilla (llaves foráneas obligatorias `NOT NULL`, pantalla P1 sin mantenedor de despachos y destinatarios reales para `notificaciones`) y se entregó el script SQL idempotente con el coordinador fijo de prueba y los 3 despachos en curso (`Planta Norte · JK-LP-82`, `Planta Sur · BZ-XD-39` y `Faena Minera Los Bronces · FHTR-56`).]
+
+4. **Prompt:** ["Listo. Avancemos con crear la base del proyecto Next.js" (Paso 2), luego "Ya pegué la key. Avancemos" (Paso 3) y "Avancemos al paso 4" (Paso 4).]
+   **Respuesta:** [En el Paso 2 se creó la base Next.js 15 + TypeScript + `@supabase/supabase-js` dentro de `src/` (`src/package.json`, `src/tsconfig.json`, `src/next.config.ts`, `src/lib/supabase.ts` exclusivo de servidor), se actualizó `.env.example` en la raíz solo con nombres de variables (`SUPABASE_URL=` y `SUPABASE_SERVICE_ROLE_KEY=`) y se preparó `src/.env.local` (ignorado por Git) para que el usuario pegara localmente su clave. En el Paso 3 se implementaron `src/lib/imprevistos.ts`, `GET /api/despachos` y `POST /api/imprevistos` con validación real en servidor. En el Paso 4 se construyeron las pantallas `P1`, `P1 vacío`, `P2`, `P2 carga`, `P3` y `P4` en `src/components/ImprevistosFlow.tsx`, `src/app/page.tsx` y `src/app/globals.css`.]
+
+5. **Prompt:** ["Avancemos al paso 5", luego "Primero probar el localhost, después paso 6", luego "Detén el servidor local y continúa al paso 6", y preguntas sobre el despliegue en Vercel (opción B: quién debe configurar claves y cómo acceden los demás miembros).]
+   **Respuesta:** [Se ejecutaron pruebas reales de punta a punta contra Supabase y auditoría de seguridad; luego se inició el servidor local en `http://localhost:3000` para validación visual directa del usuario. Al confirmar, se detuvo el servidor, se creó el commit `510c2ee` y se subió a `origin/dev`. Se explicó que en Vercel las claves se cargan una sola vez en *Environment Variables* (con `Root Directory = src` y *Vercel Authentication* desactivado) para que el resto del equipo y cualquier usuario acceda por URL pública sin instalar nada ni cargar claves en su PC.]
+
+* **Qué se aceptó o corrigió:**
+  - Se aceptó avanzar estrictamente paso a paso con confirmación en cada etapa y mantener las claves exclusivamente en `src/.env.local` (local) y en Vercel (producción), sin exponerlas en GitHub ni en el navegador.
+  - En `P3` se corrigió el error de escritura del wireframe («contiunar» → «continuar») y se dejó el formulario con `noValidate` para garantizar que la validación ocurra realmente en el backend.
+  - Para el despliegue en Vercel se eligió la **opción B** (configuración desde la cuenta dueña del repositorio en GitHub).
+
+* **Cómo se verificó:**
+  - **Entorno y compilación:** `node -v` (`v26.13.1`), `npm -v` (`11.20.0`) y `npm --prefix src run build` sin errores de TypeScript ni compilación (`Next.js 15.5.29`, rutas dinámicas `/api/despachos` y `/api/imprevistos`).
+  - **Pruebas reales contra Supabase (HTTP):**
+    - `GET /api/despachos` → HTTP `200` devolviendo los 3 despachos semilla reales.
+    - `POST /api/imprevistos` directo al backend sin `tipo` (`tipo: ""`) → HTTP `400` sin guardar registro en Supabase.
+    - `POST /api/imprevistos` directo al backend con `tipo: "inventado"` → HTTP `400` sin guardar registro en Supabase.
+    - `POST /api/imprevistos` válido (`id_despacho: 1001`, `tipo: "carga_no_lista"`) → HTTP `201` con folio `IMP-2026-001` y avisos registrados en `notificaciones` para Jefe/a de operaciones y Conductor/a.
+  - **Prueba visual manual:** el usuario probó la aplicación en vivo en `http://localhost:3000` antes de subirla.
+  - **Auditoría de seguridad y Git:** `git check-ignore -v src/.env.local src/node_modules src/.next` confirmó exclusión por `.gitignore`; revisión de `.env.example` (sin valores reales) y búsqueda con `Select-String` en `src/` confirmó cero claves, URLs de Supabase o variables `NEXT_PUBLIC_` en el código; `git push origin dev` subió únicamente los 14 archivos esperados (`commit 510c2ee`).
+
+---

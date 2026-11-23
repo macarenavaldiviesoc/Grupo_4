@@ -530,3 +530,79 @@ No se modificó ningún otro archivo ni carpeta del repositorio."
   - **Pendiente:** después del merge a `main`, comprobar en Vercel que la descripción con HTML muestra el error; abrir los enlaces de Figma y del video en una ventana de incógnito para confirmar que se ven sin iniciar sesión; y borrar en Supabase los registros de prueba.
 
 ---
+
+## Uso 16
+* **Objetivo:** Reforzar la integridad de los datos en Supabase agregando restricciones `CHECK` directamente en PostgreSQL para evitar el registro de campos vacíos, solo con espacios en blanco o que excedan el largo esperado cuando se omita la validación del formulario HTML.
+* **Contexto:** En una arquitectura donde la interfaz HTML se conecta directamente a Supabase, PostgreSQL actúa como backend. Si alguien envía peticiones por fuera de la pantalla (por ejemplo, desde la consola del navegador o Postman) con cadenas vacías (`""`) o solo espacios (`"   "`), la base de datos permitiría guardarlos si solo existen restricciones `NOT NULL` sin validación de contenido.
+* **Restricciones:** No eliminar ni recrear las tablas ya existentes en Supabase; aplicar las reglas mediante `ALTER TABLE` manteniendo compatibilidad con campos opcionales (`NULL`) y campos de lista que ya poseen restricción `IN`.
+* **Instrucción y respuesta (en orden):**
+
+1. **Prompt:** como puedo  evitar esto "Validación solo en el formulario. El backend guarda lo que llegue: basta enviar un dato vacío por fuera
+de la pantalla para que quede registrado." en esta aplicación que desde un html se conecta a esta base de datos en supabase. Revisa que todos las variables de texto tengan un limite. Combinar NOT NULL con char_length(trim(columna)) > 0 cierra por completo ese hueco.  Dame la manera de como implementar esto 
+   **Respuesta:** En una arquitectura donde tu HTML se conecta directo a Supabase, PostgreSQL es tu backend. Para cerrar ese hueco de raíz, las validaciones deben vivir como restricciones CHECK directamente en las tablas. Así, aunque alguien salte el formulario HTML y envíe un string vacío (""), solo espacios ("   ") o un texto gigante desde la consola del navegador o Postman, la base de datos rechazará la operación automáticamente con un error 23514 (check_violation).Como tus tablas ya están creadas, no necesitas borrarlas: solo debes agregar estas restricciones con ALTER TABLE.Script SQL de validación para SupabaseEste script aplica dos reglas a todas las columnas de texto libre de tu modelo:   Campos obligatorios (NOT NULL): exige char_length(trim(col)) > 0 y un límite máximo de caracteres.Campos opcionales: aplica solo el límite máximo (en PostgreSQL, un CHECK permite NULL automáticamente).Campos tipo lista: como ya tienen CHECK (... IN (...)), no necesitan límite de largo adicional.Copia y ejecuta esto en el SQL Editor de Supabase:SQL-- 1. CARGOS
+ALTER TABLE cargos
+  ADD CONSTRAINT chk_cargos_nombre CHECK (char_length(trim(nombre_cargo)) > 0 AND char_length(nombre_cargo) <= 100),
+  ADD CONSTRAINT chk_cargos_desc CHECK (char_length(descripcion) <= 500);
+
+-- 2. USUARIOS
+ALTER TABLE usuarios
+  ADD CONSTRAINT chk_usuarios_nombre CHECK (char_length(trim(nombre)) > 0 AND char_length(nombre) <= 150),
+  ADD CONSTRAINT chk_usuarios_correo CHECK (char_length(trim(correo)) > 0 AND char_length(correo) <= 150),
+  ADD CONSTRAINT chk_usuarios_tel CHECK (char_length(telefono) <= 30);
+
+-- 3. CLIENTES
+ALTER TABLE clientes
+  ADD CONSTRAINT chk_clientes_razon CHECK (char_length(trim(nombre_razon_social)) > 0 AND char_length(nombre_razon_social) <= 200),
+  ADD CONSTRAINT chk_clientes_rut CHECK (char_length(trim(rut)) > 0 AND char_length(rut) <= 20),
+  ADD CONSTRAINT chk_clientes_dir CHECK (char_length(direccion) <= 250),
+  ADD CONSTRAINT chk_clientes_correo CHECK (char_length(trim(correo)) > 0 AND char_length(correo) <= 150),
+  ADD CONSTRAINT chk_clientes_tel CHECK (char_length(telefono) <= 30);
+
+-- 4. PLANTAS
+ALTER TABLE plantas
+  ADD CONSTRAINT chk_plantas_nombre CHECK (char_length(trim(nombre_planta)) > 0 AND char_length(nombre_planta) <= 150),
+  ADD CONSTRAINT chk_plantas_dir CHECK (char_length(trim(direccion)) > 0 AND char_length(direccion) <= 250),
+  ADD CONSTRAINT chk_plantas_correo CHECK (char_length(correo) <= 150),
+  ADD CONSTRAINT chk_plantas_tel CHECK (char_length(telefono) <= 30);
+
+-- 5. EMPRESAS_TRANSPORTE
+ALTER TABLE empresas_transporte
+  ADD CONSTRAINT chk_empresas_nombre CHECK (char_length(trim(nombre)) > 0 AND char_length(nombre) <= 150),
+  ADD CONSTRAINT chk_empresas_contacto CHECK (char_length(contacto) <= 150);
+
+-- 6. VEHICULOS
+ALTER TABLE vehiculos
+  ADD CONSTRAINT chk_vehiculos_patente CHECK (char_length(trim(patente)) > 0 AND char_length(patente) <= 20),
+  ADD CONSTRAINT chk_vehiculos_tipo CHECK (char_length(tipo_camion) <= 100);
+
+-- 7. DESPACHOS
+ALTER TABLE despachos
+  ADD CONSTRAINT chk_despachos_origen CHECK (char_length(trim(origen)) > 0 AND char_length(origen) <= 250),
+  ADD CONSTRAINT chk_despachos_destino CHECK (char_length(trim(destino)) > 0 AND char_length(destino) <= 250);
+
+-- 8. IMPREVISTOS
+ALTER TABLE imprevistos
+  ADD CONSTRAINT chk_imprevistos_desc CHECK (char_length(trim(descripcion)) > 0 AND char_length(descripcion) <= 1000),
+  ADD CONSTRAINT chk_imprevistos_res CHECK (char_length(descripcion_resolucion) <= 1000);
+
+-- 9. NOTIFICACIONES
+ALTER TABLE notificaciones
+  ADD CONSTRAINT chk_notif_motivo CHECK (char_length(motivo_fallo) <= 500);
+
+-- 10. HISTORIAL
+ALTER TABLE historial
+  ADD CONSTRAINT chk_historial_accion CHECK (char_length(trim(accion)) > 0 AND char_length(accion) <= 150),
+  ADD CONSTRAINT chk_historial_desc CHECK (char_length(descripcion) <= 1000);
+Cómo aplicarlo y verificar que funcionaEjecuta el script: Ve a SQL Editor → + New query, pega el bloque completo y presiona Run. Deberías ver el mensaje Success. No rows returned.Prueba el bloqueo: En una nueva consulta del SQL Editor, intenta insertar un registro con solo espacios en blanco:SQLINSERT INTO cargos (nombre_cargo) VALUES ('   ');
+Verificación: Supabase debe rechazarlo inmediatamente con un error similar a:ERROR: new row for relation "cargos" violates check constraint "chk_cargos_nombre".Si ya tenías datos cargados en alguna tabla y alguno incumple las reglas nuevas, el ALTER TABLE te indicará exactamente qué tabla y restricción falló para que limpies ese registro primero.
+
+* **Qué se aceptó o corrigió:**
+  - Se aceptó la estrategia de aplicar restricciones `CHECK` directamente sobre las tablas existentes mediante `ALTER TABLE`, junto con el uso de `trim()` para impedir cadenas compuestas únicamente por espacios en blanco.
+  - [Indicar aquí si se ejecutaron todas las tablas tal cual o si se ajustó algún nombre de tabla/columna, por ejemplo: *Se ajustó la lista de tablas según el esquema activo en Supabase (omitiendo/incluyendo `plantas`)*.]
+
+* **Cómo se verificó:**
+  - Se ejecutó el bloque `ALTER TABLE` en el *SQL Editor* de Supabase confirmando el resultado `Success. No rows returned`.
+  - Se realizó una prueba de inserción directa saltando el formulario (`INSERT INTO cargos (nombre_cargo) VALUES ('   ');`), verificando que PostgreSQL rechazó la operación con el error `ERROR: new row for relation "cargos" violates check constraint "chk_cargos_nombre"`.
+  - [Opcional: Se probó desde el formulario HTML / navegador enviando un campo vacío o con espacios para confirmar que el backend rechaza el guardado.]
+
+---

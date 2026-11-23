@@ -241,7 +241,7 @@ Por cada una de las 9 tablas se explicitan los campos obligatorios (que no puede
   | Ext. 2: destinatario no notificado, se registra el intento fallido y queda pendiente | NOTIFICACIONES solo tenía leido (sí/no) | ❌ | ✅ estado_envio (pendiente, enviado, fallido), intentos, motivo_fallo |
   | Ext. 3: se cierra el caso y se envía una actualización | IMPREVISTOS.estado, fecha_resolucion y una nueva fila en NOTIFICACIONES | ⚠️ | ⚠️ |
 
-  Las tres brechas (❌) son las de la retroalimentación del modelo de datos; su corrección se registra en el Uso 9. La extensión 3 (⚠️) queda parcial: el cierre sí se guarda, pero NOTIFICACIONES no distingue si un aviso es el original o una actualización. Queda pendiente decidir si se agrega un campo `tipo_aviso` (original, actualizacion).
+  Las tres brechas (❌) son las de la retroalimentación del modelo de datos; su corrección se registra en el Uso 10. La extensión 3 (⚠️) queda parcial: el cierre sí se guarda, pero NOTIFICACIONES no distingue si un aviso es el original o una actualización. Queda pendiente decidir si se agrega un campo `tipo_aviso` (original, actualizacion).
 
 
 ## Uso 7
@@ -301,7 +301,7 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
 
 ---
 
-## Uso 9
+## Uso 10
 * **Objetivo:** [Incorporar la retroalimentación del profesor sobre el modelo de datos, la bitácora y el README, antes de comenzar el Avance 7]
 
 * **Instrucción y respuesta (en orden):**
@@ -330,7 +330,7 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
 
 ---
 
-## Uso 10
+## Uso 11
 * **Objetivo:** [Incorporar en el repositorio la retroalimentación del Avance 5 (prototipo y ética), sin modificar el prototipo en Figma]
 
 * **Instrucción y respuesta (en orden):**
@@ -357,7 +357,7 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
 
 ---
 
-## Uso 11
+## Uso 12
 * **Objetivo:** [Implementar la Prueba de Concepto (PoC) del camino delgado en `src/` (Next.js + Supabase) siguiendo `docs/arquitectura.md` y los wireframes de Figma, verificar la validación real en backend y la ausencia de claves expuestas, y sincronizar los cambios en la rama `dev` de GitHub.]
 * **Contexto:** [Se partió con `docs/arquitectura.md` ya definido, los 4 wireframes en `docs/wireframes/` (`wireframe 01.png`–`04.png`), el sistema mínimo en `docs/prototipo.md` y las 10 tablas ya creadas en Supabase (inicialmente vacías, sin datos semilla). Previo a iniciar la PoC también existía un conflicto de merge pendiente en `Readme.md` que impedía actualizar la rama `dev` contra `origin/dev`.]
 * **Intención:** [Resolver el bloqueo de GitHub y luego construir paso a paso —validando cada etapa antes de pasar a la siguiente— la acción única de punta a punta: seleccionar un despacho en curso, registrar un imprevisto con validación real en backend, guardarlo en Supabase junto con sus avisos y devolver un folio visible, dejando todo listo para despliegue público en Vercel.]
@@ -393,5 +393,80 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
     - `POST /api/imprevistos` válido (`id_despacho: 1001`, `tipo: "carga_no_lista"`) → HTTP `201` con folio `IMP-2026-001` y avisos registrados en `notificaciones` para Jefe/a de operaciones y Conductor/a.
   - **Prueba visual manual:** el usuario probó la aplicación en vivo en `http://localhost:3000` antes de subirla.
   - **Auditoría de seguridad y Git:** `git check-ignore -v src/.env.local src/node_modules src/.next` confirmó exclusión por `.gitignore`; revisión de `.env.example` (sin valores reales) y búsqueda con `Select-String` en `src/` confirmó cero claves, URLs de Supabase o variables `NEXT_PUBLIC_` en el código; `git push origin dev` subió únicamente los 14 archivos esperados (`commit 510c2ee`).
+
+---
+
+## Uso 13
+* **Objetivo:** Conseguir instrucciones claras para corregir en Figma lo que quedó pendiente de la retroalimentación del Avance 5, y actualizar en el repositorio el enlace del prototipo.
+* **Contexto:** Lo que se podía corregir en el repositorio ya estaba listo en el commit `ed7ac39` (Uso 11). Lo que faltaba dependía de Figma: los botones del prototipo no avanzaban al hacer clic, no existían los cuadros P1 vacío, P2 carga y P4b (envío fallido), y todavía no habíamos medido el rojo de alerta ni el tamaño de los botones.
+* **Restricciones:** Trabajar en español y siempre en la rama `dev`. El agente no hace cambios por su cuenta: propone, nos muestra el diff y nosotros aprobamos y hacemos el commit. Tampoco modifica el archivo de Figma; solo nos entrega las instrucciones.
+* **Instrucción y respuesta (en orden):**
+
+1. **Prompt (22-11):** Solicitamos una guía paso a paso para corregir en Figma los pendientes de la retroalimentación del Avance 5.
+   **Respuesta:** El agente nos dio una guía paso a paso para el archivo Entrega-4. Primero, duplicar la página como respaldo. Luego, marcar P1 como punto de inicio del flujo y conectar cada botón con *On click → Navigate to*, siguiendo una tabla de 10 conexiones que ya incluía P2 carga, P4b y P1 vacío. Al final, recorrer todo con *Present* para comprobarlo y crear los tres cuadros que faltaban.
+
+2. **Prompt (22-11):** Informamos que las correcciones se hicieron en una copia del archivo, "Entrega-4 (copia)", y compartimos su enlace para que el agente las revisara.
+   **Respuesta:** El agente no pudo abrir el archivo, porque Figma respondió que se había alcanzado el límite de llamadas del plan Starter. Entonces revisó el repositorio y vio que en `docs/wireframes/` no había capturas nuevas. Nos pidió las capturas de P1 vacío, P2 carga y P4b, el código del rojo de alerta y el alto y ancho del botón más pequeño. También nos advirtió que el enlace era de diseño (`/design/`), que abre el editor, y que para el profesor conviene el de presentación (`/proto/`). Además, nos recomendó revisar en *Share* que la copia quedara como "Anyone with the link · can view", porque las copias no siempre heredan los permisos del original.
+
+3. **Prompt (23-11):** Entregamos el enlace definitivo de la copia de Figma para actualizarlo en la documentación del proyecto.
+   **Respuesta:** El agente buscó todos los enlaces de Figma en el repositorio y cambió el antiguo (`bEA6Z4q1...`) en los dos lugares donde aparecía: la sección 7 del `Readme.md` y `docs/prototipo.md`. Dejó tal cual las marcas "pendiente en Figma", porque no tenía cómo comprobar qué cuadros existen en la copia nueva.
+
+* **Qué se aceptó o corrigió:**
+  - Aceptamos el cambio de enlace. Quedó en el commit `5fccf0b` y llegó a `main` con el PR #14.
+  - Decidimos no quitar todavía las marcas "pendiente en Figma" de `docs/prototipo.md`, `docs/etica.md` y `Readme.md`. Sin acceso al archivo ni capturas, no teníamos cómo respaldar que ya estuvieran resueltas.
+
+* **Cómo se verificó:**
+  - Buscamos `figma.com` en todo el repositorio. El enlace antiguo solo aparecía en `Readme.md` y `docs/prototipo.md`, y después del cambio no quedó ninguna referencia a él.
+  - Revisamos el `git diff` antes del commit: solo cambiaban esas dos líneas.
+  - **Pendiente:** abrir el enlace nuevo en una ventana de incógnito para confirmar que se ve sin iniciar sesión, y revisar en Figma los cuadros que siguen pendientes.
+
+---
+
+## Uso 14
+* **Objetivo:** Revisar qué faltaba del Avance 7, agregar el enlace de la PoC publicada en Vercel y corregir el riesgo de imprevistos duplicados que apareció en la prueba de punta a punta.
+* **Contexto:** El 22-11 se subieron a `dev` la arquitectura (Uso 9) y la PoC (Uso 12), que quedó publicada en `https://grupo-4-sigma.vercel.app/`. Sin embargo, el enlace no aparecía en ningún documento y el README seguía diciendo que no había nada que instalar ni ejecutar.
+* **Restricciones:** Trabajar en español y siempre en la rama `dev`. El agente no hace cambios por su cuenta: propone, nos muestra el diff y nosotros aprobamos y hacemos el commit. No hace push ni merge sin nuestra aprobación y nunca expone las claves de Supabase.
+* **Instrucción y respuesta (en orden):**
+
+1. **Prompt:** Solicitamos revisar el estado del Avance 7 para identificar los entregables pendientes y, en particular, la situación de la publicación en Vercel.
+   **Respuesta:** El agente respondió que faltaba casi todo el Avance 7: `docs/arquitectura.md`, el código en `src/` y la publicación en Vercel. Esta respuesta resultó equivocada, como se ve en el punto siguiente.
+
+2. **Prompt:** Compartimos la URL pública de la PoC desplegada en Vercel.
+   **Respuesta:** El agente abrió el sitio y vio que cargaba bien (HTTP 200, página "Despachos / Imprevistos · PoC"). Al ejecutar `git fetch`, encontró 4 commits en `origin/dev` que su copia local no tenía: la arquitectura, la PoC y la bitácora. Corrigió su respuesta anterior y probó `GET /api/despachos` en el sitio publicado, que respondió con los 3 despachos de prueba guardados en Supabase.
+
+3. **Prompt:** Pedimos incorporar la URL de la PoC en las secciones de la documentación que correspondieran.
+   **Respuesta:** El agente agregó el enlace en tres secciones del `Readme.md`. En la sección 3 explicó que para usar la PoC no hay que instalar nada, y dejó los pasos para correrla en local. En la sección 4 explicó cómo usar la versión publicada y la local. En la sección 5 actualizó la etapa actual. También agregó el enlace en el paso 5 del camino delgado de `docs/arquitectura.md`. Quedó en el commit `939ca38`.
+
+4. **Prompt:** Informamos los resultados de la prueba de punta a punta en Vercel. El imprevisto de prueba quedó registrado como IMP-2026-010 y la validación del servidor rechazó correctamente los datos incompletos. Sin embargo, se detectaron dos observaciones: el riesgo de crear duplicados al volver desde la pantalla final, y avisos marcados como "Enviado" sin que se enviara ningún correo. Indicamos priorizar los duplicados y dejar fuera el estado "Enviado", porque el envío real de correos requiere un servicio externo que aún no está definido. También pedimos verificar si esta limitación estaba documentada en la arquitectura.
+   **Respuesta:** El agente confirmó que el correo sí está documentado en `docs/arquitectura.md` como parte de la siguiente iteración: aparece con línea punteada en el diagrama, en la nota bajo el diagrama y en la tabla "Qué queda fuera". Los duplicados, en cambio, no estaban documentados. Al revisar el código encontró la causa: en P4, el botón "← Volver" regresaba a P2 con el tipo y la descripción todavía escritos, y si se confirmaba de nuevo, el backend guardaba otro imprevisto, porque no revisa si ya existe uno igual. El doble clic sí estaba protegido.
+
+5. **Prompt:** Antes de aprobar el commit, solicitamos revisar por separado los cambios de la solución propuesta para los duplicados: eliminar el botón "← Volver" de P4 y documentar el riesgo en la arquitectura.
+   **Respuesta:** El agente nos mostró un diff con solo esos dos cambios. En `src/components/ImprevistosFlow.tsx` quitó el botón "← Volver" de P4, así que ahora queda solo "Volver a despachos", que limpia el formulario y vuelve a P1. En `docs/arquitectura.md` agregó el punto 4, "Riesgo de imprevisto duplicado", en "Qué ve la persona si algo falla", y la fila "Revisión de duplicados en el servidor" en "Qué queda fuera". Lo aprobamos y quedó en el commit `29b1e9e`.
+
+6. **Prompt:** Señalamos que la bitácora tenía dos entradas numeradas como "Uso 9": una sobre la arquitectura y el camino delgado, y otra sobre la retroalimentación del Avance 3. Solicitamos renumerarlas para que cada uso tuviera un número único y pudiera relacionarse sin ambigüedad con los commits y con las referencias internas de la bitácora. Además, pedimos registrar nuestras reglas de trabajo en el campo "Restricciones".
+   **Respuesta:** El agente confirmó que había dos encabezados "Uso 9". Mantuvo el primero y, desde el segundo, corrió la numeración en uno:
+
+   | Antes | Ahora | Contenido |
+   |---|---|---|
+   | Uso 9 (el primero) | Uso 9 | Arquitectura y camino delgado |
+   | Uso 9 (el segundo) | Uso 10 | Retroalimentación del Avance 3 |
+   | Uso 10 | Uso 11 | Retroalimentación del Avance 5 |
+   | Uso 11 | Uso 12 | PoC en Next.js y Supabase |
+
+   También actualizó la única referencia que dependía de estos números: en el Uso 6, la frase sobre la corrección del modelo de datos ahora apunta al Uso 10. Por último, agregó los Usos 13 y 14, con nuestras reglas de trabajo en "Restricciones".
+
+* **Qué se aceptó o corrigió:**
+  - **Corregimos al agente:** su primera revisión del Avance 7 estaba equivocada, porque miró la copia local sin traer antes los cambios del remoto. Cuando le dimos el enlace de Vercel, hizo `git fetch` y corrigió la respuesta.
+  - Decidimos dejar para más adelante el estado "Enviado" de los avisos. El envío real requiere un servicio de correo externo que todavía no definimos, y la arquitectura ya lo deja para la siguiente iteración.
+  - Para los duplicados elegimos la solución más simple, en la pantalla (quitar el botón), en vez de agregar una revisión en el backend. Esa revisión quedó anotada para la siguiente iteración.
+  - Mantenemos en Supabase el imprevisto IMP-2026-010 y sus 2 avisos hasta dejar registrada la prueba. Después se borran y se reinician los despachos de prueba.
+
+* **Cómo se verificó:**
+  - El sitio publicado y `GET /api/despachos` respondieron HTTP 200, con los 3 despachos de Supabase.
+  - Antes de cada commit revisamos `git log origin/dev` y `git diff`, para confirmar que solo cambiaban los archivos esperados.
+  - Buscamos en `docs/arquitectura.md` las menciones al correo y a los duplicados, y leímos el código del botón en `ImprevistosFlow.tsx` y del guardado en `src/app/api/imprevistos/route.ts`.
+  - Revisamos los pull requests con la API de GitHub. El PR #14 llevó a `main` los commits `939ca38` y `5fccf0b`; el commit `29b1e9e` quedó en `dev`, a la espera de un nuevo PR.
+  - No pudimos compilar en local, porque el computador donde trabajamos no tiene Node.js. **Pendiente:** cuando se fusione en `main`, confirmar en Vercel que P4 muestra solo "Volver a despachos".
+  - Para la renumeración revisamos con `grep "^## Uso"` que los usos fueran del 1 al 14, sin repetidos.
 
 ---

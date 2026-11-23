@@ -4,6 +4,16 @@
 
 Equipo 4
 
+**Enlaces principales**
+
+| Qué | Enlace |
+|---|---|
+| PoC publicada (Avance 7) | <https://grupo-4-sigma.vercel.app/> |
+| Video de demostración de la PoC | [Carpeta en Google Drive](https://drive.google.com/drive/folders/1p0eljQNjPvJON0yX9kPhgGzzr6emPcjJ?usp=sharing) |
+| Prototipo en Figma | [Entrega 4](https://www.figma.com/file/LsDxkm3a9WNEiHiWuEvOw0?node-id=41:339&locale=en&type=design) |
+| Arquitectura y camino delgado | [docs/arquitectura.md](docs/arquitectura.md) |
+| Bitácora de uso de IA | [docs/bitacora-ia/bitacora.md](docs/bitacora-ia/bitacora.md) |
+
 ---
 
 ## 1. QUÉ ES LA SOLUCIÓN

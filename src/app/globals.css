@@ -1,0 +1,346 @@
+:root {
+  --color-bg: #f2f2f2;
+  --color-surface: #ffffff;
+  --color-header-bg: #f7f7f7;
+  --color-logo-bg: #d9d9d9;
+  --color-border: #cccccc;
+  --color-border-strong: #333333;
+  --color-text: #1f1f1f;
+  --color-muted: #666666;
+  --color-action: #333333;
+  --color-action-hover: #1f1f1f;
+  --color-selected-bg: #f0f0f0;
+  --color-alert-bg: #fadbd8;
+  --color-alert-border: #a93226;
+  --color-alert-text: #641e16;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-3) var(--space-2);
+}
+
+.app-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.app-header {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.app-header-title {
+  flex: 1;
+  background-color: var(--color-header-bg);
+  padding: var(--space-2);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.app-header-logo {
+  width: 108px;
+  background-color: var(--color-logo-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.app-body {
+  padding: var(--space-3) var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.step-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.screen-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.25;
+}
+
+.screen-subtitle {
+  font-size: 14px;
+  color: var(--color-muted);
+  margin-top: 4px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.field-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.text-input,
+.select-input,
+.textarea-input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.text-input:focus,
+.select-input:focus,
+.textarea-input:focus {
+  border-color: var(--color-border-strong);
+}
+
+.textarea-input {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.input-error {
+  border: 1.5px solid var(--color-alert-border);
+  background-color: #fdf2f2;
+}
+
+.dispatch-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.dispatch-item {
+  width: 100%;
+  text-align: left;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.dispatch-item:hover {
+  border-color: var(--color-border-strong);
+}
+
+.dispatch-item-selected {
+  border: 2px solid var(--color-border-strong);
+  background-color: var(--color-selected-bg);
+}
+
+.dispatch-plant {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.dispatch-meta {
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.empty-box {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-header-bg);
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.alert-box {
+  background-color: var(--color-alert-bg);
+  border: 1px solid var(--color-alert-border);
+  color: var(--color-alert-text);
+  padding: 12px var(--space-2);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.recipients-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.recipients-list {
+  list-style: disc;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.folio-box {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-header-bg);
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.folio-label {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.folio-value {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
+
+.summary-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summary-type {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.notice-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.notice-row {
+  border: 1px solid var(--color-border);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-1);
+}
+
+.notice-role {
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.notice-name {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.notice-status {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.notice-status-failed {
+  color: var(--color-alert-border);
+}
+
+.poc-note {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.actions-row {
+  display: flex;
+  gap: var(--space-1);
+  margin-top: var(--space-1);
+}
+
+.btn {
+  flex: 1;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px var(--space-2);
+  cursor: pointer;
+  border: 1px solid var(--color-action);
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--color-action);
+  color: #ffffff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-action-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-header-bg);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.loading-text {
+  font-size: 14px;
+  color: var(--color-muted);
+  padding: var(--space-2) 0;
+  text-align: center;
+}

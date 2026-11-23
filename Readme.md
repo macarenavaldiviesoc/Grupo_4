@@ -173,7 +173,7 @@ camión en espera en el acceso al polvorín de una faena minera):
 - [docs/prototipo.md](docs/prototipo.md) — enlace al prototipo navegable y su mapa de navegación.
 - [docs/etica.md](docs/etica.md) — análisis ético del prototipo.
 - Enlace a prototipo en figma: 
-      https://www.figma.com/design/bEA6Z4q13xJlCxUTl2BNZg/Entrega-4?node-id=41-339&p=f 
+      https://www.figma.com/file/LsDxkm3a9WNEiHiWuEvOw0?node-id=41:339&locale=en&type=design 
 
 ---
 

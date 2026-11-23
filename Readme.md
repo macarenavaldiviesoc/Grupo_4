@@ -116,10 +116,11 @@ muestra el folio y el estado de los avisos.
 - **Avance 4:** historias de usuario y criterios de aceptación, estructura de datos adaptada al caso minero y wireframes de las 5 pantallas.
 - **Avance 5:** prototipo navegable y análisis ético del prototipo.
 - **Avance 6:** diseño de la prueba de usuarios y guion de la sesión de validación.
+- **Avance 7:** diagrama de arquitectura y camino delgado ([docs/arquitectura.md](docs/arquitectura.md)), y PoC del flujo principal publicada en <https://grupo-4-sigma.vercel.app/>: registrar un imprevisto, validarlo en el backend, guardarlo en Supabase y mostrar su folio.
 - **Correcciones según la retroalimentación** (ver sección 9).
 
 **En curso:**
-- Avance 7: diagrama de arquitectura (`docs/arquitectura.md`), camino delgado y PoC publicada.
+- A la espera de la retroalimentación del Avance 7. Después de la prueba de punta a punta de la PoC se corrigió el imprevisto duplicado al volver desde P4 y se agregó la validación de la descripción.
 
 **Por hacer:**
 - Flujo de tareas/acciones de la aplicación.
@@ -195,11 +196,11 @@ camión en espera en el acceso al polvorín de una faena minera):
 | La verificación del `.gitignore` no tenía fuente | Comparación con la plantilla oficial de GitHub y prueba con `git check-ignore`; se agregaron `.next/` y `.vercel/` | [docs/bitacora-ia/bitacora.md](docs/bitacora-ia/bitacora.md) (Uso 3), [.gitignore](.gitignore) |
 | El Uso 6 describía la corrección en forma general y solo verificaba que el diagrama se viera bien | Detalle de lo corregido y contraste del modelo con cada paso del caso de uso | [docs/bitacora-ia/bitacora.md](docs/bitacora-ia/bitacora.md) (Uso 6) |
 | El README seguía en el Avance 2 y no mencionaba el Avance 3 | Estado actualizado por avance; se eliminó la copia antigua del manual en `src/Readme.md` | Este archivo, [src/Readme.md](src/Readme.md) |
-| Avance 5: faltaban estados vacío y de carga; el mapa decía «Cancelar» en P2, pero la pantalla tiene «Volver» | Se agregaron al mapa P1 vacío y P2 carga; el mapa se corrigió a «Volver». **Pendiente en Figma:** crear esos cuadros | [docs/prototipo.md](docs/prototipo.md) |
+| Avance 5: faltaban estados vacío y de carga; el mapa decía «Cancelar» en P2, pero la pantalla tiene «Volver» | Se agregaron al mapa P1 vacío y P2 carga; el mapa se corrigió a «Volver». Ambos cuadros ya están creados en Figma | [docs/prototipo.md](docs/prototipo.md), [docs/capturas/](docs/capturas/) |
 | Avance 5: la ficha de datos no daba plazos de conservación | Plazo de 12 meses desde el cierre del caso, con su justificación | [docs/etica.md](docs/etica.md) (B2) |
-| Avance 5: la accesibilidad decía «cumple» sin medir | Contraste medido: #333333 sobre blanco = 12,6:1. El rojo de alerta y el tamaño de los botones quedan pendientes de medir en Figma | [docs/etica.md](docs/etica.md) (B3) |
-| Avance 5: P4b (envío fallido) no existe en el prototipo y falta la captura del «después» | Se declaró como pendiente. **Pendiente en Figma:** crear P4b con «Fallido» y «Reintentar», y agregar la captura | [docs/etica.md](docs/etica.md) (Integración), [docs/prototipo.md](docs/prototipo.md) |
-| Avance 5: los botones del prototipo no avanzaban al hacer clic | **Pendiente en Figma:** revisar las conexiones y probar en una ventana de incógnito | Prototipo en Figma |
+| Avance 5: la accesibilidad decía «cumple» sin medir | Contraste medido en Figma para el texto, los botones, los mensajes de alerta y el estado «Fallido» (entre 7,5:1 y 16,1:1, todo cumple AA y AAA). Botones de 44 px de alto (mínimo 24 px) | [docs/etica.md](docs/etica.md) (B3) |
+| Avance 5: P4b (envío fallido) no existe en el prototipo y falta la captura del «después» | P4b creada en Figma con «Fallido» y «Reintentar»; su captura quedó como «después» | [docs/etica.md](docs/etica.md) (Integración), [docs/prototipo.md](docs/prototipo.md) |
+| Avance 5: los botones del prototipo no avanzaban al hacer clic | Botones conectados: el recorrido avanza al hacer clic. Falta probar el enlace en una ventana de incógnito | [docs/prototipo.md](docs/prototipo.md), prototipo en Figma |
 | Recomendación: incluir en la prueba a un conductor que haya quedado sin señal en ruta | Ya estaba en el perfil P2; se eliminó la línea de «Fuera de alcance» que lo contradecía | [docs/prueba-usuarios.md](docs/prueba-usuarios.md) |
 
 ---

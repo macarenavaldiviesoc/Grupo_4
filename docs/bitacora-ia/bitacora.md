@@ -220,7 +220,7 @@ Por cada una de las 9 tablas se explicitan los campos obligatorios (que no puede
   | Los ejemplos usaban el nombre del equipo (`@grupo4.cl`, "Flota Propia Grupo 4") | Los datos de ejemplo deben representar a la empresa usuaria, no al equipo | Se cambió a `@logitrack.cl` y "Flota Propia" |
   | Cliente 2 "Comercial Don Juan" y destino del despacho 1002 | Se ajustaron para acercarlos al caso base del equipo | Cliente "Matriceria Mac SpA" y nuevo destino |
 
-  **Lo que esa corrección no detectó:** quedaron dos celdas con texto en campos numéricos, `1 (Despachador)` en USUARIOS.id_cargo y `1 (Supermercados Lider)` en NOTIFICACIONES.id_cliente_destinatario. Las señaló la retroalimentación y se corrigieron el 22-11-2026 (ver Uso 10).
+  **Lo que esa corrección no detectó:** quedaron dos celdas con texto en campos numéricos, `1 (Despachador)` en USUARIOS.id_cargo y `1 (Supermercados Lider)` en NOTIFICACIONES.id_cliente_destinatario. Las señaló la retroalimentación y se corrigieron el 22-11-2026 (ver Uso 9).
 
 * **Cómo se verificó:** [Se reviso la imagen de la base datos en la rama dev. Se pudo verificar que graficamente coincidió con las conexiones de las tablas esperadas]
 
@@ -241,7 +241,7 @@ Por cada una de las 9 tablas se explicitan los campos obligatorios (que no puede
   | Ext. 2: destinatario no notificado, se registra el intento fallido y queda pendiente | NOTIFICACIONES solo tenía leido (sí/no) | ❌ | ✅ estado_envio (pendiente, enviado, fallido), intentos, motivo_fallo |
   | Ext. 3: se cierra el caso y se envía una actualización | IMPREVISTOS.estado, fecha_resolucion y una nueva fila en NOTIFICACIONES | ⚠️ | ⚠️ |
 
-  Las tres brechas (❌) son las de la retroalimentación del modelo de datos; su corrección se registra en el Uso 10. La extensión 3 (⚠️) queda parcial: el cierre sí se guarda, pero NOTIFICACIONES no distingue si un aviso es el original o una actualización. Queda pendiente decidir si se agrega un campo `tipo_aviso` (original, actualizacion).
+  Las tres brechas (❌) son las de la retroalimentación del modelo de datos; su corrección se registra en el Uso 9. La extensión 3 (⚠️) queda parcial: el cierre sí se guarda, pero NOTIFICACIONES no distingue si un aviso es el original o una actualización. Queda pendiente decidir si se agrega un campo `tipo_aviso` (original, actualizacion).
 
 
 ## Uso 7
@@ -301,9 +301,8 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
 
 ---
 
-## Uso 10
+## Uso 9
 * **Objetivo:** [Incorporar la retroalimentación del profesor sobre el modelo de datos, la bitácora y el README, antes de comenzar el Avance 7]
-* **Restricciones:** [Al iniciar la sesión se fijaron las reglas de trabajo con el agente: responder en español; no hacer nada sin antes presentar las opciones; trabajar siempre en la rama `dev`; y ningún cambio directo, todo pasa por un commit que aprueba el equipo. La tarea del curso venía en Word y PPT, fuera del repositorio. Estas reglas se mantuvieron en los Usos 11 y 13.]
 
 * **Instrucción y respuesta (en orden):**
 
@@ -328,11 +327,10 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
   - Modelo de datos: se contrastó cada paso y extensión del caso de uso del Avance 2 (docs/unidad1/Avance2_Equipo_4.docx.pdf) con la tabla y el campo donde se guarda (tabla en el Uso 6). Se revisó que los ejemplos nuevos fueran coherentes entre tablas: imprevisto 5005 ↔ despacho 1002 ↔ vehículos 1 y 2 ↔ historial 7005, con horas consistentes.
   - .gitignore: comparación con la plantilla oficial Node.gitignore de github/gitignore y prueba con git check-ignore antes y después del cambio (detalle en el Uso 3).
   - README: se comparó la sección "En qué estado está" con la lista de archivos del repositorio y el historial de commits de cada avance.
-  - Commit: el agente no hizo el commit; los cambios se revisaron y se subieron a `dev` en el commit `3993b73` («Mejoras mencionadas en avance 3»).
 
 ---
 
-## Uso 11
+## Uso 10
 * **Objetivo:** [Incorporar en el repositorio la retroalimentación del Avance 5 (prototipo y ética), sin modificar el prototipo en Figma]
 
 * **Instrucción y respuesta (en orden):**
@@ -356,11 +354,10 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
   - Contraste: se calculó con la fórmula de WCAG 2.2. La luminancia relativa de #333333 es aprox. 0,033 y la del blanco es 1, por lo que (1 + 0,05) / (0,033 + 0,05) ≈ 12,6:1. El resultado coincide con el valor indicado en la retroalimentación.
   - Se comprobó que las etiquetas P1 y P2 de prueba-usuarios.md (sección 3) corresponden a coordinador/a y conductor/a antes de reescribir la línea de alcance.
   - Se revisó que cada pantalla del mapa de navegación tenga su fila en la tabla de decisiones y que los botones nombrados coincidan entre ambas.
-  - Commit: el agente no hizo el commit; los cambios se revisaron y se subieron a `dev` en el commit `ed7ac39` («Mejoras de avance 5 (estados, plazos de datos, contraste)»).
 
 ---
 
-## Uso 12
+## Uso 11
 * **Objetivo:** [Implementar la Prueba de Concepto (PoC) del camino delgado en `src/` (Next.js + Supabase) siguiendo `docs/arquitectura.md` y los wireframes de Figma, verificar la validación real en backend y la ausencia de claves expuestas, y sincronizar los cambios en la rama `dev` de GitHub.]
 * **Contexto:** [Se partió con `docs/arquitectura.md` ya definido, los 4 wireframes en `docs/wireframes/` (`wireframe 01.png`–`04.png`), el sistema mínimo en `docs/prototipo.md` y las 10 tablas ya creadas en Supabase (inicialmente vacías, sin datos semilla). Previo a iniciar la PoC también existía un conflicto de merge pendiente en `Readme.md` que impedía actualizar la rama `dev` contra `origin/dev`.]
 * **Intención:** [Resolver el bloqueo de GitHub y luego construir paso a paso —validando cada etapa antes de pasar a la siguiente— la acción única de punta a punta: seleccionar un despacho en curso, registrar un imprevisto con validación real en backend, guardarlo en Supabase junto con sus avisos y devolver un folio visible, dejando todo listo para despliegue público en Vercel.]
@@ -396,19 +393,5 @@ No se modificó ningún otro archivo ni carpeta del repositorio."]
     - `POST /api/imprevistos` válido (`id_despacho: 1001`, `tipo: "carga_no_lista"`) → HTTP `201` con folio `IMP-2026-001` y avisos registrados en `notificaciones` para Jefe/a de operaciones y Conductor/a.
   - **Prueba visual manual:** el usuario probó la aplicación en vivo en `http://localhost:3000` antes de subirla.
   - **Auditoría de seguridad y Git:** `git check-ignore -v src/.env.local src/node_modules src/.next` confirmó exclusión por `.gitignore`; revisión de `.env.example` (sin valores reales) y búsqueda con `Select-String` en `src/` confirmó cero claves, URLs de Supabase o variables `NEXT_PUBLIC_` en el código; `git push origin dev` subió únicamente los 14 archivos esperados (`commit 510c2ee`).
-
----
-
-## Uso 13
-* **Objetivo:** [Obtener instrucciones para corregir en Figma lo que quedó marcado como «pendiente en Figma» en el Uso 11, trabajando sobre una copia del archivo.]
-* **Contexto:** [El Uso 11 aplicó la retroalimentación del Avance 5 en el repositorio sin tocar el prototipo. En `docs/prototipo.md` quedaron pendientes en Figma las pantallas P1 vacío, P2 carga y P4b (envío fallido), y la conexión de los botones.]
-* **Restricciones:** [Las mismas reglas de trabajo del Uso 10: responder en español, no hacer nada sin antes presentar las opciones, trabajar en `dev` y ningún cambio directo al repositorio sin un commit aprobado por el equipo.]
-* **Instrucción y respuesta (en orden):**
-
-1. **Prompt:** [Se pidieron instrucciones para arreglar todo en Figma y se compartió el enlace del nuevo archivo «Entrega 4 (copia)».]
-   **Respuesta:** [POR COMPLETAR]
-
-* **Qué se aceptó o corrigió:** [POR COMPLETAR]
-* **Cómo se verificó:** [POR COMPLETAR]
 
 ---

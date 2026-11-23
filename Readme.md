@@ -79,22 +79,35 @@ transporte que les prestan servicio (ej. Enaex S.A.).
 
 ## 3. CÓMO SE INSTALA
 
-Aún no hay nada que instalar. A la fecha de este documento la
-solución no cuenta con una versión instalable; existe solo una
-maqueta digital preliminar.
+Para usar la prueba de concepto (PoC) no hay que instalar nada: está
+publicada en **<https://grupo-4-sigma.vercel.app/>** y se abre desde
+cualquier navegador, sin inicio de sesión.
+
+Para correrla en un computador propio (solo desarrollo):
+
+1. Instalar Node.js 18.18 o superior.
+2. Clonar el repositorio y entrar a la carpeta del código: `cd src`
+3. Instalar las dependencias: `npm install`
+4. Copiar [.env.example](.env.example) a `src/.env.local` y completar
+   `SUPABASE_URL` y `SUPABASE_SERVICE_ROLE_KEY`. Las claves se piden al
+   equipo y **nunca** se suben a GitHub.
 
 ---
 
 ## 4. CÓMO SE EJECUTA
 
-Aún no hay nada que ejecutar. La solución se encuentra en etapa de
-diseño.
+**Versión publicada:** abrir <https://grupo-4-sigma.vercel.app/>, elegir
+un despacho en curso, registrar el imprevisto y confirmar. La pantalla
+muestra el folio y el estado de los avisos.
+
+**Versión local:** desde `src/`, ejecutar `npm run dev` y abrir
+<http://localhost:3000>.
 
 ---
 
 ## 5. EN QUÉ ESTADO ESTÁ
 
-**Etapa actual:** Avance 7, diagrama de arquitectura y prueba de concepto (PoC) del flujo principal (en curso).
+**Etapa actual:** Avance 7, diagrama de arquitectura y prueba de concepto (PoC) del flujo principal, publicada en <https://grupo-4-sigma.vercel.app/>.
 
 **Completado:**
 - **Avance 1:** definición del problema y del usuario.
@@ -160,7 +173,7 @@ camión en espera en el acceso al polvorín de una faena minera):
 - [docs/prototipo.md](docs/prototipo.md) — enlace al prototipo navegable y su mapa de navegación.
 - [docs/etica.md](docs/etica.md) — análisis ético del prototipo.
 - Enlace a prototipo en figma: 
-      https://www.figma.com/design/bEA6Z4q13xJlCxUTl2BNZg/Entrega-4?node-id=41-339&p=f 
+      https://www.figma.com/file/LsDxkm3a9WNEiHiWuEvOw0?node-id=41:339&locale=en&type=design 
 
 ---
 

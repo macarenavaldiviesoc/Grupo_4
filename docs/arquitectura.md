@@ -62,7 +62,7 @@ La solución depende del **servicio externo de correo** para notificar automáti
 2. **Validación (Backend):** El endpoint de Next.js verifica que el despacho seleccionado exista y que **tipo de imprevisto** y **descripción** no vengan vacíos.
 3. **Persistencia (Datos):** El backend inserta el registro en Supabase (`IMPREVISTOS`) vinculado al **coordinador fijo de prueba (seed)**, obtiene el **folio** generado y crea los registros de aviso para Jefe de operaciones y Conductor (`NOTIFICACIONES`).
 4. **Respuesta visible (Frontend):** La pantalla **P4** muestra el **folio del imprevisto** y la lista de destinatarios con su estado visible, con la opción de volver a los despachos y repetir la acción.
-5. **Publicación (Despliegue):** Todo el recorrido corre desplegado en una URL pública de **Vercel**, repetible desde cualquier navegador.
+5. **Publicación (Despliegue):** Todo el recorrido corre desplegado en una URL pública de **Vercel** (<https://grupo-4-sigma.vercel.app/>), repetible desde cualquier navegador.
 
 ### Inicio de sesión en esta etapa
 

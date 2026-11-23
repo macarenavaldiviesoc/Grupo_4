@@ -264,7 +264,9 @@ No se modificó ningún otro archivo ni carpeta del repositorio."
 
 ## Uso 8
 * **Objetivo:** Diseñar la prueba de usuarios del Avance 6 (hipótesis, tareas, perfiles, plan de levantamiento) y el guion de la sesión, documentados en docs/prueba-usuarios.md y docs/pauta-validacion.md
-
+* **Contexto:** El repositorio ya contaba con las historias de usuario (`docs/historias.md`), el análisis ético con el mapa de impacto (`docs/etica.md`), el prototipo navegable y los wireframes (`docs/wireframes/`), y la hipótesis planteada en el Avance 2. El Avance 6 pedía diseñar, sin ejecutarla todavía, la prueba con usuarios y el guion de la sesión. La sesión se realizó el 08-11-2026 (commit `c530092`).
+* **Intención:** Diseñar una prueba que permita aceptar o rechazar la hipótesis del Avance 2 con evidencia observable, construida solo con datos del repositorio y revisada contra la lista de errores frecuentes del Avance 6 antes de darla por terminada.
+* **Restricciones:** No usar datos fuera del repositorio; nombrar a quienes facilitan como «Integrante 1, 2, 3», sin nombres reales; sesiones de máximo 20 minutos; guion de máximo dos planas; evidencia sin audio ni rostro, guardada fuera del repositorio; escenarios y objetivos de las tareas sin nombrar botones ni pantallas; ningún dato personal en el repositorio.
 * **Instrucción y respuesta (en orden):**
 
 1. **Prompt:** "Crea docs/prueba-usuarios.md con el título '# Diseño de prueba de usuarios · [nombre del proyecto]' y dos secciones: '1. Objetivo, hipótesis y alcance' (pregunta que responde la prueba, una hipótesis falseable con la plantilla 'Creemos que… Lo sabremos cuando observemos…' retomando la del Avance 2, y qué queda fuera de alcance) y '2. Tareas, métricas y umbral' (2-3 tareas del flujo principal en una tabla Tarea | HU | Escenario | Objetivo | Éxito | No revelar | Umbral, sin nombrar botones ni pantallas en escenario/objetivo, con datos que existan en el prototipo, y umbrales numéricos concretos). Restricción: todo debe salir del repositorio, lo que falte queda como [POR COMPLETAR]."
@@ -307,7 +309,9 @@ No se modificó ningún otro archivo ni carpeta del repositorio."
 
 ## Uso 10
 * **Objetivo:** Incorporar la retroalimentación del profesor sobre el modelo de datos, la bitácora y el README, antes de comenzar el Avance 7
-
+* **Contexto:** Se recibió la retroalimentación del Avance 3, con observaciones sobre el modelo de datos (`docs/datos/estructura_datos.md`), la bitácora (Usos 3 y 6) y el README. Al momento de corregir, el repositorio ya incluía el trabajo hasta el Avance 6. La sesión se realizó el 22-11-2026.
+* **Intención:** Corregir cada observación verificándola contra una fuente concreta (el caso de uso del Avance 2, el historial de git y la plantilla oficial de `.gitignore`), en vez de reconstruir los cambios de memoria, y revisar antes de editar si alguna corrección ya estaba hecha en los archivos actuales.
+* **Restricciones:** Responder en español; trabajar siempre en la rama `dev`; el agente no aplica cambios sin aprobación: primero propone, y una vez aprobado deja los cambios listos para que el equipo revise y haga el commit.
 * **Instrucción y respuesta (en orden):**
 
 1. **Prompt:** Se pegó al agente la retroalimentación del modelo de datos: el envío fallido de la extensión 2 no tiene dónde guardarse, al cambiar de camión se pierde el original, no se sabe qué jefe de operaciones corresponde a cada despacho, VEHICULOS.id_conductor no guarda el historial "a lo largo del tiempo", hay dos celdas de clave foránea con texto y DESPACHOS.destino repite el nombre del cliente.
@@ -336,7 +340,9 @@ No se modificó ningún otro archivo ni carpeta del repositorio."
 
 ## Uso 11
 * **Objetivo:** Incorporar en el repositorio la retroalimentación del Avance 5 (prototipo y ética), sin modificar el prototipo en Figma
-
+* **Contexto:** La retroalimentación del Avance 5 señaló que faltaban los estados vacío y de carga, que el mapa de navegación no coincidía con la pantalla P2, que la ficha de datos no tenía plazos de conservación, que la accesibilidad se declaraba sin medir, que P4b no existía en Figma y que los botones del prototipo no avanzaban. Parte de estos puntos se corrige en el repositorio y parte solo en el archivo de Figma. La sesión se realizó el 22-11-2026, a continuación del Uso 10.
+* **Intención:** Corregir en el repositorio todo lo que se pudiera respaldar con datos ya disponibles, y dejar marcado explícitamente como pendiente lo que dependía de Figma, sin aparentar que ya estaba resuelto.
+* **Restricciones:** Responder en español; trabajar siempre en la rama `dev`; el agente no modifica el prototipo en Figma; los cambios quedan listos para que el equipo los revise y haga el commit.
 * **Instrucción y respuesta (en orden):**
 
 1. **Prompt:** Se pegó al agente la retroalimentación del Avance 5: faltan estados vacío y de carga; el mapa dice «Cancelar» en P2, pero la pantalla solo tiene «Volver»; la ficha de datos no da plazos de conservación; la accesibilidad dice «cumple» sin medir; P4b no existe en Figma; los botones del prototipo no avanzan; y la recomendación de incluir en la prueba a un conductor sin señal en ruta.
@@ -513,7 +519,7 @@ No se modificó ningún otro archivo ni carpeta del repositorio."
   - **Se corrigió un dato entregado por el equipo:** el alto de los botones se registró como 44 px, según la nota de accesibilidad de Figma y la medición en la captura completa, en lugar de 70.
   - Se aceptó guardar las capturas en `docs/capturas/` y quitar todas las marcas «pendiente en Figma» que ya tenían evidencia. Queda pendiente solo probar el enlace de Figma en una ventana de incógnito.
   - Para la descripción se aceptó una lista de caracteres permitidos, que también rechaza `@`; no se agregó texto de ayuda bajo el campo porque la pantalla de Figma no lo muestra.
-  - Se decidió no unificar la estructura de los campos de los Usos anteriores (1 a 8, 10 y 11), para no reescribir registros que el profesor ya revisó.
+  - Se completaron los campos «Contexto», «Intención» y «Restricciones» de los Usos 8, 10 y 11, para que los Usos 8 a 15 sigan la misma plantilla. No se cambió la estructura de los Usos 1 a 7, que corresponden a la creación inicial del repositorio y que el profesor ya revisó con ese formato.
 
 * **Cómo se verificó:**
   - Contraste calculado con la fórmula de WCAG 2.2 a partir de los colores medidos en las capturas exportadas de Figma.
